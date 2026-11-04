@@ -189,12 +189,12 @@ export const es: Dictionary = {
     items: [
       {
         title: "Cartilla de plantas medicinales",
-        description: "“Plantas medicinais, conhecimentos populares em saúde e luta por terra: uma cartilha em defesa da vida” (en portugués), escrita con las mujeres del Colectivo.", link: { href: "https://tr.ee/8v2VcmZmiC", label: "Leer la cartilla" }
+        description: "“Plantas medicinais, conhecimentos populares em saúde e luta por terra: uma cartilha em defesa da vida” (en portugués), escrita con las mujeres del Colectivo.", links: [{ href: "https://tr.ee/8v2VcmZmiC", label: "Leer la cartilla" }]
       },
-      { title: "Espacio Bem Viver", description: "Área colectiva desde 2021: hierbas medicinales, hortalizas tradicionales, frutales, humus, talleres e intercambios.", link: { href: "https://www.instagram.com/coletivo.bemviver/", label: "Colectivo Bem Viver en Instagram" } },
-      { title: "Dos minidocumentales", description: "En alianza con el Colectivo Audiovisual Caroá y la Escuela de Gastronomía Social Ivens Dias Branco.", link: { href: "https://tr.ee/E85-yBxU0d", label: "Ver: Lagoa dos Cavalos e o Bem Viver" } },
+      { title: "Espacio Bem Viver", description: "Área colectiva desde 2021: hierbas medicinales, hortalizas tradicionales, frutales, humus, talleres e intercambios.", links: [{ href: "https://www.instagram.com/coletivo.bemviver/", label: "Colectivo Bem Viver en Instagram" }] },
+      { title: "Dos minidocumentales", description: "En alianza con el Colectivo Audiovisual Caroá y la Escuela de Gastronomía Social Ivens Dias Branco.", links: [{ href: "https://tr.ee/E85-yBxU0d", label: "Ver: Lagoa dos Cavalos e o Bem Viver" }] },
       { title: "Tesis con tribunal popular", description: "La comunidad participó en la evaluación del conocimiento producido sobre ella y con ella." },
-      { title: "Dos artículos científicos", description: "Mercator (2026), sobre el método de reparación; Conexões (2020), sobre el acuerdo de ajuste de conducta y el conflicto." },
+      { title: "Dos artículos científicos", description: "Mercator (2026), sobre el método de reparación; Conexões (2020), sobre el acuerdo de ajuste de conducta y el conflicto.", links: [{ href: "https://doi.org/10.36517/rm2026.e25009", label: "Leer el artículo en Mercator (2026, en portugués)" }, { href: "https://doi.org/10.21439/conexoes.v14i2.1876", label: "Leer el artículo en Conexões (2020, en portugués)" }] },
       { title: "Archivo Ecuador", description: "Audios, fotos y 117 transcripciones de entrevistas con quienes hacen la Clínica Ambiental." },
     ],
   },

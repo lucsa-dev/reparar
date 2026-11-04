@@ -192,12 +192,12 @@ export const pt: Dictionary = {
     items: [
       {
         title: "Cartilha de plantas medicinais",
-        description: "“Plantas medicinais, conhecimentos populares em saúde e luta por terra: uma cartilha em defesa da vida”, escrita com as mulheres do Coletivo.", link: { href: "https://tr.ee/8v2VcmZmiC", label: "Ler a cartilha" }
+        description: "“Plantas medicinais, conhecimentos populares em saúde e luta por terra: uma cartilha em defesa da vida”, escrita com as mulheres do Coletivo.", links: [{ href: "https://tr.ee/8v2VcmZmiC", label: "Ler a cartilha" }]
       },
-      { title: "Espaço Bem Viver", description: "Área coletiva desde 2021: ervas medicinais, hortaliças tradicionais, frutíferas, húmus, oficinas e intercâmbios.", link: { href: "https://www.instagram.com/coletivo.bemviver/", label: "Coletivo Bem Viver no Instagram" } },
-      { title: "Dois minidocumentários", description: "Em parceria com o Coletivo Audiovisual Caroá e a Escola de Gastronomia Social Ivens Dias Branco.", link: { href: "https://tr.ee/E85-yBxU0d", label: "Assistir: Lagoa dos Cavalos e o Bem Viver" } },
+      { title: "Espaço Bem Viver", description: "Área coletiva desde 2021: ervas medicinais, hortaliças tradicionais, frutíferas, húmus, oficinas e intercâmbios.", links: [{ href: "https://www.instagram.com/coletivo.bemviver/", label: "Coletivo Bem Viver no Instagram" }] },
+      { title: "Dois minidocumentários", description: "Em parceria com o Coletivo Audiovisual Caroá e a Escola de Gastronomia Social Ivens Dias Branco.", links: [{ href: "https://tr.ee/E85-yBxU0d", label: "Assistir: Lagoa dos Cavalos e o Bem Viver" }] },
       { title: "Tese com banca popular", description: "A comunidade participou da avaliação do conhecimento produzido sobre ela e com ela." },
-      { title: "Dois artigos científicos", description: "Mercator (2026), sobre o método de reparação; Conexões (2020), sobre o TAC e o conflito." },
+      { title: "Dois artigos científicos", description: "Mercator (2026), sobre o método de reparação; Conexões (2020), sobre o TAC e o conflito.", links: [{ href: "https://doi.org/10.36517/rm2026.e25009", label: "Ler o artigo na Mercator (2026)" }, { href: "https://doi.org/10.21439/conexoes.v14i2.1876", label: "Ler o artigo na Conexões (2020)" }] },
       { title: "Acervo Equador", description: "Áudios, fotos e 117 transcrições de entrevistas com quem faz a Clínica Ambiental." },
     ],
   },
