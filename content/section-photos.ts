@@ -1,7 +1,7 @@
 import type { Locale } from "./index";
 
 type SectionPhoto = { src: string; caption: Record<Locale, string> };
-type SectionKey = "repair" | "method" | "huipala" | "territory" | "voices" | "fruits" | "references";
+type SectionKey = "repair" | "method" | "huipala" | "territory" | "voices" | "fieldMission" | "references";
 
 const t = (pt: string, es: string, en: string) => ({ pt, es, en });
 const SHUAR = "Shuar Sharup";
@@ -28,8 +28,9 @@ export const sectionPhotos: Record<SectionKey, SectionPhoto[]> = {
     { src: "/plants/p013-1.jpg", caption: t("Japana, planta medicinal", "Ayapana, planta medicinal", "Ayapana, a medicinal plant") },
     { src: "/plants/p015-1.jpg", caption: t("Jambu, planta medicinal", "Botoncillo, planta medicinal", "Toothache plant, a medicinal herb") },
   ],
-  fruits: [
-    { src: "/plants/p085-1.jpg", caption: t("Goiaba, uma das plantas do acervo", "Guayaba, una de las plantas del archivo", "Guava, one of the plants in the archive") },
+  fieldMission: [
+    { src: "/field/9148.jpg", caption: t(`Saberes passados de mão em mão · ${SHUAR}`, `Saberes que pasan de mano en mano · ${SHUAR}`, `Knowledge passed from hand to hand · ${SHUAR}`) },
+    { src: "/field/9154.jpg", caption: t(`A copa da floresta · ${SHUAR}`, `La copa del bosque · ${SHUAR}`, `The forest canopy · ${SHUAR}`) },
   ],
   references: [
     { src: "/field/9106.jpg", caption: t(`Mata em ${SHUAR}`, `Monte en ${SHUAR}`, `Forest in ${SHUAR}`) },

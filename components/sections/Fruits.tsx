@@ -1,5 +1,5 @@
 import { SplitLayout } from "@/components/SplitLayout";
-import { SectionPhotos } from "@/components/SectionPhotos";
+import { FruitVideos } from "@/components/FruitVideos";
 import { Icon, type IconName } from "@/components/Icon";
 import { SectionHeading } from "@/components/SectionHeading";
 import type { Locale } from "@/content";
@@ -10,7 +10,7 @@ const fruitIcons: IconName[] = ["book", "sprout", "film", "graduation", "documen
 export function Fruits({ content, locale }: { content: Dictionary["fruits"]; locale: Locale }) {
   return (
     <section id="fruits">
-      <SplitLayout side="left" media={<SectionPhotos section="fruits" locale={locale} showBookNote />}>
+      <SplitLayout side="left" media={<FruitVideos />}>
         <SectionHeading label={content.label} title={content.title} />
         <div className="grid2">
           {content.items.map((item, index) => (

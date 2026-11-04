@@ -12,9 +12,7 @@ const SHUAR = "Shuar Sharup";
 const t = (pt: string, es: string, en: string) => ({ pt, es, en });
 
 export const fieldPhotos: FieldPhoto[] = [
-  { file: "9148.jpg", place: SHUAR, caption: t("Saberes passados de mão em mão", "Saberes que pasan de mano en mano", "Knowledge passed from hand to hand") },
   { file: "9157.jpg", place: SHUAR, caption: t("Consulta com o livro de plantas", "Consulta con el libro de plantas", "Consultation with the plant book") },
-  { file: "9154.jpg", place: SHUAR, caption: t("A copa da floresta", "La copa del bosque", "The forest canopy") },
   { file: "9181.jpg", place: SHUAR, caption: t("Conversa na varanda", "Conversación en el corredor", "Talking on the porch") },
   { file: "8915.jpg", place: "Puyo", caption: t("Flor da mata", "Flor del monte", "Forest flower") },
   { file: "9146.jpg", place: SHUAR, caption: t("Falando sobre as plantas", "Hablando de las plantas", "Talking about the plants") },
