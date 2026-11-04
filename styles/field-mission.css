@@ -1,5 +1,0 @@
-.field{width:100%;border-collapse:collapse;font-family:var(--f-ui);font-size:.98rem;min-width:560px}
-.field th{text-align:left;font-family:var(--f-label);font-weight:700;letter-spacing:.06em;color:var(--muted);font-size:.82rem;border-bottom:1px solid var(--ink);padding:.5rem .6rem;text-transform:lowercase}
-.field td{padding:.55rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
-.field td:first-child{font-variant-numeric:tabular-nums;white-space:nowrap}
-.scroll{overflow-x:auto;margin-top:1.2rem}

@@ -68,8 +68,7 @@ export type Dictionary = {
     label: string;
     title: string;
     intro: string;
-    columns: { date: string; place: string; record: string };
-    rows: { date: string; place: string; record: string }[];
+    rows: { year: string; date: string; place: string; record: string; key?: boolean }[];
     source: string;
     galleryTitle: string;
     galleryIntro: string;

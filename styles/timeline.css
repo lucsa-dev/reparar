@@ -6,3 +6,11 @@
 .timeline .yr{font-family:var(--f-ui);font-weight:700;font-variant-numeric:tabular-nums;text-align:right;padding-top:.15rem}
 .timeline .ev{font-size:1.02rem}
 .timeline .ev small{display:block;font-family:var(--f-ui);color:var(--muted);font-size:.85rem}
+.timeline-dates{max-width:68ch}
+.timeline-dates::before{left:6.1rem}
+.timeline-dates li{grid-template-columns:5.4rem 1fr}
+.timeline-dates li::after{left:5.82rem}
+.timeline-dates .ev-place{display:block;font-family:var(--f-ui)}
+.timeline-dates .timeline-year{padding-block:1rem .25rem}
+.timeline-dates .timeline-year::after{display:none}
+.timeline-dates .timeline-year .yr{font-family:var(--f-display);font-size:1.3rem;font-weight:800}

@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { FieldGallery } from "@/components/FieldGallery";
 import { SectionHeading } from "@/components/SectionHeading";
 import type { Locale } from "@/content";
@@ -11,26 +12,22 @@ export function FieldMission({ content, locale }: { content: Dictionary["fieldMi
           <SectionHeading label={content.label} title={content.title} />
           <p>{content.intro}</p>
         </div>
-        <div className="scroll">
-          <table className="field">
-            <thead>
-              <tr>
-                <th>{content.columns.date}</th>
-                <th>{content.columns.place}</th>
-                <th>{content.columns.record}</th>
-              </tr>
-            </thead>
-            <tbody>
-              {content.rows.map((row) => (
-                <tr key={`${row.date}-${row.place}`}>
-                  <td>{row.date}</td>
-                  <td>{row.place}</td>
-                  <td>{row.record}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <ol className="timeline timeline-dates wrap start">
+          {content.rows.map((row, index) => (
+            <Fragment key={`${row.date}-${row.place}`}>
+              {row.year !== content.rows[index - 1]?.year && (
+                <li className="timeline-year"><span className="yr">{row.year}</span></li>
+              )}
+              <li className={row.key ? "key" : undefined}>
+                <span className="yr">{row.date}</span>
+                <span className="ev">
+                  <b className="ev-place">{row.place}</b>
+                  {row.record}
+                </span>
+              </li>
+            </Fragment>
+          ))}
+        </ol>
         <p className="small muted ui mt-1">{content.source}</p>
         <h3 className="subhead">{content.galleryTitle}</h3>
         <p className="small mt-half">{content.galleryIntro}</p>
