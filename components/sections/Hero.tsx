@@ -28,12 +28,12 @@ export function Hero({ content, locale }: { content: Dictionary["hero"]; locale:
       </div>
       <div className="route">
         <span className="route-stop">
-          <img className="flag" src="/flags/ceara.png" alt="" />
+          <img className="flag" src="/flags/ceara.png" alt="" width={32} height={22} />
           <RichText html={content.routeFromHtml} />
         </span>
         <span className="route-line" aria-hidden="true" />
         <span className="route-stop">
-          <img className="flag" src="/flags/equador.png" alt="" />
+          <img className="flag" src="/flags/equador.png" alt="" width={32} height={21} />
           <RichText html={content.routeToHtml} />
         </span>
       </div>

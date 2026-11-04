@@ -8,7 +8,7 @@ import type { Dictionary } from "@/content/types";
 
 export function ArchiveTeaser({ content, locale }: { content: Dictionary["archive"]; locale: Locale }) {
   return (
-    <section className="archive-teaser" id="archive">
+    <section className="archive-teaser band" id="archive">
       <div className="wide">
         <div className="wrap start">
           <SectionHeading label={content.label} title={content.title} />

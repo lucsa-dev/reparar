@@ -1,10 +1,10 @@
 .timeline{list-style:none;margin:1.5rem 0 0;padding:0;position:relative}
-.timeline::before{content:"";position:absolute;left:5.1rem;top:.4rem;bottom:.4rem;width:2px;background:var(--line)}
+.timeline::before{content:"";position:absolute;left:5.1rem;top:.4rem;bottom:.4rem;width:2px;background:var(--sol);opacity:.5}
 .timeline li{display:grid;grid-template-columns:4.4rem 1fr;gap:1.6rem;padding-block:.55rem;position:relative}
-.timeline li::after{content:"";position:absolute;left:4.82rem;top:1.05rem;width:.7rem;height:.7rem;border-radius:50%;background:var(--bg);border:2px solid var(--muted)}
-.timeline li.key::after{background:var(--accent);border-color:var(--accent)}
+.timeline li::after{content:"";position:absolute;left:4.82rem;top:1.05rem;width:.7rem;height:.7rem;border-radius:50%;background:var(--bg);border:2px solid var(--sol)}
+.timeline li.key::after{background:var(--brand-terracotta);border-color:var(--brand-terracotta)}
 .timeline .yr{font-family:var(--f-ui);font-weight:700;font-variant-numeric:tabular-nums;text-align:right;padding-top:.15rem}
-.timeline .ev{font-size:1.02rem}
+.timeline .ev{font-size:.98rem}
 .timeline .ev small{display:block;font-family:var(--f-ui);color:var(--muted);font-size:.85rem}
 .timeline-dates{max-width:68ch}
 .timeline-dates::before{left:6.1rem}
@@ -13,4 +13,4 @@
 .timeline-dates .ev-place{display:block;font-family:var(--f-ui)}
 .timeline-dates .timeline-year{padding-block:1rem .25rem}
 .timeline-dates .timeline-year::after{display:none}
-.timeline-dates .timeline-year .yr{font-family:var(--f-display);font-size:1.3rem;font-weight:800}
+.timeline-dates .timeline-year .yr{font-family:var(--f-display);font-size:1.3rem;font-weight:600}

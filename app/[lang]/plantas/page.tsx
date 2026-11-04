@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PlantCatalog } from "@/components/plants/PlantCatalog";
+import { Footer } from "@/components/sections/Footer";
+import { SiteNav } from "@/components/SiteNav";
 import { TopBar } from "@/components/TopBar";
 import { getDictionary, isLocale, localeDetails, localeHref, locales } from "@/content";
 import { plantCopy } from "@/content/plants";
@@ -26,9 +28,11 @@ export default async function PlantsPage({ params }: PlantsPageProps) {
   const { lang } = await params;
   if (!isLocale(lang)) notFound();
   const copy = plantCopy[lang];
+  const content = getDictionary(lang);
   return (
     <>
-      <TopBar locale={lang} ui={getDictionary(lang).ui} path="plantas" />
+      <TopBar locale={lang} ui={content.ui} path="plantas" />
+      <SiteNav content={content.nav} home={localeHref(lang) === "/" ? "/" : `${localeHref(lang)}/`} />
       <main className="plants wide">
         <Link className="plants-back" href={localeHref(lang)}>{copy.back}</Link>
         <span className="label">{copy.label}</span>
@@ -41,6 +45,7 @@ export default async function PlantsPage({ params }: PlantsPageProps) {
         </div>
         <PlantCatalog locale={lang} />
       </main>
+      <Footer content={content} locale={lang} />
     </>
   );
 }

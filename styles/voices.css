@@ -1,9 +1,10 @@
-blockquote{margin:1.6rem 0;padding:0 0 0 1.2rem;border-left:3px solid var(--sol)}
-blockquote p{font-style:italic;font-size:1.2rem;line-height:1.5}
-blockquote cite{font-style:normal;font-family:var(--f-ui);font-size:.92rem;color:var(--muted)}
-.big-quote{background:var(--accent);color:var(--accent-ink);padding-block:3rem;border:none}
-.big-quote blockquote{border-left-color:var(--accent-ink);margin:0}
-.big-quote blockquote p{font-size:clamp(1.3rem,2.6vw,1.75rem);font-weight:500}
-.big-quote cite{color:var(--accent-ink);opacity:.85}
-.quote-icon{display:block;color:var(--sol);margin-bottom:.4rem}
-.big-quote .quote-icon{color:var(--accent-ink);opacity:.75}
+blockquote{margin:1.8rem 0;padding:0 0 0 1.3rem;border-left:3px solid var(--sol)}
+blockquote p{font-family:var(--f-display);font-size:1.18rem;font-style:italic;line-height:1.5}
+blockquote cite{font-family:var(--f-ui);font-size:.9rem;font-style:normal;color:var(--muted)}
+.quote-icon{display:block;margin-bottom:.4rem;color:var(--sol)}
+.big-quote{overflow:hidden;color:var(--brand-cream);background:var(--brand-green)}
+.big-quote blockquote{position:relative;margin:0;padding:0;border:0}
+.big-quote blockquote p{font-size:clamp(1.3rem,2.6vw,1.8rem);font-weight:500;color:var(--brand-cream)}
+.big-quote cite{color:var(--brand-cream);opacity:.88}
+.big-quote .quote-icon{color:var(--brand-ochre)}
+.big-quote .botanical-roots{right:-2rem;top:-1rem;width:min(30rem,70%);opacity:.14}

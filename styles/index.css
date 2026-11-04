@@ -1,5 +1,6 @@
 @import "./tokens.css";
 @import "./base.css";
+@import "./organic.css";
 @import "./hero.css";
 @import "./repair.css";
 @import "./method.css";
@@ -16,3 +17,4 @@
 @import "./site-nav.css";
 @import "./section-photos.css";
 @import "./split.css";
+@import "./footer.css";

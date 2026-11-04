@@ -1,6 +1,7 @@
 import { Icon, type IconName } from "@/components/Icon";
 import { PartnerLogos } from "@/components/PartnerLogos";
 import { SectionHeading } from "@/components/SectionHeading";
+import { contacts } from "@/content/contacts";
 import type { Dictionary } from "@/content/types";
 
 const groupIcons: IconName[] = ["pin", "pin", "graduation", "handshake"];
@@ -27,9 +28,9 @@ export function Credits({ content }: { content: Dictionary["credits"] }) {
         </div>
         <h3 className="subhead">{content.contactsTitle}</h3>
         <div className="contact mt-half">
-          <span><Icon name="mail" size={16} /> {content.correspondingAuthor} <code>laraqueirozvb@gmail.com</code></span>
-          <span><Icon name="arrow" size={16} /> <a href="https://linktr.ee/lara.vbraga" target="_blank" rel="noopener">{content.laraPage}</a></span>
-          <span><Icon name="mail" size={16} /> Clínica Ambiental: <code>clinicambiental@gmail.com</code> · {content.clinicLocation}</span>
+          <span><Icon name="mail" size={16} /> {content.correspondingAuthor} <code>{contacts.authorEmail}</code></span>
+          <span><Icon name="arrow" size={16} /> <a href={contacts.laraPage} target="_blank" rel="noopener">{content.laraPage}</a></span>
+          <span><Icon name="mail" size={16} /> Clínica Ambiental: <code>{contacts.clinicEmail}</code> · {content.clinicLocation}</span>
         </div>
       </div>
     </section>

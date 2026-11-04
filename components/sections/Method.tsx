@@ -9,7 +9,7 @@ const stageIcons: IconName[] = ["eye", "sprout", "sun"];
 
 export function Method({ content, locale }: { content: Dictionary["method"]; locale: Locale }) {
   return (
-    <section id="method">
+    <section id="method" className="band">
       <div className="wide">
         <SplitLayout side="left" wideMedia media={<SectionPhotos section="method" locale={locale} />}>
           <SectionHeading label={content.label} title={content.title} />

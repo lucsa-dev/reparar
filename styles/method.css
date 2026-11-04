@@ -1,12 +1,14 @@
-.stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem;margin-top:1.5rem}
-.stage{background:var(--surface);padding:1.4rem 1.3rem 1.2rem;border-radius:4px;min-width:0;display:flex;flex-direction:column;gap:.8rem}
-.stage .es{font-family:var(--f-ui);font-size:.9rem;color:var(--muted)}
-.stage h3{font-size:1.65rem;font-weight:800}
-.stage .side{font-size:1rem;line-height:1.5}
-.stage .side b{font-family:var(--f-label);font-weight:700;letter-spacing:.06em;font-size:.82rem;color:var(--accent);display:block;text-transform:lowercase}
-.stage .step{font-family:var(--f-ui);font-weight:700;color:var(--sol);font-size:.95rem}
-@media (max-width:860px){.stages{grid-template-columns:1fr}}
-.cross{margin-top:1.5rem;font-family:var(--f-ui);font-size:1rem;display:flex;flex-wrap:wrap;gap:.5rem}
-.chip{border:1px solid var(--line);border-radius:999px;padding:.3rem .8rem;background:var(--bg)}
-.stage-icon{display:flex;align-items:center;justify-content:center;width:3.25rem;height:3.25rem;color:var(--accent-ink);background:var(--accent);border-radius:50%}
+.stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem;margin-top:2rem}
+.stage{display:flex;flex-direction:column;gap:.8rem;min-width:0;padding:1.6rem 1.5rem 1.4rem;background:var(--surface-raised);border-radius:var(--radius-l);box-shadow:var(--shadow-soft)}
+.stage .es{font-family:var(--f-ui);font-size:.9rem;font-style:italic;color:var(--muted)}
+.stage h3{font-size:1.6rem}
+.stage .side{margin:0;font-size:.98rem;line-height:1.55}
+.stage .side b{display:block;margin-bottom:.15rem;font-family:var(--f-label);font-size:.74rem;font-weight:700;letter-spacing:.1em;color:var(--accent);text-transform:uppercase}
 .stage .side b svg{display:inline;vertical-align:-2px;margin-right:.25rem}
+.stage .step{font-family:var(--f-ui);font-size:.88rem;font-weight:700;color:var(--highlight)}
+.stage-icon{display:flex;align-items:center;justify-content:center;width:3.25rem;height:3.25rem;color:var(--brand-cream);background:var(--brand-green);border-radius:50%}
+.stage:nth-child(2) .stage-icon{background:var(--brand-terracotta)}
+.stage:nth-child(3) .stage-icon{color:var(--brand-brown);background:var(--brand-ochre)}
+.cross{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-top:1.6rem;font-family:var(--f-ui);font-size:.95rem}
+.chip{padding:.3rem .85rem;background:var(--surface-raised);border:1px solid var(--line);border-radius:var(--radius-pill)}
+@media (max-width:860px){.stages{grid-template-columns:1fr}}

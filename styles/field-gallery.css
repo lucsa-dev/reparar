@@ -1,5 +1,5 @@
 .field-gallery{list-style:none;margin:1.2rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,16rem),1fr));gap:1rem}
 .field-gallery figure{margin:0}
-.field-gallery img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px}
+.field-gallery img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius-m)}
 .field-gallery img.portrait{object-position:center 20%}
 .field-gallery figcaption{margin-top:.35rem;font-family:var(--f-ui);font-size:.85rem;line-height:1.3;color:var(--muted)}

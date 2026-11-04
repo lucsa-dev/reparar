@@ -1,19 +1,51 @@
 :root{
-  --bg:#f2f3ec;          /* palha clara, levemente esverdeada */
-  --surface:#e7eadf;
-  --ink:#1d2a22;         /* verde-mata quase preto */
-  --muted:#56645a;
-  --line:#c9cfbf;
-  --accent:#1f6b52;      /* verde das "ilhas de esperança" */
-  --accent-ink:#f2f3ec;
-  --sol:#b8860b;         /* sol do sertão, para destaques pontuais */
+  /* Paleta da marca Reparação Integral Comunitária */
+  --brand-green:#285D32;
+  --brand-terracotta:#B95832;
+  --brand-ochre:#D99A27;
+  --brand-brown:#54321F;
+  --brand-cream:#F8F3E7;
+  --brand-sage:#E5EDDF;
+
+  /* Papéis de cor */
+  --bg:var(--brand-cream);
+  --surface:var(--brand-sage);
+  --surface-raised:#FFFCF4;
+  --ink:var(--brand-brown);
+  --muted:#6B5243;
+  --line:#DCD0B9;
+  --accent:var(--brand-green);
+  --accent-ink:var(--brand-cream);
+  --highlight:#A04826;   /* terracota escurecido para texto pequeno sobre fundos claros */
+  --sol:var(--brand-ochre);
+  --overlay:rgba(44,26,15,.72);
+
   /* sete cores da wiphala, usadas só na régua Huipala */
   --w1:#c8332b; --w2:#e07a1f; --w3:#e8c22e; --w4:#f5f4ef; --w5:#3d8b3d; --w6:#2f5fa8; --w7:#6b3fa0;
-  --f-display:var(--font-alegreya),Georgia,"Times New Roman",serif;
-  --f-body:var(--font-alegreya),Georgia,serif;
-  --f-ui:var(--font-alegreya-sans),system-ui,-apple-system,"Segoe UI",sans-serif;
-  --f-label:var(--font-alegreya-sc),var(--font-alegreya-sans),system-ui,sans-serif;
+
+  /* Tipografia */
+  --f-display:var(--font-lora),Georgia,"Times New Roman",serif;
+  --f-body:var(--font-dm-sans),system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-ui:var(--f-body);
+  --f-label:var(--f-body);
+
+  /* Espaçamento */
+  --gutter:max(16px,env(safe-area-inset-left,0px));
+  --space-section:clamp(3.5rem,7vw,5.75rem);
+  --content-wide:1120px;
+
+  /* Bordas e sombras */
+  --radius-s:.5rem;
+  --radius-m:.875rem;
+  --radius-l:1.25rem;
+  --radius-xl:clamp(1.5rem,4vw,3.25rem);
+  --radius-organic:4.5rem;
+  --radius-pill:999px;
+  --shadow-soft:0 1px 2px rgba(84,50,31,.06),0 10px 28px rgba(84,50,31,.08);
+  --transition:.18s ease;
 }
 :root[data-theme="dark"]{
-  --bg:#141b16;--surface:#1c251f;--ink:#e6eadf;--muted:#a3b0a5;--line:#34423a;
-  --accent:#5fbf96;--accent-ink:#0f1612;--sol:#e0b24a;--w4:#d9d7cf;color-scheme:dark}
+  --bg:#1E1711;--surface:#2A231A;--surface-raised:#31281D;--ink:#F8F3E7;--muted:#CFC1AC;--line:#4B3C2C;
+  --accent:#A3D3A6;--accent-ink:#1E1711;--highlight:#EDA47E;--sol:#E8B24A;--w4:#d9d7cf;
+  --shadow-soft:0 1px 2px rgba(0,0,0,.3),0 10px 28px rgba(0,0,0,.25);
+  color-scheme:dark}

@@ -1,0 +1,18 @@
+/* Elementos gráficos da marca: papel, faixas orgânicas, divisórias e raízes */
+body{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .33 0 0 0 0 .2 0 0 0 0 .12 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)'/%3E%3C/svg%3E")}
+:root[data-theme="dark"] body{background-image:none}
+
+/* Divisória: linha curva com uma semente ao centro */
+section::before{content:"";position:absolute;top:-7px;left:50%;width:min(24rem,70%);height:14px;transform:translateX(-50%);background:var(--sol);opacity:.75;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 14'%3E%3Cpath d='M0 9C48 2 92 2 136 7S172 11 180 8M204 8C212 11 248 11 292 6S340 3 384 9' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round'/%3E%3Cellipse cx='192' cy='7' rx='6' ry='4' transform='rotate(-24 192 7)'/%3E%3C/svg%3E") center/100% 100% no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 14'%3E%3Cpath d='M0 9C48 2 92 2 136 7S172 11 180 8M204 8C212 11 248 11 292 6S340 3 384 9' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round'/%3E%3Cellipse cx='192' cy='7' rx='6' ry='4' transform='rotate(-24 192 7)'/%3E%3C/svg%3E") center/100% 100% no-repeat}
+
+/* Faixas de cor pontuais, com cantos amplos */
+.band{margin-inline:clamp(0px,1.4vw,1.5rem);border-radius:var(--radius-xl)}
+.band::before,.band + section::before{display:none}
+#method,.archive-teaser{background:var(--surface)}
+
+.botanical-roots{position:absolute;pointer-events:none;color:currentColor;opacity:.13}
+
+/* Cartões editoriais */
+.card-icon{box-sizing:content-box;display:block;margin-bottom:.7rem;padding:.55rem;color:var(--accent);background:var(--surface);border-radius:50%}

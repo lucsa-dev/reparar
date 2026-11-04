@@ -1,26 +1,19 @@
 import type { Metadata, Viewport } from "next";
-import { Alegreya, Alegreya_Sans, Alegreya_Sans_SC } from "next/font/google";
+import { DM_Sans, Lora } from "next/font/google";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 import { getDictionary, isLocale, localeDetails, localeHref, locales } from "@/content";
 import { themeInitScript } from "@/lib/theme";
 import "@/styles/index.css";
 
-const alegreya = Alegreya({
+const lora = Lora({
   subsets: ["latin"],
-  weight: ["400", "500", "700", "800"],
   style: ["normal", "italic"],
-  variable: "--font-alegreya",
+  variable: "--font-lora",
 });
-const alegreyaSans = Alegreya_Sans({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-alegreya-sans",
-});
-const alegreyaSansSc = Alegreya_Sans_SC({
-  subsets: ["latin"],
-  weight: ["500", "700"],
-  variable: "--font-alegreya-sc",
+  variable: "--font-dm-sans",
 });
 
 type LangParams = { params: Promise<{ lang: string }> };
@@ -31,7 +24,7 @@ export function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
 }
 
-export const viewport: Viewport = { viewportFit: "cover" };
+export const viewport: Viewport = { viewportFit: "cover", themeColor: "#F8F3E7" };
 
 export async function generateMetadata({ params }: LangParams): Promise<Metadata> {
   const { lang } = await params;
@@ -40,6 +33,13 @@ export async function generateMetadata({ params }: LangParams): Promise<Metadata
   return {
     title: meta.title,
     description: meta.description,
+    icons: {
+      icon: [
+        { url: "/brand/favicon-32.png", sizes: "32x32", type: "image/png" },
+        { url: "/brand/favicon-192.png", sizes: "192x192", type: "image/png" },
+      ],
+      apple: "/brand/apple-touch-icon.png",
+    },
     alternates: {
       canonical: localeHref(lang),
       languages: Object.fromEntries(locales.map((locale) => [localeDetails[locale].htmlLang, localeHref(locale)])),
@@ -53,7 +53,7 @@ export default async function RootLayout({ children, params }: LangParams & { ch
   return (
     <html
       lang={localeDetails[lang].htmlLang}
-      className={`${alegreya.variable} ${alegreyaSans.variable} ${alegreyaSansSc.variable}`}
+      className={`${lora.variable} ${dmSans.variable}`}
       suppressHydrationWarning
     >
       <head>

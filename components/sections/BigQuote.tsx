@@ -1,9 +1,11 @@
+import { BotanicalRoots } from "@/components/BotanicalRoots";
 import { Icon } from "@/components/Icon";
 import type { Dictionary } from "@/content/types";
 
 export function BigQuote({ content }: { content: Dictionary["bigQuote"] }) {
   return (
-    <section className="big-quote">
+    <section className="big-quote band">
+      <BotanicalRoots />
       <div className="wrap">
         <blockquote>
           <Icon name="quote" size={40} className="quote-icon" />

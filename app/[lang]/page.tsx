@@ -36,7 +36,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
       <ArchiveTeaser content={content.archive} locale={lang} />
       <Credits content={content.credits} />
       <References content={content.references} locale={lang} />
-      <Footer content={content.footer} />
+      <Footer content={content} locale={lang} />
     </>
   );
 }

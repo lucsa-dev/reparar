@@ -1,5 +1,5 @@
-.plants{padding-block:2rem 4rem}
-.plants h1{font-size:clamp(2rem,4.6vw,3.2rem);font-weight:800;margin-bottom:1rem;max-width:22ch}
+.plants{padding-block:clamp(2rem,4vw,3.5rem) 0}
+.plants h1{font-size:clamp(2rem,4.6vw,3.2rem);font-weight:600;margin-bottom:1rem;max-width:22ch}
 .plants-back{display:inline-block;font-family:var(--f-ui);font-size:1rem;margin-bottom:2rem}
 .plants-intro{font-size:1.2rem;max-width:62ch}
 .plants-notices{font-family:var(--f-ui);font-size:.98rem;background:var(--surface);border-left:3px solid var(--sol);padding:.9rem 1.1rem;margin-block:1.5rem 2rem;max-width:72ch}
@@ -7,25 +7,25 @@
 .plants-notices p + p{margin-top:.5rem}
 .plants-controls{display:grid;gap:1rem;font-family:var(--f-ui)}
 .plants-search{display:grid;gap:.3rem;font-weight:700;font-size:.95rem;max-width:30rem}
-.plants-search input{font:inherit;font-weight:400;font-size:1rem;width:100%;min-height:2.75rem;padding:.5rem .8rem;color:var(--ink);background:var(--bg);border:1px solid var(--muted);border-radius:6px}
+.plants-search input{font:inherit;font-weight:400;font-size:1rem;width:100%;min-height:2.75rem;padding:.5rem .8rem;color:var(--ink);background:var(--surface-raised);border:1px solid var(--muted);border-radius:var(--radius-l)}
 .plants-search input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .plants-filters{display:flex;flex-wrap:wrap;gap:.5rem}
-.plants-filters button{font:inherit;font-size:.95rem;font-weight:700;min-height:2.5rem;padding:.3rem .9rem;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:999px;cursor:pointer}
+.plants-filters button{font:inherit;font-size:.92rem;font-weight:600;min-height:2.5rem;padding:.3rem 1rem;color:var(--ink);background:var(--surface-raised);border:1px solid var(--line);border-radius:999px;cursor:pointer}
 .plants-filters button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 .plants-count{font-family:var(--f-ui);font-size:.95rem;color:var(--muted);margin-block:1.2rem .8rem}
 .plant-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,19rem),1fr));gap:1.1rem}
-.plant-card{display:flex;flex-direction:column;height:44rem;min-width:0;background:var(--surface);border-radius:4px;overflow:hidden}
+.plant-card{display:flex;flex-direction:column;height:44rem;min-width:0;background:var(--surface-raised);box-shadow:var(--shadow-soft);border-radius:var(--radius-l);overflow:hidden}
 .plant-card-body{flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:.55rem;padding:1rem 1.2rem 1.2rem}
 .plant-card-body:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
 .plant-card h2{font-size:1.35rem;font-weight:700;margin:0}
 .plant-card p{margin:0}
 .plant-local-name{font-family:var(--f-ui);font-size:.95rem;color:var(--muted)}
 .plant-scientific{font-family:var(--f-ui);font-size:.88rem;color:var(--muted)}
-.plant-detail{font-size:1.02rem;line-height:1.5}
+.plant-detail{font-size:.98rem;line-height:1.5}
 .plant-detail b{font-family:var(--f-ui);font-size:.92rem}
-.plant-caution{font-family:var(--f-ui);font-size:.9rem;font-weight:700;color:var(--sol)}
+.plant-caution{font-family:var(--f-ui);font-size:.9rem;font-weight:700;color:var(--highlight)}
 .plant-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:auto;padding-top:.4rem;font-family:var(--f-ui);font-size:.82rem}
-.plant-tags span{background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.12rem .55rem}
+.plant-tags span{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:.12rem .55rem}
 .plant-territories{font-family:var(--f-ui);font-size:.88rem;color:var(--muted)}
 .plant-carousel{position:relative;flex:none;height:21rem;background:var(--bg)}
 .plant-track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
@@ -33,14 +33,14 @@
 .plant-slide{flex:0 0 100%;min-width:0;margin:0;display:flex;flex-direction:column;scroll-snap-align:start}
 .plant-slide .zoom-trigger{flex:1;min-height:0}
 .plant-slide img{display:block;width:100%;height:100%;object-fit:cover}
-.plant-slide figcaption{flex:none;height:2.9rem;overflow:hidden;padding:.35rem 1.2rem 0;font-family:var(--f-ui);font-size:.8rem;line-height:1.25;color:var(--muted);background:var(--surface)}
-.plant-carousel-button{position:absolute;top:calc((100% - 2.9rem)/2);transform:translateY(-50%);display:flex;align-items:center;justify-content:center;width:2.5rem;height:2.5rem;padding:0;font-size:1.4rem;line-height:1;color:#fff;background:rgba(15,22,18,.65);border:0;border-radius:50%;cursor:pointer}
-.plant-carousel-button:hover{background:rgba(15,22,18,.85)}
+.plant-slide figcaption{flex:none;height:2.9rem;overflow:hidden;padding:.35rem 1.2rem 0;font-family:var(--f-ui);font-size:.8rem;line-height:1.25;color:var(--muted);background:var(--surface-raised)}
+.plant-carousel-button{position:absolute;top:calc((100% - 2.9rem)/2);transform:translateY(-50%);display:flex;align-items:center;justify-content:center;width:2.5rem;height:2.5rem;padding:0;font-size:1.4rem;line-height:1;color:#fff;background:var(--overlay);border:0;border-radius:50%;cursor:pointer}
+.plant-carousel-button:hover{background:rgba(44,26,15,.9)}
 .plant-carousel-button:focus-visible{outline:2px solid #fff;outline-offset:1px}
 .plant-carousel-button:disabled{opacity:.3;cursor:default}
 .plant-carousel-button.previous{left:.5rem}
 .plant-carousel-button.next{right:.5rem}
-.plant-carousel-count{position:absolute;top:.5rem;right:.5rem;padding:.1rem .55rem;font-family:var(--f-ui);font-size:.78rem;color:#fff;background:rgba(15,22,18,.65);border-radius:999px}
+.plant-carousel-count{position:absolute;top:.5rem;right:.5rem;padding:.1rem .55rem;font-family:var(--f-ui);font-size:.78rem;color:#fff;background:var(--overlay);border-radius:999px}
 .plant-photo-skeleton{flex:none;height:21rem;display:flex;align-items:center;justify-content:center;background:var(--line);background:color-mix(in srgb,var(--line) 55%,var(--surface))}
 .plant-photo-skeleton svg{color:var(--muted);opacity:.45}
 .plant-no-report{font-family:var(--f-ui);font-size:.92rem;color:var(--muted);font-style:italic}

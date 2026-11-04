@@ -1,11 +1,25 @@
-.top-bar{display:flex;justify-content:flex-end;align-items:center;gap:.75rem;padding-top:1rem;font-family:var(--f-ui)}
-.lang-switcher{display:flex;border:1px solid var(--line);border-radius:6px;overflow:hidden}
-.lang-switcher a{display:flex;align-items:center;min-height:2.5rem;padding-inline:.75rem;font-size:.92rem;font-weight:700;color:var(--muted);text-decoration:none}
+.top-bar{display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding-block:.9rem;font-family:var(--f-ui)}
+.top-bar-actions{display:flex;align-items:center;gap:.6rem}
+.brand-link{display:block;flex:none;line-height:0}
+.brand-link img{display:block;width:auto}
+.logo-horizontal img{height:4rem}
+.logo-symbol img{height:3.4rem}
+.logo-full img{width:min(15rem,100%);height:auto}
+.top-bar .logo-symbol{display:none}
+.logo-on-dark{display:none!important}
+:root[data-theme="dark"] .logo-on-dark{display:block!important}
+:root[data-theme="dark"] .logo-on-light{display:none!important}
+@media (max-width:640px){
+  .top-bar .logo-horizontal{display:none}
+  .top-bar .logo-symbol{display:block}
+}
+.lang-switcher{display:flex;border:1px solid var(--line);border-radius:var(--radius-pill);overflow:hidden;background:var(--surface-raised)}
+.lang-switcher a{display:flex;align-items:center;min-height:2.5rem;padding-inline:.8rem;font-size:.88rem;font-weight:600;color:var(--muted);text-decoration:none}
 .lang-switcher a + a{border-left:1px solid var(--line)}
 .lang-switcher a:hover{color:var(--ink)}
 .lang-switcher a[aria-current="true"]{background:var(--accent);color:var(--accent-ink)}
-.theme-toggle{display:flex;align-items:center;justify-content:center;width:2.5rem;height:2.5rem;padding:0;background:transparent;border:1px solid var(--line);border-radius:6px;color:var(--sol);cursor:pointer}
-.theme-toggle:hover{border-color:var(--sol)}
+.theme-toggle{display:flex;align-items:center;justify-content:center;width:2.5rem;height:2.5rem;padding:0;background:var(--surface-raised);border:1px solid var(--line);border-radius:50%;color:var(--highlight);cursor:pointer}
+.theme-toggle:hover{border-color:var(--highlight)}
 .theme-toggle .icon-moon{display:none}
 :root[data-theme="dark"] .theme-toggle .icon-sun{display:none}
 :root[data-theme="dark"] .theme-toggle .icon-moon{display:block}

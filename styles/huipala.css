@@ -1,5 +1,5 @@
 .wiphala{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;margin:1.5rem 0 .6rem}
-.wiphala div{padding:.8rem .5rem 1rem;font-family:var(--f-ui);font-weight:700;font-size:.92rem;line-height:1.2;color:#1b1b1b;min-height:5.2rem;display:flex;align-items:flex-end;border-radius:2px}
+.wiphala div{padding:.8rem .5rem 1rem;font-family:var(--f-ui);font-weight:700;font-size:.92rem;line-height:1.2;color:#1b1b1b;min-height:5.2rem;display:flex;align-items:flex-end;border-radius:var(--radius-m)}
 .wiphala div:nth-child(1){background:var(--w1);color:#fff}
 .wiphala div:nth-child(2){background:var(--w2)}
 .wiphala div:nth-child(3){background:var(--w3)}
@@ -9,9 +9,9 @@
 .wiphala div:nth-child(7){background:var(--w7);color:#fff}
 @media (max-width:640px){.wiphala{grid-template-columns:repeat(2,minmax(0,1fr))}.wiphala div{min-height:3.4rem}}
 .dims{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0 1.5rem;font-family:var(--f-ui);font-size:1rem}
-.dims span{background:var(--surface);padding:.35rem .75rem;border-radius:3px}
+.dims span{background:var(--surface);padding:.35rem .85rem;border-radius:var(--radius-pill)}
 .horiz{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;font-size:1rem;margin-top:1rem}
-.horiz div{border-top:2px solid var(--accent);padding-top:.6rem}
+.horiz div{border-top:2px solid var(--brand-terracotta);padding-top:.6rem}
 .horiz b{font-family:var(--f-ui);display:block}
 @media (max-width:640px){.horiz{grid-template-columns:1fr}}
 .levels-note{max-width:68ch;margin-inline:auto}
