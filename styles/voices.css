@@ -1,0 +1,7 @@
+blockquote{margin:1.6rem 0;padding:0 0 0 1.2rem;border-left:3px solid var(--sol)}
+blockquote p{font-style:italic;font-size:1.2rem;line-height:1.5}
+blockquote cite{font-style:normal;font-family:var(--f-ui);font-size:.92rem;color:var(--muted)}
+.big-quote{background:var(--accent);color:var(--accent-ink);padding-block:3rem;border:none}
+.big-quote blockquote{border-left-color:var(--accent-ink);margin:0}
+.big-quote blockquote p{font-size:clamp(1.3rem,2.6vw,1.75rem);font-weight:500}
+.big-quote cite{color:var(--accent-ink);opacity:.85}

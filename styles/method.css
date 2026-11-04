@@ -1,0 +1,10 @@
+.stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem;margin-top:1.5rem}
+.stage{background:var(--surface);padding:1.4rem 1.3rem 1.2rem;border-radius:4px;min-width:0;display:flex;flex-direction:column;gap:.8rem}
+.stage .es{font-family:var(--f-ui);font-size:.9rem;color:var(--muted)}
+.stage h3{font-size:1.65rem;font-weight:800}
+.stage .side{font-size:1rem;line-height:1.5}
+.stage .side b{font-family:var(--f-label);font-weight:700;letter-spacing:.06em;font-size:.82rem;color:var(--accent);display:block;text-transform:lowercase}
+.stage .step{font-family:var(--f-ui);font-weight:700;color:var(--sol);font-size:.95rem}
+@media (max-width:860px){.stages{grid-template-columns:1fr}}
+.cross{margin-top:1.5rem;font-family:var(--f-ui);font-size:1rem;display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{border:1px solid var(--line);border-radius:999px;padding:.3rem .8rem;background:var(--bg)}

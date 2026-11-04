@@ -1,0 +1,19 @@
+:root{
+  --bg:#f2f3ec;          /* palha clara, levemente esverdeada */
+  --surface:#e7eadf;
+  --ink:#1d2a22;         /* verde-mata quase preto */
+  --muted:#56645a;
+  --line:#c9cfbf;
+  --accent:#1f6b52;      /* verde das "ilhas de esperança" */
+  --accent-ink:#f2f3ec;
+  --sol:#b8860b;         /* sol do sertão, para destaques pontuais */
+  /* sete cores da wiphala, usadas só na régua Huipala */
+  --w1:#c8332b; --w2:#e07a1f; --w3:#e8c22e; --w4:#f5f4ef; --w5:#3d8b3d; --w6:#2f5fa8; --w7:#6b3fa0;
+  --f-display:var(--font-alegreya),Georgia,"Times New Roman",serif;
+  --f-body:var(--font-alegreya),Georgia,serif;
+  --f-ui:var(--font-alegreya-sans),system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-label:var(--font-alegreya-sc),var(--font-alegreya-sans),system-ui,sans-serif;
+}
+:root[data-theme="dark"]{
+  --bg:#141b16;--surface:#1c251f;--ink:#e6eadf;--muted:#a3b0a5;--line:#34423a;
+  --accent:#5fbf96;--accent-ink:#0f1612;--sol:#e0b24a;--w4:#d9d7cf;color-scheme:dark}
