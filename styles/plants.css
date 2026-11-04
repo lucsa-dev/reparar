@@ -25,3 +25,8 @@
 .plant-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:auto;padding-top:.4rem;font-family:var(--f-ui);font-size:.82rem}
 .plant-tags span{background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.12rem .55rem}
 .plant-territories{font-family:var(--f-ui);font-size:.88rem;color:var(--muted)}
+.plant-photo{margin:0}
+.plant-photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:contain;background:var(--bg);border-radius:3px}
+.plant-photo figcaption{font-family:var(--f-ui);font-size:.82rem;color:var(--muted);margin-top:.35rem}
+.plant-no-report{font-family:var(--f-ui);font-size:.92rem;color:var(--muted);font-style:italic}
+.plant-credit{font-family:var(--f-ui);font-size:.78rem;color:var(--muted)}

@@ -10,6 +10,18 @@ const paikoka = (name: string) => ({ name, language: "Paikoka" });
 const kichwa = (name: string) => ({ name, language: "Kichwa" });
 const t = (pt: string, es: string, en: string) => ({ pt, es, en });
 
+/** Book pages showing each plant, matched from the numbers cited in the consultations. */
+export const bookPagesByPlant: Record<string, number[]> = {
+  achiote: [7], aji: [48, 49], "ajo-monte": [62], algodao: [36, 37], araza: [83], barbasco: [77, 65, 116, 117],
+  borojo: [88], botoncillo: [15, 14], cacao: [93], "cacao-blanco": [92], caimito: [45], camote: [16], cauchillo: [105, 106],
+  chiqui: [81], chirimoya: [3], chonta: [40], chuna: [82], frejol: [34], granadilla: [41, 42], "guaba-zampi": [74],
+  guambula: [64], guanabana: [2], guanto: [47, 46], guayaba: [85], guayusa: [61], "huevo-potro": [112, 113], huito: [43],
+  kumay: [86], "lengua-vaca": [90], maiz: [26], malanga: [5, 4], mani: [30], mate: [20, 6], morete: [126], namuk: [21],
+  naranjilla: [52], ovo: [56], papaya: [12], "pina-silvestre": [8], "pina-tierra": [39, 38], piripri: [22], platanillo: [70],
+  saque: [124], tabaco: [50, 51], uguana: [122], unguragua: [125], yage: [78], yapu: [127], yoko: [89], yuca: [25],
+  zapallo: [17, 18], zapote: [63],
+};
+
 export const plants: Plant[] = [
   {
     id: "achiote",
@@ -87,9 +99,9 @@ export const plants: Plant[] = [
     uses: t("Fruta cultivada perto de casa, junto de outras frutíferas.", "Fruta cultivada cerca de casa, junto a otros frutales.", "A fruit grown near the house alongside other fruit trees."),
   },
   {
-    id: "arroz-monte",
-    name: t("Arroz do monte", "Arroz del monte", "Forest rice"),
-    localNames: [{ name: "arroz huasca", language: "Castellano" }],
+    id: "ajo-monte",
+    name: t("Alho-do-monte", "Ajo del monte", "Forest garlic"),
+    scientificName: "Mansoa alliacea",
     categories: ["medicinal"],
     territories: [SHUAR],
     uses: t("Usado em vapor para gripe e tosse persistente, e em banho para febre.", "Se usa en vapor para la gripe y la tos crónica, y en baño para la fiebre.", "Used in steam for flu and persistent cough, and in baths for fever."),
