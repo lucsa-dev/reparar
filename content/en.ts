@@ -17,6 +17,7 @@ export const en: Dictionary = {
     cta: {
       article: "Read the article (Mercator, 2026, in Portuguese)",
       clinic: "Visit Clínica Ambiental",
+      plants: "See the plant archive",
     },
     facts: [
       { value: "3", label: "stages of the method: open your eyes, act, rejoice" },
@@ -160,7 +161,7 @@ export const en: Dictionary = {
     label: "south–south dialogue",
     title: "The field mission in Ecuador",
     intro:
-      "Between November 2024 and February 2025, the team visited permaculture farms, Shuar and Siekoya Indigenous communities, health consultations and academic spaces. In the interviews, members of the Clínica share their stories and leave messages for those fighting in Brazil. The names of interviewees are withheld until consent for publication is confirmed.",
+      "Between November 2024 and February 2025, the team visited permaculture farms, Shuar and Siekoya Indigenous communities, health consultations and academic spaces. In the interviews, members of the Clínica share their stories and leave messages for those fighting in Brazil.",
     columns: { date: "date", place: "place", record: "record" },
     rows: [
       { date: "Nov 2024", place: "Chocó Andino", record: "Interviews on land regeneration and environmental activism" },
@@ -228,7 +229,7 @@ export const en: Dictionary = {
   },
   footer: {
     paragraphs: [
-      "Research approved by the UFC Research Ethics Committee (opinion no. 3.507.932/2019). The raw archive of audio, photos and transcripts remains in the care of the project and the communities; what is published here is already public or was recorded as a message for sharing.",
+      "Research approved by the UFC Research Ethics Committee (opinion no. 3.507.932/2019). The raw archive of audio, photos and transcripts remains in the care of the project and the communities; what is published here is already public or was authorized for sharing.",
       "Article texts under a CC-BY 3.0 license. Updated November 2026.",
     ],
   },

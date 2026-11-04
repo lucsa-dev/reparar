@@ -17,6 +17,7 @@ export const pt: Dictionary = {
     cta: {
       article: "Ler o artigo (Mercator, 2026)",
       clinic: "Conhecer a Clínica Ambiental",
+      plants: "Ver o acervo de plantas",
     },
     facts: [
       { value: "3", label: "etapas do método: abrir os olhos, atua, alegra-te" },
@@ -160,7 +161,7 @@ export const pt: Dictionary = {
     label: "diálogo sul–sul",
     title: "A missão de campo no Equador",
     intro:
-      "Entre novembro de 2024 e fevereiro de 2025, a equipe visitou fincas permaculturais, comunidades indígenas Shuar e Siekoya, consultas de saúde e espaços acadêmicos. Nas entrevistas, associadas e associados da Clínica contam suas histórias e deixam recados para quem luta no Brasil. Os nomes das pessoas entrevistadas ficam de fora até que o consentimento para divulgação seja confirmado.",
+      "Entre novembro de 2024 e fevereiro de 2025, a equipe visitou fincas permaculturais, comunidades indígenas Shuar e Siekoya, consultas de saúde e espaços acadêmicos. Nas entrevistas, associadas e associados da Clínica contam suas histórias e deixam recados para quem luta no Brasil.",
     columns: { date: "data", place: "lugar", record: "registro" },
     rows: [
       { date: "nov/2024", place: "Chocó Andino", record: "Entrevistas sobre regeneração da terra e ativismo ambiental" },
@@ -228,7 +229,7 @@ export const pt: Dictionary = {
   },
   footer: {
     paragraphs: [
-      "Pesquisa aprovada pelo Comitê de Ética em Pesquisa da UFC (parecer nº 3.507.932/2019). O acervo bruto de áudios, fotos e transcrições fica sob guarda do projeto e das comunidades; o que se publica aqui é o que já é público ou foi gravado como mensagem para divulgação.",
+      "Pesquisa aprovada pelo Comitê de Ética em Pesquisa da UFC (parecer nº 3.507.932/2019). O acervo bruto de áudios, fotos e transcrições fica sob guarda do projeto e das comunidades; o que se publica aqui é o que já é público ou teve a divulgação autorizada.",
       "Textos do artigo sob licença CC-BY 3.0. Atualizado em novembro de 2026.",
     ],
   },

@@ -21,7 +21,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
   return (
     <>
       <TopBar locale={lang} ui={content.ui} />
-      <Hero content={content.hero} />
+      <Hero content={content.hero} locale={lang} />
       <Repair content={content.repair} />
       <Method content={content.method} />
       <Huipala content={content.huipala} />

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PlantCatalog } from "@/components/plants/PlantCatalog";
 import { TopBar } from "@/components/TopBar";
-import { getDictionary, isLocale, localeHref } from "@/content";
+import { getDictionary, isLocale, localeDetails, localeHref, locales } from "@/content";
 import { plantCopy } from "@/content/plants";
 
 type PlantsPageProps = { params: Promise<{ lang: string }> };
@@ -15,9 +15,10 @@ export async function generateMetadata({ params }: PlantsPageProps): Promise<Met
   return {
     title: copy.metaTitle,
     description: copy.metaDescription,
-    alternates: { canonical: localeHref(lang, "plantas") },
-    // Stays out of search engines until the communities confirm consent for publication.
-    robots: { index: false, follow: false },
+    alternates: {
+      canonical: localeHref(lang, "plantas"),
+      languages: Object.fromEntries(locales.map((locale) => [localeDetails[locale].htmlLang, localeHref(locale, "plantas")])),
+    },
   };
 }
 

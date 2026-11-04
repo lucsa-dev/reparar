@@ -8,7 +8,7 @@ export type Dictionary = {
     lede: string;
     routeFromHtml: string;
     routeToHtml: string;
-    cta: { article: string; clinic: string };
+    cta: { article: string; clinic: string; plants: string };
     facts: { value: string; label: string }[];
   };
   repair: {

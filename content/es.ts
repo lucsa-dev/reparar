@@ -17,6 +17,7 @@ export const es: Dictionary = {
     cta: {
       article: "Leer el artículo (Mercator, 2026)",
       clinic: "Conocer la Clínica Ambiental",
+      plants: "Ver el archivo de plantas",
     },
     facts: [
       { value: "3", label: "etapas del método: abre los ojos, actúa, alégrate" },
@@ -157,7 +158,7 @@ export const es: Dictionary = {
     label: "diálogo sur–sur",
     title: "La misión de campo en Ecuador",
     intro:
-      "Entre noviembre de 2024 y febrero de 2025, el equipo visitó fincas permaculturales, comunidades indígenas Shuar y Siekoya, consultas de salud y espacios académicos. En las entrevistas, asociadas y asociados de la Clínica cuentan sus historias y dejan mensajes para quienes luchan en Brasil. Los nombres de las personas entrevistadas se omiten hasta confirmar el consentimiento para su difusión.",
+      "Entre noviembre de 2024 y febrero de 2025, el equipo visitó fincas permaculturales, comunidades indígenas Shuar y Siekoya, consultas de salud y espacios académicos. En las entrevistas, asociadas y asociados de la Clínica cuentan sus historias y dejan mensajes para quienes luchan en Brasil.",
     columns: { date: "fecha", place: "lugar", record: "registro" },
     rows: [
       { date: "nov/2024", place: "Chocó Andino", record: "Entrevistas sobre regeneración de la tierra y activismo ambiental" },
@@ -225,7 +226,7 @@ export const es: Dictionary = {
   },
   footer: {
     paragraphs: [
-      "Investigación aprobada por el Comité de Ética en Investigación de la UFC (dictamen n.º 3.507.932/2019). El archivo bruto de audios, fotos y transcripciones queda bajo custodia del proyecto y de las comunidades; lo que se publica aquí es lo que ya es público o se grabó como mensaje para su difusión.",
+      "Investigación aprobada por el Comité de Ética en Investigación de la UFC (dictamen n.º 3.507.932/2019). El archivo bruto de audios, fotos y transcripciones queda bajo custodia del proyecto y de las comunidades; lo que se publica aquí es lo que ya es público o cuya difusión fue autorizada.",
       "Textos del artículo bajo licencia CC-BY 3.0. Actualizado en noviembre de 2026.",
     ],
   },
