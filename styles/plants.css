@@ -40,6 +40,7 @@
 .plant-carousel-button.previous{left:.5rem}
 .plant-carousel-button.next{right:.5rem}
 .plant-carousel-count{position:absolute;top:.5rem;right:.5rem;padding:.1rem .55rem;font-family:var(--f-ui);font-size:.78rem;color:#fff;background:rgba(15,22,18,.65);border-radius:999px}
-.plant-no-photo{flex:none;height:21rem;display:flex;align-items:center;justify-content:center;font-family:var(--f-ui);font-size:.95rem;color:var(--muted);background:var(--bg)}
+.plant-photo-skeleton{flex:none;height:21rem;display:flex;align-items:center;justify-content:center;background:var(--line);background:color-mix(in srgb,var(--line) 55%,var(--surface))}
+.plant-photo-skeleton svg{color:var(--muted);opacity:.45}
 .plant-no-report{font-family:var(--f-ui);font-size:.92rem;color:var(--muted);font-style:italic}
 @media (prefers-reduced-motion:no-preference){.plant-track{scroll-behavior:smooth}}

@@ -2,6 +2,7 @@ import type { Locale } from "@/content";
 import { entryPhotos, entryTitle, type CatalogEntry } from "@/content/plant-catalog";
 import { plantCopy } from "@/content/plants";
 import { PhotoCarousel } from "./PhotoCarousel";
+import { PhotoSkeleton } from "./PhotoSkeleton";
 
 type PlantCardProps = {
   entry: CatalogEntry;
@@ -14,7 +15,7 @@ export function PlantCard({ entry, locale }: PlantCardProps) {
   const photos = entryPhotos(entry);
   return (
     <li className="plant-card">
-      {photos.length > 0 ? <PhotoCarousel photos={photos} locale={locale} /> : <div className="plant-no-photo">{copy.noPhoto}</div>}
+      {photos.length > 0 ? <PhotoCarousel photos={photos} locale={locale} /> : <PhotoSkeleton label={copy.noPhoto} />}
       {/* Fixed card height: longer accounts scroll inside the card, so it must be keyboard focusable. */}
       <div className="plant-card-body" tabIndex={0}>
         <h2>{entryTitle(entry, locale)}</h2>
