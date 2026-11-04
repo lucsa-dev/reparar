@@ -25,17 +25,17 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
       <TopBar locale={lang} ui={content.ui} />
       <SiteNav content={content.nav} />
       <Hero content={content.hero} locale={lang} />
-      <Repair content={content.repair} />
-      <Method content={content.method} />
-      <Huipala content={content.huipala} />
-      <Territory content={content.territory} />
-      <Voices content={content.voices} />
+      <Repair content={content.repair} locale={lang} />
+      <Method content={content.method} locale={lang} />
+      <Huipala content={content.huipala} locale={lang} />
+      <Territory content={content.territory} locale={lang} />
+      <Voices content={content.voices} locale={lang} />
       <BigQuote content={content.bigQuote} />
       <FieldMission content={content.fieldMission} locale={lang} />
-      <Fruits content={content.fruits} />
+      <Fruits content={content.fruits} locale={lang} />
       <ArchiveTeaser content={content.archive} locale={lang} />
       <Credits content={content.credits} />
-      <References content={content.references} />
+      <References content={content.references} locale={lang} />
       <Footer content={content.footer} />
     </>
   );

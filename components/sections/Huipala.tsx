@@ -1,16 +1,19 @@
+import { SectionPhotos } from "@/components/SectionPhotos";
 import { Icon, type IconName } from "@/components/Icon";
 import { RichText } from "@/components/RichText";
 import { SectionHeading } from "@/components/SectionHeading";
+import type { Locale } from "@/content";
 import type { Dictionary } from "@/content/types";
 
 const dimensionIcons: IconName[] = ["book", "hand", "heart", "sprout", "store", "zap", "smile", "users"];
 
-export function Huipala({ content }: { content: Dictionary["huipala"] }) {
+export function Huipala({ content, locale }: { content: Dictionary["huipala"]; locale: Locale }) {
   return (
     <section id="huipala">
       <div className="wrap">
         <SectionHeading label={content.label} title={content.title} />
         <RichText as="p" html={content.introHtml} />
+        <SectionPhotos section="huipala" locale={locale} />
         <p>{content.levelsIntro}</p>
       </div>
       <div className="wide">

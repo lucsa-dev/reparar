@@ -16,7 +16,6 @@ export const fieldPhotos: FieldPhoto[] = [
   { file: "9157.jpg", place: SHUAR, caption: t("Consulta com o livro de plantas", "Consulta con el libro de plantas", "Consultation with the plant book") },
   { file: "9154.jpg", place: SHUAR, caption: t("A copa da floresta", "La copa del bosque", "The forest canopy") },
   { file: "9181.jpg", place: SHUAR, caption: t("Conversa na varanda", "Conversación en el corredor", "Talking on the porch") },
-  { file: "9296.jpg", place: SHUAR, caption: t("Cuidando do viveiro de mudas", "Cuidando el vivero de plántulas", "Tending the seedling nursery") },
   { file: "8915.jpg", place: "Puyo", caption: t("Flor da mata", "Flor del monte", "Forest flower") },
   { file: "9146.jpg", place: SHUAR, caption: t("Falando sobre as plantas", "Hablando de las plantas", "Talking about the plants") },
   { file: "9205.jpg", place: SHUAR, caption: t("Frutos colhidos no caminho", "Frutos cosechados en el camino", "Fruit gathered along the way") },

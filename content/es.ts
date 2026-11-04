@@ -9,6 +9,7 @@ export const es: Dictionary = {
   ui: { languageLabel: "Idioma", themeToggle: "Cambiar entre tema claro y oscuro" },
   nav: {
     label: "Secciones de la página",
+    menu: "Menú",
     items: [{ id: "repair", label: "Qué es" }, { id: "method", label: "Método" }, { id: "huipala", label: "Huipala" }, { id: "territory", label: "Territorio" }, { id: "voices", label: "Voces" }, { id: "field-mission", label: "Misión" }, { id: "fruits", label: "Frutos" }, { id: "archive", label: "Archivo" }, { id: "credits", label: "Alianzas" }, { id: "references", label: "Referencias" }],
   },
   hero: {

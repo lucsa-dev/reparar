@@ -1,18 +1,25 @@
 import { Icon, type IconName } from "@/components/Icon";
+import { PartnerLogos } from "@/components/PartnerLogos";
 import { SectionHeading } from "@/components/SectionHeading";
 import type { Dictionary } from "@/content/types";
 
 const groupIcons: IconName[] = ["pin", "pin", "graduation", "handshake"];
+const groupFlags = ["/flags/ceara.png", "/flags/equador.png"];
 
 export function Credits({ content }: { content: Dictionary["credits"] }) {
   return (
     <section id="credits">
       <div className="wrap">
         <SectionHeading label={content.label} title={content.title} />
+        <PartnerLogos />
         <div className="grid2">
           {content.groups.map((group, index) => (
             <div key={group.title}>
-              <Icon name={groupIcons[index]} size={26} className="card-icon" />
+              {groupFlags[index] ? (
+                <img className="flag card-flag" src={groupFlags[index]} alt="" />
+              ) : (
+                <Icon name={groupIcons[index]} size={26} className="card-icon" />
+              )}
               <h3>{group.title}</h3>
               <p>{group.description}</p>
             </div>

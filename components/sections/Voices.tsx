@@ -1,13 +1,16 @@
+import { SectionPhotos } from "@/components/SectionPhotos";
 import { Icon } from "@/components/Icon";
 import { SectionHeading } from "@/components/SectionHeading";
+import type { Locale } from "@/content";
 import type { Dictionary } from "@/content/types";
 
-export function Voices({ content }: { content: Dictionary["voices"] }) {
+export function Voices({ content, locale }: { content: Dictionary["voices"]; locale: Locale }) {
   return (
     <section id="voices">
       <div className="wrap">
         <SectionHeading label={content.label} title={content.title} />
         <p>{content.intro}</p>
+        <SectionPhotos section="voices" locale={locale} showBookNote />
         {content.quotes.map((quote) => (
           <blockquote key={quote.author}>
             <Icon name="quote" size={26} className="quote-icon" />
