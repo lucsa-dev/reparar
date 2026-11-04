@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Alegreya, Alegreya_Sans, Alegreya_Sans_SC } from "next/font/google";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
-import { getDictionary, isLocale, localeDetails, locales } from "@/content";
+import { getDictionary, isLocale, localeDetails, localeHref, locales } from "@/content";
 import { themeInitScript } from "@/lib/theme";
 import "@/styles/index.css";
 
@@ -41,8 +41,8 @@ export async function generateMetadata({ params }: LangParams): Promise<Metadata
     title: meta.title,
     description: meta.description,
     alternates: {
-      canonical: localeDetails[lang].href,
-      languages: Object.fromEntries(locales.map((locale) => [localeDetails[locale].htmlLang, localeDetails[locale].href])),
+      canonical: localeHref(lang),
+      languages: Object.fromEntries(locales.map((locale) => [localeDetails[locale].htmlLang, localeHref(locale)])),
     },
   };
 }
