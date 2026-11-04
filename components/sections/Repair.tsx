@@ -1,3 +1,4 @@
+import { SplitLayout } from "@/components/SplitLayout";
 import { SectionPhotos } from "@/components/SectionPhotos";
 import { Icon, type IconName } from "@/components/Icon";
 import { RichText } from "@/components/RichText";
@@ -10,10 +11,9 @@ const elementIcons: IconName[] = ["home", "coins", "heartPulse", "medal", "shiel
 export function Repair({ content, locale }: { content: Dictionary["repair"]; locale: Locale }) {
   return (
     <section id="repair">
-      <div className="wrap">
+      <SplitLayout side="right" media={<SectionPhotos section="repair" locale={locale} />}>
         <SectionHeading label={content.label} title={content.title} />
         <RichText as="p" html={content.introHtml} />
-        <SectionPhotos section="repair" locale={locale} />
         <ul className="five">
           {content.elements.map((element, index) => (
             <li key={element.name}>
@@ -23,7 +23,7 @@ export function Repair({ content, locale }: { content: Dictionary["repair"]; loc
           ))}
         </ul>
         <RichText as="p" html={content.closingHtml} />
-      </div>
+      </SplitLayout>
     </section>
   );
 }

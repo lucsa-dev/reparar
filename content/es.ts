@@ -192,9 +192,10 @@ export const es: Dictionary = {
         description: "“Plantas medicinais, conhecimentos populares em saúde e luta por terra: uma cartilha em defesa da vida” (en portugués), escrita con las mujeres del Colectivo.", links: [{ href: "https://drive.google.com/file/d/1Jtd4nYeeyt1cz69j-UivwZdQQLvay7ss/view?usp=sharing", label: "Leer la cartilla" }]
       },
       { title: "Espacio Bem Viver", description: "Área colectiva desde 2021: hierbas medicinales, hortalizas tradicionales, frutales, humus, talleres e intercambios.", links: [{ href: "https://www.instagram.com/coletivo.bemviver/", label: "Colectivo Bem Viver en Instagram" }] },
-      { title: "Dos minidocumentales", description: "En alianza con el Colectivo Audiovisual Caroá y la Escuela de Gastronomía Social Ivens Dias Branco.", links: [{ href: "https://www.youtube.com/watch?v=iVvl3MRPU7s", label: "Ver: Lagoa dos Cavalos e o Bem Viver" }] },
+      { title: "Dos minidocumentales", description: "En alianza con el Colectivo Audiovisual Caroá y la Escuela de Gastronomía Social Ivens Dias Branco.", links: [{ href: "https://www.youtube.com/watch?v=iVvl3MRPU7s", label: "Ver: Lagoa dos Cavalos e o Bem Viver" }, { href: "https://www.youtube.com/watch?v=kDiJanz7bkE", label: "Ver: PANC na Lagoa dos Cavalos" }] },
       { title: "Tesis con tribunal popular", description: "La comunidad participó en la evaluación del conocimiento producido sobre ella y con ella." },
       { title: "Dos artículos científicos", description: "Mercator (2026), sobre el método de reparación; Conexões (2020), sobre el acuerdo de ajuste de conducta y el conflicto.", links: [{ href: "https://doi.org/10.36517/rm2026.e25009", label: "Leer el artículo en Mercator (2026, en portugués)" }, { href: "https://doi.org/10.21439/conexoes.v14i2.1876", label: "Leer el artículo en Conexões (2020, en portugués)" }] },
+      { title: "Plantas no convencionales en Lagoa dos Cavalos", description: "Investigación de Osarina Lima, nacida en Russas, sobre las plantas alimenticias no convencionales de la comunidad, con huerta agroecológica, recetas y un calendario de cultivo para agricultoras y agricultores.", links: [{ href: "https://gastronomiasocial.org.br/laboratorio-de-criac/osarina-lima/", label: "Conocer la investigación (en portugués)" }] },
       { title: "Archivo Ecuador", description: "Audios, fotos y 117 transcripciones de entrevistas con quienes hacen la Clínica Ambiental." },
     ],
   },
@@ -223,6 +224,7 @@ export const es: Dictionary = {
     ],
     contactsTitle: "Contactos públicos",
     correspondingAuthor: "Autora de correspondencia del artículo:",
+    laraPage: "Página de Lara Braga",
     clinicLocation: "Quito y Nueva Loja, Ecuador",
   },
   references: {

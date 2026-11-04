@@ -1,3 +1,4 @@
+import { SplitLayout } from "@/components/SplitLayout";
 import { SectionPhotos } from "@/components/SectionPhotos";
 import { Icon, type IconName } from "@/components/Icon";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -10,11 +11,10 @@ export function Method({ content, locale }: { content: Dictionary["method"]; loc
   return (
     <section id="method">
       <div className="wide">
-        <div className="wrap start">
+        <SplitLayout side="left" wideMedia media={<SectionPhotos section="method" locale={locale} />}>
           <SectionHeading label={content.label} title={content.title} />
           <p>{content.intro}</p>
-        </div>
-          <SectionPhotos section="method" locale={locale} />
+        </SplitLayout>
         <div className="stages">
           {content.stages.map((stage, index) => (
             <article className="stage" key={stage.step}>

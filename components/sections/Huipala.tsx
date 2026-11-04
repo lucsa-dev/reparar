@@ -1,3 +1,4 @@
+import { SplitLayout } from "@/components/SplitLayout";
 import { SectionPhotos } from "@/components/SectionPhotos";
 import { Icon, type IconName } from "@/components/Icon";
 import { RichText } from "@/components/RichText";
@@ -10,12 +11,11 @@ const dimensionIcons: IconName[] = ["book", "hand", "heart", "sprout", "store", 
 export function Huipala({ content, locale }: { content: Dictionary["huipala"]; locale: Locale }) {
   return (
     <section id="huipala">
-      <div className="wrap">
+      <SplitLayout side="right" wideMedia media={<SectionPhotos section="huipala" locale={locale} />}>
         <SectionHeading label={content.label} title={content.title} />
         <RichText as="p" html={content.introHtml} />
-        <SectionPhotos section="huipala" locale={locale} />
         <p>{content.levelsIntro}</p>
-      </div>
+      </SplitLayout>
       <div className="wide">
         <div className="wiphala" role="list" aria-label={content.levelsAria}>
           {content.levels.map((level) => (

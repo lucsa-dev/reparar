@@ -1,3 +1,4 @@
+import { SplitLayout } from "@/components/SplitLayout";
 import { SectionPhotos } from "@/components/SectionPhotos";
 import { SectionHeading } from "@/components/SectionHeading";
 import type { Locale } from "@/content";
@@ -6,10 +7,9 @@ import type { Dictionary } from "@/content/types";
 export function Territory({ content, locale }: { content: Dictionary["territory"]; locale: Locale }) {
   return (
     <section id="territory">
-      <div className="wrap">
+      <SplitLayout side="left" media={<SectionPhotos section="territory" locale={locale} showBookNote />}>
         <SectionHeading label={content.label} title={content.title} />
         <p>{content.intro}</p>
-        <SectionPhotos section="territory" locale={locale} showBookNote />
         <ol className="timeline">
           {content.timeline.map((entry) => (
             <li key={entry.year} className={entry.key ? "key" : undefined}>
@@ -22,7 +22,7 @@ export function Territory({ content, locale }: { content: Dictionary["territory"
           ))}
         </ol>
         <p className="small muted subhead">{content.closing}</p>
-      </div>
+      </SplitLayout>
     </section>
   );
 }

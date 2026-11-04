@@ -86,6 +86,7 @@ export type Dictionary = {
     groups: { title: string; description: string }[];
     contactsTitle: string;
     correspondingAuthor: string;
+    laraPage: string;
     clinicLocation: string;
   };
   references: { label: string; title: string; itemsHtml: string[] };

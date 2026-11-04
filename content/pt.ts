@@ -195,9 +195,10 @@ export const pt: Dictionary = {
         description: "“Plantas medicinais, conhecimentos populares em saúde e luta por terra: uma cartilha em defesa da vida”, escrita com as mulheres do Coletivo.", links: [{ href: "https://drive.google.com/file/d/1Jtd4nYeeyt1cz69j-UivwZdQQLvay7ss/view?usp=sharing", label: "Ler a cartilha" }]
       },
       { title: "Espaço Bem Viver", description: "Área coletiva desde 2021: ervas medicinais, hortaliças tradicionais, frutíferas, húmus, oficinas e intercâmbios.", links: [{ href: "https://www.instagram.com/coletivo.bemviver/", label: "Coletivo Bem Viver no Instagram" }] },
-      { title: "Dois minidocumentários", description: "Em parceria com o Coletivo Audiovisual Caroá e a Escola de Gastronomia Social Ivens Dias Branco.", links: [{ href: "https://www.youtube.com/watch?v=iVvl3MRPU7s", label: "Assistir: Lagoa dos Cavalos e o Bem Viver" }] },
+      { title: "Dois minidocumentários", description: "Em parceria com o Coletivo Audiovisual Caroá e a Escola de Gastronomia Social Ivens Dias Branco.", links: [{ href: "https://www.youtube.com/watch?v=iVvl3MRPU7s", label: "Assistir: Lagoa dos Cavalos e o Bem Viver" }, { href: "https://www.youtube.com/watch?v=kDiJanz7bkE", label: "Assistir: PANC na Lagoa dos Cavalos" }] },
       { title: "Tese com banca popular", description: "A comunidade participou da avaliação do conhecimento produzido sobre ela e com ela." },
       { title: "Dois artigos científicos", description: "Mercator (2026), sobre o método de reparação; Conexões (2020), sobre o TAC e o conflito.", links: [{ href: "https://doi.org/10.36517/rm2026.e25009", label: "Ler o artigo na Mercator (2026)" }, { href: "https://doi.org/10.21439/conexoes.v14i2.1876", label: "Ler o artigo na Conexões (2020)" }] },
+      { title: "PANC na Lagoa dos Cavalos", description: "Pesquisa de Osarina Lima, nascida em Russas, sobre as plantas alimentícias não convencionais da comunidade, com horta agroecológica, receitas e um calendário de cultivo para agricultoras e agricultores.", links: [{ href: "https://gastronomiasocial.org.br/laboratorio-de-criac/osarina-lima/", label: "Conhecer a pesquisa" }] },
       { title: "Acervo Equador", description: "Áudios, fotos e 117 transcrições de entrevistas com quem faz a Clínica Ambiental." },
     ],
   },
@@ -226,6 +227,7 @@ export const pt: Dictionary = {
     ],
     contactsTitle: "Contatos públicos",
     correspondingAuthor: "Autora correspondente do artigo:",
+    laraPage: "Página de Lara Braga",
     clinicLocation: "Quito e Nueva Loja, Equador",
   },
   references: {

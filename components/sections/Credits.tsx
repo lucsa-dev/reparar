@@ -28,6 +28,7 @@ export function Credits({ content }: { content: Dictionary["credits"] }) {
         <h3 className="subhead">{content.contactsTitle}</h3>
         <div className="contact mt-half">
           <span><Icon name="mail" size={16} /> {content.correspondingAuthor} <code>laraqueirozvb@gmail.com</code></span>
+          <span><Icon name="arrow" size={16} /> <a href="https://linktr.ee/lara.vbraga" target="_blank" rel="noopener">{content.laraPage}</a></span>
           <span><Icon name="mail" size={16} /> Clínica Ambiental: <code>clinicambiental@gmail.com</code> · {content.clinicLocation}</span>
         </div>
       </div>
