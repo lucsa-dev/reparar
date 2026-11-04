@@ -77,7 +77,7 @@ export type Dictionary = {
   fruits: {
     label: string;
     title: string;
-    items: { title: string; description: string }[];
+    items: { title: string; description: string; link?: { href: string; label: string } }[];
   };
   archive: { label: string; title: string; intro: string; cta: string };
   credits: {

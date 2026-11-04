@@ -192,10 +192,10 @@ export const en: Dictionary = {
     items: [
       {
         title: "Medicinal plants booklet",
-        description: "“Plantas medicinais, conhecimentos populares em saúde e luta por terra: uma cartilha em defesa da vida” (in Portuguese), written with the women of the Collective.",
+        description: "“Plantas medicinais, conhecimentos populares em saúde e luta por terra: uma cartilha em defesa da vida” (in Portuguese), written with the women of the Collective.", link: { href: "https://tr.ee/8v2VcmZmiC", label: "Read the booklet (in Portuguese)" }
       },
-      { title: "Bem Viver Space", description: "A collective area since 2021: medicinal herbs, traditional vegetables, fruit trees, humus, workshops and exchanges." },
-      { title: "Two short documentaries", description: "In partnership with the Caroá Audiovisual Collective and the Ivens Dias Branco School of Social Gastronomy." },
+      { title: "Bem Viver Space", description: "A collective area since 2021: medicinal herbs, traditional vegetables, fruit trees, humus, workshops and exchanges.", link: { href: "https://www.instagram.com/coletivo.bemviver/", label: "Bem Viver Collective on Instagram" } },
+      { title: "Two short documentaries", description: "In partnership with the Caroá Audiovisual Collective and the Ivens Dias Branco School of Social Gastronomy.", link: { href: "https://tr.ee/E85-yBxU0d", label: "Watch: Lagoa dos Cavalos e o Bem Viver" } },
       { title: "A thesis with a community panel", description: "The community took part in evaluating the knowledge produced about it and with it." },
       { title: "Two scientific articles", description: "Mercator (2026), on the reparation method; Conexões (2020), on the conduct adjustment agreement and the conflict." },
       { title: "Ecuador archive", description: "Audio, photos and 117 transcripts of interviews with the people who make up Clínica Ambiental." },

@@ -18,6 +18,12 @@ export function Fruits({ content, locale }: { content: Dictionary["fruits"]; loc
               <Icon name={fruitIcons[index]} size={26} className="card-icon" />
               <h3>{item.title}</h3>
               <p>{item.description}</p>
+              {item.link && (
+                <a className="fruit-link" href={item.link.href} target="_blank" rel="noopener">
+                  {item.link.label}
+                  <Icon name="arrow" size={16} />
+                </a>
+              )}
             </div>
           ))}
         </div>
