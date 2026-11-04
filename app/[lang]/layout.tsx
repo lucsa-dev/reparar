@@ -24,7 +24,7 @@ export function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
 }
 
-export const viewport: Viewport = { viewportFit: "cover", themeColor: "#F8F3E7" };
+export const viewport: Viewport = { viewportFit: "cover", themeColor: "#1E1711" };
 
 export async function generateMetadata({ params }: LangParams): Promise<Metadata> {
   const { lang } = await params;
@@ -53,6 +53,7 @@ export default async function RootLayout({ children, params }: LangParams & { ch
   return (
     <html
       lang={localeDetails[lang].htmlLang}
+      data-theme="dark"
       className={`${lora.variable} ${dmSans.variable}`}
       suppressHydrationWarning
     >
