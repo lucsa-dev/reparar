@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { ArchiveTeaser } from "@/components/sections/ArchiveTeaser";
 import { BigQuote } from "@/components/sections/BigQuote";
 import { Credits } from "@/components/sections/Credits";
 import { FieldMission } from "@/components/sections/FieldMission";
@@ -30,6 +31,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
       <BigQuote content={content.bigQuote} />
       <FieldMission content={content.fieldMission} />
       <Fruits content={content.fruits} />
+      <ArchiveTeaser content={content.archive} locale={lang} />
       <Credits content={content.credits} />
       <References content={content.references} />
       <Footer content={content.footer} />

@@ -1,5 +1,8 @@
+import { Icon, type IconName } from "@/components/Icon";
 import { SectionHeading } from "@/components/SectionHeading";
 import type { Dictionary } from "@/content/types";
+
+const stageIcons: IconName[] = ["eye", "sprout", "sun"];
 
 export function Method({ content }: { content: Dictionary["method"] }) {
   return (
@@ -10,13 +13,14 @@ export function Method({ content }: { content: Dictionary["method"] }) {
           <p>{content.intro}</p>
         </div>
         <div className="stages">
-          {content.stages.map((stage) => (
+          {content.stages.map((stage, index) => (
             <article className="stage" key={stage.step}>
+              <span className="stage-icon"><Icon name={stageIcons[index]} size={28} /></span>
               <span className="step">{stage.step}</span>
               <h3>{stage.name}</h3>
               {stage.originalName && <span className="es" lang="es">{stage.originalName}</span>}
-              <p className="side"><b>{content.ecuadorLabel}</b>{stage.ecuador}</p>
-              <p className="side"><b>{content.cearaLabel}</b>{stage.ceara}</p>
+              <p className="side"><b><Icon name="pin" size={14} />{content.ecuadorLabel}</b>{stage.ecuador}</p>
+              <p className="side"><b><Icon name="pin" size={14} />{content.cearaLabel}</b>{stage.ceara}</p>
             </article>
           ))}
         </div>

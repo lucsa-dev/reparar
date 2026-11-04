@@ -3,3 +3,4 @@
 .grid2 h3{font-size:1.15rem;margin-bottom:.3rem}
 .grid2 p{font-size:1rem}
 @media (max-width:640px){.grid2{grid-template-columns:1fr}}
+.card-icon{display:block;color:var(--accent);margin-bottom:.45rem}

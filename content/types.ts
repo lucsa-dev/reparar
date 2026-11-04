@@ -76,6 +76,7 @@ export type Dictionary = {
     title: string;
     items: { title: string; description: string }[];
   };
+  archive: { label: string; title: string; intro: string; cta: string };
   credits: {
     label: string;
     title: string;

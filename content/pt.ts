@@ -194,6 +194,12 @@ export const pt: Dictionary = {
       { title: "Acervo Equador", description: "Áudios, fotos e 117 transcrições de entrevistas com quem faz a Clínica Ambiental." },
     ],
   },
+  archive: {
+    label: "acervo de plantas",
+    title: "As plantas que guardam essa história",
+    intro: "São 135 espécies do livro Acervo Botânico e os nomes, significados, usos e histórias contados nos territórios. As fotos mostram as espécies, não as comunidades.",
+    cta: "Explorar o acervo",
+  },
   credits: {
     label: "quem faz",
     title: "Parcerias e créditos",

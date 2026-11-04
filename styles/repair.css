@@ -2,3 +2,5 @@
 .five li{display:grid;grid-template-columns:9.5rem 1fr;gap:1rem;padding-bottom:.9rem;border-bottom:1px dashed var(--line)}
 .five b{font-family:var(--f-ui)}
 @media (max-width:560px){.five li{grid-template-columns:1fr;gap:.2rem}}
+.five b{display:flex;align-items:flex-start;gap:.5rem}
+.element-icon{flex:none;color:var(--accent)}

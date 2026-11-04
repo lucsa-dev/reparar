@@ -5,3 +5,5 @@ blockquote cite{font-style:normal;font-family:var(--f-ui);font-size:.92rem;color
 .big-quote blockquote{border-left-color:var(--accent-ink);margin:0}
 .big-quote blockquote p{font-size:clamp(1.3rem,2.6vw,1.75rem);font-weight:500}
 .big-quote cite{color:var(--accent-ink);opacity:.85}
+.quote-icon{display:block;color:var(--sol);margin-bottom:.4rem}
+.big-quote .quote-icon{color:var(--accent-ink);opacity:.75}

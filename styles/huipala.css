@@ -15,3 +15,5 @@
 .horiz b{font-family:var(--f-ui);display:block}
 @media (max-width:640px){.horiz{grid-template-columns:1fr}}
 .levels-note{max-width:68ch;margin-inline:auto}
+.dims span{display:inline-flex;align-items:center;gap:.4rem}
+.dims svg{flex:none;color:var(--accent)}

@@ -194,6 +194,12 @@ export const en: Dictionary = {
       { title: "Ecuador archive", description: "Audio, photos and 117 transcripts of interviews with the people who make up Clínica Ambiental." },
     ],
   },
+  archive: {
+    label: "plant archive",
+    title: "The plants that hold this story",
+    intro: "Here are 135 species from the Acervo Botânico book, with the names, meanings, uses and stories told in the territories. The photos show the species, not the communities.",
+    cta: "Explore the archive",
+  },
   credits: {
     label: "who does it",
     title: "Partners and credits",

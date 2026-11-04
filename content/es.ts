@@ -191,6 +191,12 @@ export const es: Dictionary = {
       { title: "Archivo Ecuador", description: "Audios, fotos y 117 transcripciones de entrevistas con quienes hacen la Clínica Ambiental." },
     ],
   },
+  archive: {
+    label: "archivo de plantas",
+    title: "Las plantas que guardan esta historia",
+    intro: "Son 135 especies del libro Acervo Botânico y los nombres, significados, usos e historias contados en los territorios. Las fotos muestran las especies, no las comunidades.",
+    cta: "Explorar el archivo",
+  },
   credits: {
     label: "quién lo hace",
     title: "Alianzas y créditos",

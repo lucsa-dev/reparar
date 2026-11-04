@@ -1,6 +1,9 @@
+import { Icon, type IconName } from "@/components/Icon";
 import { RichText } from "@/components/RichText";
 import { SectionHeading } from "@/components/SectionHeading";
 import type { Dictionary } from "@/content/types";
+
+const dimensionIcons: IconName[] = ["book", "hand", "heart", "sprout", "store", "zap", "smile", "users"];
 
 export function Huipala({ content }: { content: Dictionary["huipala"] }) {
   return (
@@ -22,8 +25,8 @@ export function Huipala({ content }: { content: Dictionary["huipala"] }) {
         <h3 className="subhead">{content.matrixTitle}</h3>
         <p className="small mt-half">{content.matrixIntro}</p>
         <div className="dims">
-          {content.dimensions.map((dimension) => (
-            <span key={dimension}>{dimension}</span>
+          {content.dimensions.map((dimension, index) => (
+            <span key={dimension}><Icon name={dimensionIcons[index]} size={16} />{dimension}</span>
           ))}
         </div>
         <RichText as="p" className="small" html={content.horizonsHtml} />
