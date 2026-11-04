@@ -37,6 +37,7 @@ export default async function PlantsPage({ params }: PlantsPageProps) {
         <div className="plants-notices">
           <p>{copy.draftNotice}</p>
           <p>{copy.healthNotice}</p>
+          <p>{copy.photoCredit}</p>
         </div>
         <PlantCatalog locale={lang} />
       </main>

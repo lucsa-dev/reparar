@@ -33,6 +33,8 @@ export function entryMatchesCategory(entry: CatalogEntry, category: PlantCategor
   return entry.plant?.categories.includes(category) ?? false;
 }
 
-export function photoPath({ page }: BookSpecies): string {
-  return `/plants/p${String(page).padStart(3, "0")}.jpg`;
+export type CatalogPhoto = { src: string; species: BookSpecies };
+
+export function entryPhotos(entry: CatalogEntry): CatalogPhoto[] {
+  return entry.photos.flatMap((species) => species.photos.map((file) => ({ src: `/plants/${file}`, species })));
 }

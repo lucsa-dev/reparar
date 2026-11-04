@@ -19,7 +19,7 @@ export type Plant = {
   caution?: boolean;
 };
 
-export type BookSpecies = { page: number; name: string; fullName: string; list: 1 | 2 | 3 };
+export type BookSpecies = { page: number; name: string; fullName: string; list: 1 | 2 | 3; photos: string[] };
 
 export type PlantCopy = {
   metaTitle: string;
@@ -43,6 +43,10 @@ export type PlantCopy = {
   withReports: string;
   noReport: string;
   photoCredit: string;
+  noPhoto: string;
+  previousPhoto: string;
+  nextPhoto: string;
+  photoCount: (current: number, total: number) => string;
   bookLists: Record<BookSpecies["list"], string>;
   count: (shown: number, total: number) => string;
   empty: string;
@@ -69,7 +73,11 @@ export const plantCopy: Record<Locale, PlantCopy> = {
     story: "História",
     withReports: "Com relatos",
     noReport: "Ainda sem relato registrado nas consultas.",
-    photoCredit: "Imagem: livro Acervo Botânico",
+    photoCredit: "Imagens: livro Acervo Botânico.",
+    noPhoto: "Ainda sem foto",
+    previousPhoto: "Foto anterior",
+    nextPhoto: "Próxima foto",
+    photoCount: (current, total) => `Foto ${current} de ${total}`,
     bookLists: { 1: "Provavelmente domesticada", 2: "Provavelmente semidomesticada", 3: "Com populações em início de domesticação" },
     cautionNote: "Planta tóxica, potente ou de uso delicado. Não use sem orientação de quem conhece.",
     count: (shown, total) => `${shown} de ${total} plantas`,
@@ -95,7 +103,11 @@ export const plantCopy: Record<Locale, PlantCopy> = {
     story: "Historia",
     withReports: "Con relatos",
     noReport: "Aún sin relato registrado en las consultas.",
-    photoCredit: "Imagen: libro Acervo Botânico",
+    photoCredit: "Imágenes: libro Acervo Botânico.",
+    noPhoto: "Aún sin foto",
+    previousPhoto: "Foto anterior",
+    nextPhoto: "Siguiente foto",
+    photoCount: (current, total) => `Foto ${current} de ${total}`,
     bookLists: { 1: "Probablemente domesticada", 2: "Probablemente semidomesticada", 3: "Con poblaciones en inicio de domesticación" },
     cautionNote: "Planta tóxica, potente o de uso delicado. No la use sin orientación de quien la conoce.",
     count: (shown, total) => `${shown} de ${total} plantas`,
@@ -121,7 +133,11 @@ export const plantCopy: Record<Locale, PlantCopy> = {
     story: "Story",
     withReports: "With accounts",
     noReport: "No account recorded in the consultations yet.",
-    photoCredit: "Image: Acervo Botânico book",
+    photoCredit: "Images: Acervo Botânico book.",
+    noPhoto: "No photo yet",
+    previousPhoto: "Previous photo",
+    nextPhoto: "Next photo",
+    photoCount: (current, total) => `Photo ${current} of ${total}`,
     bookLists: { 1: "Probably domesticated", 2: "Probably semi-domesticated", 3: "With incipiently domesticated populations" },
     cautionNote: "Toxic, potent or delicate plant. Do not use without guidance from those who know it.",
     count: (shown, total) => `${shown} of ${total} plants`,
