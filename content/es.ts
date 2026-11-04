@@ -175,6 +175,8 @@ export const es: Dictionary = {
       { date: "2025", place: "Quito · Universidad Andina Simón Bolívar", record: "Clase y evento sobre derrames de petróleo, mecheros y litigio ambiental" },
     ],
     source: "Fuente: organización del archivo de transcripciones del proyecto. Fechas de carpeta, sujetas a revisión.",
+    galleryTitle: "La misión en imágenes",
+    galleryIntro: "Fotos del archivo del proyecto, tomadas durante la misión de campo en Ecuador.",
   },
   fruits: {
     label: "lo que ya brotó",

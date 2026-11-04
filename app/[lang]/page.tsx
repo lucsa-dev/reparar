@@ -29,7 +29,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
       <Territory content={content.territory} />
       <Voices content={content.voices} />
       <BigQuote content={content.bigQuote} />
-      <FieldMission content={content.fieldMission} />
+      <FieldMission content={content.fieldMission} locale={lang} />
       <Fruits content={content.fruits} />
       <ArchiveTeaser content={content.archive} locale={lang} />
       <Credits content={content.credits} />

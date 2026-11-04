@@ -1,7 +1,9 @@
+import { FieldGallery } from "@/components/FieldGallery";
 import { SectionHeading } from "@/components/SectionHeading";
+import type { Locale } from "@/content";
 import type { Dictionary } from "@/content/types";
 
-export function FieldMission({ content }: { content: Dictionary["fieldMission"] }) {
+export function FieldMission({ content, locale }: { content: Dictionary["fieldMission"]; locale: Locale }) {
   return (
     <section>
       <div className="wide">
@@ -30,6 +32,9 @@ export function FieldMission({ content }: { content: Dictionary["fieldMission"] 
           </table>
         </div>
         <p className="small muted ui mt-1">{content.source}</p>
+        <h3 className="subhead">{content.galleryTitle}</h3>
+        <p className="small mt-half">{content.galleryIntro}</p>
+        <FieldGallery locale={locale} />
       </div>
     </section>
   );

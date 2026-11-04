@@ -70,6 +70,8 @@ export type Dictionary = {
     columns: { date: string; place: string; record: string };
     rows: { date: string; place: string; record: string }[];
     source: string;
+    galleryTitle: string;
+    galleryIntro: string;
   };
   fruits: {
     label: string;

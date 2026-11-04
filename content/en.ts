@@ -178,6 +178,8 @@ export const en: Dictionary = {
       { date: "2025", place: "Quito · Universidad Andina Simón Bolívar", record: "Class and event on oil spills, gas flares and environmental litigation" },
     ],
     source: "Source: organization of the project's transcript archive. Dates come from folder names and are subject to review.",
+    galleryTitle: "The mission in pictures",
+    galleryIntro: "Photos from the project's archive, taken during the field mission in Ecuador.",
   },
   fruits: {
     label: "what has already sprouted",
