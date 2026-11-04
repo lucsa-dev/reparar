@@ -6,7 +6,7 @@ const fruitIcons: IconName[] = ["book", "sprout", "film", "graduation", "documen
 
 export function Fruits({ content }: { content: Dictionary["fruits"] }) {
   return (
-    <section>
+    <section id="fruits">
       <div className="wrap">
         <SectionHeading label={content.label} title={content.title} />
         <div className="grid2">

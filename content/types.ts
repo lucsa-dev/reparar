@@ -2,6 +2,7 @@
 export type Dictionary = {
   meta: { title: string; description: string };
   ui: { languageLabel: string; themeToggle: string };
+  nav: { label: string; items: { id: string; label: string }[] };
   hero: {
     kicker: string;
     titleHtml: string;

@@ -12,6 +12,7 @@ import { References } from "@/components/sections/References";
 import { Repair } from "@/components/sections/Repair";
 import { Territory } from "@/components/sections/Territory";
 import { Voices } from "@/components/sections/Voices";
+import { SiteNav } from "@/components/SiteNav";
 import { TopBar } from "@/components/TopBar";
 import { getDictionary, isLocale } from "@/content";
 
@@ -22,6 +23,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
   return (
     <>
       <TopBar locale={lang} ui={content.ui} />
+      <SiteNav content={content.nav} />
       <Hero content={content.hero} locale={lang} />
       <Repair content={content.repair} />
       <Method content={content.method} />

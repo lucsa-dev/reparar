@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { ZoomableImage } from "@/components/ZoomableImage";
 import type { Locale } from "@/content";
 import type { CatalogPhoto } from "@/content/plant-catalog";
 import { plantCopy } from "@/content/plants";
@@ -30,7 +31,7 @@ export function PhotoCarousel({ photos, locale }: PhotoCarouselProps) {
       <div className="plant-track" ref={trackRef} onScroll={syncCurrent}>
         {photos.map(({ src, species }) => (
           <figure className="plant-slide" key={src}>
-            <img src={src} alt={species.fullName} loading="lazy" decoding="async" />
+            <ZoomableImage src={src} alt={species.fullName} locale={locale} caption={`${species.fullName} · ${copy.bookLists[species.list]}`} />
             <figcaption><i>{species.fullName}</i> · {copy.bookLists[species.list]}</figcaption>
           </figure>
         ))}

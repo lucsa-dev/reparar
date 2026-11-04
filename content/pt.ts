@@ -7,6 +7,10 @@ export const pt: Dictionary = {
       "Uma comunidade do sertão cearense e uma organização da Amazônia equatoriana aprendem uma com a outra a curar a terra, a saúde e o tecido social.",
   },
   ui: { languageLabel: "Idioma", themeToggle: "Alternar entre tema claro e escuro" },
+  nav: {
+    label: "Seções da página",
+    items: [{ id: "repair", label: "O que é" }, { id: "method", label: "Método" }, { id: "huipala", label: "Huipala" }, { id: "territory", label: "Território" }, { id: "voices", label: "Vozes" }, { id: "field-mission", label: "Missão" }, { id: "fruits", label: "Frutos" }, { id: "archive", label: "Acervo" }, { id: "credits", label: "Parcerias" }, { id: "references", label: "Referências" }],
+  },
   hero: {
     kicker: "pesquisa participativa de base comunitária · Ceará ⇄ Equador",
     titleHtml:

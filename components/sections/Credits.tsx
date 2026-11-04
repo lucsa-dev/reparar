@@ -6,7 +6,7 @@ const groupIcons: IconName[] = ["pin", "pin", "graduation", "handshake"];
 
 export function Credits({ content }: { content: Dictionary["credits"] }) {
   return (
-    <section>
+    <section id="credits">
       <div className="wrap">
         <SectionHeading label={content.label} title={content.title} />
         <div className="grid2">

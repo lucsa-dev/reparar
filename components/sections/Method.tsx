@@ -6,7 +6,7 @@ const stageIcons: IconName[] = ["eye", "sprout", "sun"];
 
 export function Method({ content }: { content: Dictionary["method"] }) {
   return (
-    <section>
+    <section id="method">
       <div className="wide">
         <div className="wrap start">
           <SectionHeading label={content.label} title={content.title} />

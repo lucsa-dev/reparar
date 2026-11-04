@@ -1,5 +1,6 @@
 import type { Locale } from "@/content";
 import { fieldPhotos } from "@/content/field-photos";
+import { ZoomableImage } from "./ZoomableImage";
 
 export function FieldGallery({ locale }: { locale: Locale }) {
   return (
@@ -7,7 +8,7 @@ export function FieldGallery({ locale }: { locale: Locale }) {
       {fieldPhotos.map(({ file, place, portrait, caption }) => (
         <li key={file}>
           <figure>
-            <img src={`/field/${file}`} alt={caption[locale]} loading="lazy" decoding="async" className={portrait ? "portrait" : undefined} />
+            <ZoomableImage src={`/field/${file}`} alt={caption[locale]} locale={locale} caption={place ? `${caption[locale]} · ${place}` : caption[locale]} className={portrait ? "portrait" : undefined} />
             <figcaption>{place ? `${caption[locale]} · ${place}` : caption[locale]}</figcaption>
           </figure>
         </li>

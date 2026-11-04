@@ -7,7 +7,7 @@ const dimensionIcons: IconName[] = ["book", "hand", "heart", "sprout", "store", 
 
 export function Huipala({ content }: { content: Dictionary["huipala"] }) {
   return (
-    <section>
+    <section id="huipala">
       <div className="wrap">
         <SectionHeading label={content.label} title={content.title} />
         <RichText as="p" html={content.introHtml} />

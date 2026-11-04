@@ -1,0 +1,8 @@
+.site-nav{position:sticky;top:0;z-index:10;margin-top:.75rem;background:var(--bg);border-block:1px solid var(--line)}
+.site-nav ul{list-style:none;margin-block:0;padding:0;display:flex;gap:.25rem;overflow-x:auto;scrollbar-width:none}
+.site-nav ul::-webkit-scrollbar{display:none}
+.site-nav a{display:flex;align-items:center;min-height:2.75rem;padding-inline:.7rem;font-family:var(--f-ui);font-size:.95rem;font-weight:700;white-space:nowrap;color:var(--ink);text-decoration:none}
+.site-nav a:hover{color:var(--accent);text-decoration:underline}
+.site-nav a:focus-visible{outline-offset:-3px}
+section[id]{scroll-margin-top:3.25rem}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}

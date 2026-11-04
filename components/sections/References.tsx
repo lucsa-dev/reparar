@@ -4,7 +4,7 @@ import type { Dictionary } from "@/content/types";
 
 export function References({ content }: { content: Dictionary["references"] }) {
   return (
-    <section>
+    <section id="references">
       <div className="wrap">
         <SectionHeading label={content.label} title={content.title} />
         <ul className="refs">

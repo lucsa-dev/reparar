@@ -5,7 +5,7 @@ import type { Dictionary } from "@/content/types";
 
 export function FieldMission({ content, locale }: { content: Dictionary["fieldMission"]; locale: Locale }) {
   return (
-    <section>
+    <section id="field-mission">
       <div className="wide">
         <div className="wrap start">
           <SectionHeading label={content.label} title={content.title} />

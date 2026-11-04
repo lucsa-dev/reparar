@@ -3,7 +3,7 @@ import type { Dictionary } from "@/content/types";
 
 export function Territory({ content }: { content: Dictionary["territory"] }) {
   return (
-    <section>
+    <section id="territory">
       <div className="wrap">
         <SectionHeading label={content.label} title={content.title} />
         <p>{content.intro}</p>

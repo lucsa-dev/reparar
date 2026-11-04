@@ -7,7 +7,7 @@ const elementIcons: IconName[] = ["home", "coins", "heartPulse", "medal", "shiel
 
 export function Repair({ content }: { content: Dictionary["repair"] }) {
   return (
-    <section>
+    <section id="repair">
       <div className="wrap">
         <SectionHeading label={content.label} title={content.title} />
         <RichText as="p" html={content.introHtml} />

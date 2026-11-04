@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Icon, type IconName } from "@/components/Icon";
 import { RichText } from "@/components/RichText";
+import { ZoomableImage } from "@/components/ZoomableImage";
 import { localeHref, type Locale } from "@/content";
 import { getHeroPhotos } from "@/content/home-photos";
 import type { Dictionary } from "@/content/types";
@@ -19,7 +20,7 @@ export function Hero({ content, locale }: { content: Dictionary["hero"]; locale:
         <div className="hero-mosaic">
           {getHeroPhotos(locale).map(({ src, name }) => (
             <figure key={src}>
-              <img src={src} alt={name} />
+              <ZoomableImage src={src} alt={name} locale={locale} lazy={false} />
               <figcaption>{name}</figcaption>
             </figure>
           ))}

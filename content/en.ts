@@ -7,6 +7,10 @@ export const en: Dictionary = {
       "A community in the backlands of Ceará and an organization in the Ecuadorian Amazon learn from each other how to heal the land, health and the social fabric.",
   },
   ui: { languageLabel: "Language", themeToggle: "Switch between light and dark theme" },
+  nav: {
+    label: "Page sections",
+    items: [{ id: "repair", label: "What it is" }, { id: "method", label: "Method" }, { id: "huipala", label: "Huipala" }, { id: "territory", label: "Territory" }, { id: "voices", label: "Voices" }, { id: "field-mission", label: "Mission" }, { id: "fruits", label: "Fruits" }, { id: "archive", label: "Archive" }, { id: "credits", label: "Partners" }, { id: "references", label: "References" }],
+  },
   hero: {
     kicker: "community-based participatory research · Ceará ⇄ Ecuador",
     titleHtml:
