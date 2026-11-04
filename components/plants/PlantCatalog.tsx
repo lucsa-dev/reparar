@@ -2,7 +2,8 @@
 
 import { useMemo, useState } from "react";
 import type { Locale } from "@/content";
-import { plantCategories, plantCopy, plants, type Plant, type PlantCategory } from "@/content/plants";
+import { plants } from "@/content/plant-data";
+import { plantCategories, plantCopy, type Plant, type PlantCategory } from "@/content/plants";
 
 function normalize(text: string) {
   return text.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase();
@@ -10,7 +11,8 @@ function normalize(text: string) {
 
 function searchableText(plant: Plant, locale: Locale) {
   const localNames = plant.localNames?.map(({ name, language }) => `${name} ${language}`) ?? [];
-  return normalize([plant.name[locale], plant.uses[locale], ...plant.territories, ...localNames].join(" "));
+  const details = [plant.scientificName, plant.meaning?.[locale], plant.story?.[locale]].filter(Boolean);
+  return normalize([plant.name[locale], plant.uses[locale], ...details, ...plant.territories, ...localNames].join(" "));
 }
 
 export function PlantCatalog({ locale }: { locale: Locale }) {
@@ -54,7 +56,10 @@ export function PlantCatalog({ locale }: { locale: Locale }) {
               {plant.localNames?.map(({ name, language }) => (
                 <p className="plant-local-name" key={name}><i>{name}</i> · {language}</p>
               ))}
-              <p className="plant-uses">{plant.uses[locale]}</p>
+              {plant.scientificName && <p className="plant-scientific"><i>{plant.scientificName}</i></p>}
+              {plant.meaning && <p className="plant-detail"><b>{copy.meaning}:</b> {plant.meaning[locale]}</p>}
+              <p className="plant-detail"><b>{copy.uses}:</b> {plant.uses[locale]}</p>
+              {plant.story && <p className="plant-detail"><b>{copy.story}:</b> {plant.story[locale]}</p>}
               {plant.caution && <p className="plant-caution">{copy.cautionNote}</p>}
               <div className="plant-tags">
                 {plant.categories.map((option) => (

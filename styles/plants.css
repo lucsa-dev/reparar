@@ -18,7 +18,9 @@
 .plant-card h2{font-size:1.35rem;font-weight:700;margin:0}
 .plant-card p{margin:0}
 .plant-local-name{font-family:var(--f-ui);font-size:.95rem;color:var(--muted)}
-.plant-uses{font-size:1.02rem;line-height:1.5}
+.plant-scientific{font-family:var(--f-ui);font-size:.88rem;color:var(--muted)}
+.plant-detail{font-size:1.02rem;line-height:1.5}
+.plant-detail b{font-family:var(--f-ui);font-size:.92rem}
 .plant-caution{font-family:var(--f-ui);font-size:.9rem;font-weight:700;color:var(--sol)}
 .plant-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:auto;padding-top:.4rem;font-family:var(--f-ui);font-size:.82rem}
 .plant-tags span{background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.12rem .55rem}
