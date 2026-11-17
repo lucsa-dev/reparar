@@ -70,6 +70,38 @@ export function Huipala({ content, locale }: { content: Dictionary["huipala"]; l
         <RichText as="p" className="mt-half" html={content.processHtml} />
         <RichText as="p" html={content.adaptHtml} />
         <RichText as="p" className="small muted ui" html={content.sourceHtml} />
+      </div>
+      <div className="wrap ceara">
+        <h3 className="subhead">{content.ceara.title}</h3>
+        <p className="mt-half">{content.ceara.intro}</p>
+        <p>{content.ceara.stepsIntro}</p>
+        <ol className="ceara-steps">
+          {content.ceara.steps.map((step) => (
+            <li key={step}>{step}</li>
+          ))}
+        </ol>
+        <p>{content.ceara.gradientIntro}</p>
+        <ol className="ceara-gradient" aria-label={content.ceara.gradientIntro}>
+          {content.ceara.gradient.map((step) => (
+            <li key={step}>{step}</li>
+          ))}
+        </ol>
+        <p>{content.ceara.utopiaIntro}</p>
+        <dl className="ceara-utopias">
+          {content.ceara.utopias.map(({ dimension, utopia }) => (
+            <div key={dimension}>
+              <dt>{dimension}</dt>
+              <dd>{utopia}</dd>
+            </div>
+          ))}
+        </dl>
+        <RichText as="p" html={content.ceara.closingHtml} />
+        <blockquote>
+          <p>«{content.ceara.quote}»</p>
+          {content.ceara.quoteTranslation && <p className="small muted ui">{content.ceara.quoteTranslation}</p>}
+          <cite>{content.ceara.cite}</cite>
+        </blockquote>
+        <RichText as="p" className="small muted ui" html={content.ceara.sourceHtml} />
         <h3 className="subhead">{content.matrixTitle}</h3>
         <p className="small mt-half">{content.matrixIntro}</p>
         <div className="dims">

@@ -52,6 +52,22 @@ export type Dictionary = {
     processHtml: string;
     adaptHtml: string;
     sourceHtml: string;
+    /** The matrix as remodeled in Lagoa dos Cavalos (Braga, 2020, ch. 3). */
+    ceara: {
+      title: string;
+      intro: string;
+      stepsIntro: string;
+      steps: string[];
+      gradientIntro: string;
+      gradient: string[];
+      utopiaIntro: string;
+      utopias: { dimension: string; utopia: string }[];
+      closingHtml: string;
+      quote: string;
+      quoteTranslation: string;
+      cite: string;
+      sourceHtml: string;
+    };
     matrixTitle: string;
     matrixIntro: string;
     dimensions: string[];

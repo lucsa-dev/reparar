@@ -115,6 +115,30 @@ export const pt: Dictionary = {
       "A Clínica avisa que a matriz não é universal: foi feita para os problemas de um trecho da Amazônia equatoriana. A grade pode ser reproduzida em qualquer lugar, mas o conteúdo de cada casa deve ser preenchido com a própria gente, começando por recolher os sonhos como ponto de chegada. Foi o que o Coletivo Bem Viver fez no Ceará.",
     sourceHtml:
       "Fonte: <a href=\"https://www.clinicambiental.org/wp-content/uploads/docs/publicaciones/alerta7huipala.pdf\" target=\"_blank\" rel=\"noopener\">Alerta Naranja nº 7, «La propuesta Huipala» (Clínica Ambiental, 2013)</a> e entrevistas da missão de campo.",
+    ceara: {
+      title: "A Huipala no sertão: Lagoa dos Cavalos",
+      intro: "Entre 2018 e 2019, o Coletivo de Pesquisa Bem Viver remodelou a matriz equatoriana para Lagoa dos Cavalos, em Russas, numa pesquisa participante da tese de doutorado de Lara Braga. Antes de medir qualquer coisa, a proposta abriu espaço para olhar os sonhos, um direito que parecia ter sido roubado com a desapropriação.",
+      stepsIntro: "Foram seis oficinas de três horas, com murais de cartões:",
+      steps: ["diagnóstico dos horizontes da realidade e da utopia, com questionário", "avaliação das categorias da matriz em grupos", "roda de conversa sobre o que é bem viver"],
+      gradientIntro: "No lugar das cores, a comunidade classificou cada prática numa escada com palavras do sertão:",
+      gradient: ["Realidade", "1. Difícil!", "2. Devagar", "3. Mais ou menos", "4. Bom", "5. Muito bom!", "6. Maravilhoso!", "Utopia"],
+      utopiaIntro: "E deu nome à utopia de cada dimensão da matriz:",
+      utopias: [
+        { dimension: "conhecimentos", utopia: "saberes populares em saúde" },
+        { dimension: "habilidades", utopia: "alimentação, agricultura e arte" },
+        { dimension: "atitudes", utopia: "hábitos saudáveis" },
+        { dimension: "produção", utopia: "diversidade e coletividade" },
+        { dimension: "comercialização", utopia: "solidariedade" },
+        { dimension: "energias", utopia: "equilíbrio" },
+        { dimension: "alegria", utopia: "encontros e natureza" },
+        { dimension: "organização", utopia: "autonomia" },
+      ],
+      closingHtml: "O ponto de partida foi um indicador escolhido pela própria comunidade: as práticas populares de saúde com plantas medicinais, rumo à valorização desses saberes. Seguiram-se os três princípios dos Indicadores para o Sumak Kawsay de Adolfo Maldonado: <strong>soberania</strong> (a comunidade decide o que medir), <strong>diversidade</strong> e <strong>simplicidade</strong> (fácil de medir pela própria gente). Na leitura da tese, a reparação foi também a criação do próprio Coletivo, que ganhou autonomia para seguir com suas práticas de saúde, sua alegria e seus sonhos.",
+      quote: "Assuntos que nunca paramos para pensar, perceber, das coisas que estão guardadas no baú. Parece que agora acordamos para vida.",
+      quoteTranslation: "",
+      cite: "Osarina Lima, agricultora e empreendedora, Lagoa dos Cavalos (2017)",
+      sourceHtml: "Fonte: BRAGA, L. Q. V. <em>Bem viver, saúde e reparação: tecendo diálogos urgentes</em>. Tese (Doutorado em Desenvolvimento e Meio Ambiente), UFC, 2020, cap. 3.",
+    },
     matrixTitle: "A Matriz de Reparação do Coletivo Bem Viver",
     matrixIntro:
       "No Ceará, as dimensões do método equatoriano viraram um fluxograma que liga as escalas local e global, individual e comunitária, popular e científica:",
@@ -259,6 +283,7 @@ export const pt: Dictionary = {
     itemsHtml: [
       'BRAGA, L. Q. V.; MEIRELES, A. J. A. Diálogos para reparação socioambiental integradora em uma pesquisa participativa de base comunitária. <em>Mercator</em>, v. 25, e25009, 2026. <a href="https://periodicos.ufc.br/mercator/article/view/100570" target="_blank" rel="noopener">periodicos.ufc.br/mercator/article/view/100570</a>',
       'BRAGA, L. Q. V.; MEIRELES, A. J. A. Os sentidos da resolução negociada de um conflito socioambiental no sertão do Ceará. <em>Conexões – Ciência e Tecnologia</em>, v. 14, n. 2, p. 86–97, 2020. <a href="https://doi.org/10.21439/conexoes.v14i2.1876" target="_blank" rel="noopener">doi.org/10.21439/conexoes.v14i2.1876</a>',
+      "BRAGA, L. Q. V. <em>Bem viver, saúde e reparação: tecendo diálogos urgentes</em>. Tese (Doutorado em Desenvolvimento e Meio Ambiente) – Universidade Federal do Ceará, Fortaleza, 2020.",
       'CLÍNICA AMBIENTAL. Soluciones socioambientales. <a href="https://www.clinicambiental.org/" target="_blank" rel="noopener">clinicambiental.org</a> · <a href="https://www.clinicambiental.org/certificacion-huipala/" target="_blank" rel="noopener">Certificação Huipala</a> · <a href="https://www.clinicambiental.org/wp-content/uploads/docs/publicaciones/alerta7huipala.pdf" target="_blank" rel="noopener">Alerta Naranja nº 7 (Proposta Huipala, 2013)</a>',
       "MALDONADO, A. <em>Una propuesta de reparación socio-ecosistémica a los impactos del metabolismo de la actividad petrolera para la Amazonía ecuatoriana</em>. Tese (Doutorado em Saúde Coletiva, Ambiente e Sociedade), Universidad Andina Simón Bolívar, Quito, 2018.",
       "BERISTAIN, C. M. (org.). <em>El derecho a la reparación en los conflictos socioambientales</em>. Bilbao: Hegoa, 2010.",
