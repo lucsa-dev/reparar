@@ -91,3 +91,6 @@
 .md .md-card .pc-senses i{width:.6rem;height:.6rem;border-radius:50%}
 .md [data-person]{cursor:help;text-decoration:underline dotted var(--muted);text-underline-offset:3px}
 .md .chip[data-person]{text-decoration:none}
+.md .md-card .pc-name{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.md .md-card .pc-flags{display:inline-flex;gap:.3rem}
+.md .md-card .pc-flag{display:block;width:21px;height:14px;border-radius:2px;box-shadow:0 0 0 1px var(--line)}

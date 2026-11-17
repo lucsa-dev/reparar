@@ -206,6 +206,7 @@ function buildMandala(){
  });
 }
 
+const flags=cs=>(cs||[]).map(c=>`<img class="pc-flag" src="/flags/${c.code.toLowerCase()}.svg" alt="${esc(c.name)}" title="${esc(c.name)}" width="21" height="14">`).join("");
 const INFO=Object.fromEntries(peopleData.people.map(p=>[p.id,p]));
 function personCardHTML(id){
  const p=INFO[id];if(!p)return"";
@@ -213,11 +214,11 @@ function personCardHTML(id){
  const rel=(p.relations||[]).map(r=>`${esc(r.type)}${r.confirmed?"":" (a confirmar)"}`);
  const place=[p.home.community,p.home.place].filter(Boolean).join(", ");
  const ints=p.interviews.map(i=>i.date.split("-").reverse().join(".")).join(" · ");
- return`<b class="pc-name">${esc(p.fullName)}</b>
+ return`<b class="pc-name">${esc(p.fullName)}<span class="pc-flags">${flags(p.countries)}</span></b>
  <span class="pc-sub">${esc(place)}</span>
  <p>${esc(p.summary)}</p>
  <dl>
-  <dt>Origem</dt><dd>${esc(p.origin)}</dd>
+  <dt>Origem</dt><dd>${(p.countries||[]).map(c=>esc(c.name)).join(" e ")}${p.countries&&p.countries.length?" · ":""}${esc(p.origin)}</dd>
   <dt>Papéis</dt><dd>${p.roles.map(esc).join("; ")}</dd>
   <dt>Na Clínica</dt><dd>${p.clinic.since?esc(p.clinic.since)+". ":""}${esc(p.clinic.how)}</dd>
   ${rel.length?`<dt>Relações</dt><dd>${rel.join("; ")}</dd>`:""}
