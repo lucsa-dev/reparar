@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { BotanicalRoots } from "@/components/BotanicalRoots";
 import { Logo } from "@/components/Logo";
-import { localeHref, type Locale } from "@/content";
+import type { Locale } from "@/content";
 import { contacts } from "@/content/contacts";
+import { pageHref } from "@/content/sections";
 import type { Dictionary } from "@/content/types";
 
 export function Footer({ content, locale }: { content: Dictionary; locale: Locale }) {
-  const home = localeHref(locale);
   return (
     <footer className="site-footer">
       <BotanicalRoots />
@@ -21,7 +21,7 @@ export function Footer({ content, locale }: { content: Dictionary; locale: Local
           <p className="footer-title">{content.nav.label}</p>
           <ul className="footer-links">
             {content.nav.items.map(({ id, label }) => (
-              <li key={id}><Link href={`${home === "/" ? "" : home}/#${id}`}>{label}</Link></li>
+              <li key={id}><Link href={pageHref(locale, id)}>{label}</Link></li>
             ))}
           </ul>
         </nav>

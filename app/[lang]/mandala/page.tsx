@@ -56,7 +56,7 @@ export default async function MandalaPage({ params }: MandalaPageProps) {
   return (
     <>
       <TopBar locale={lang} ui={content.ui} path="mandala" />
-      <SiteNav content={content.nav} home={localeHref(lang) === "/" ? "/" : `${localeHref(lang)}/`} mandalaHref={localeHref(lang, "mandala")} current="mandala" />
+      <SiteNav content={content.nav} locale={lang} current="mandala" />
       <main className="md-main wide">
         <Link className="plants-back" href={localeHref(lang)}>{text.back}</Link>
         <header className="md-hero">

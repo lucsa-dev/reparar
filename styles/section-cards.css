@@ -1,0 +1,27 @@
+.section-cards{list-style:none;margin:1.6rem 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.1rem}
+.section-cards li{min-width:0;display:flex}
+.section-card{display:flex;flex-direction:column;width:100%;color:inherit;text-decoration:none;background:var(--surface-raised);border-radius:var(--radius-l);box-shadow:var(--shadow-soft);overflow:hidden}
+.section-card img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover}
+.section-cards li:first-child .section-card img{border-top-left-radius:var(--radius-organic)}
+.section-card-body{flex:1;display:flex;flex-direction:column;gap:.45rem;padding:1.1rem 1.25rem 1.2rem}
+.section-card .label{margin:0}
+.section-card h3{font-size:1.25rem}
+.section-card-teaser{font-size:.96rem;line-height:1.5;color:var(--muted)}
+.section-card-more{display:inline-flex;align-items:center;gap:.35rem;margin-top:auto;padding-top:.4rem;font-family:var(--f-ui);font-size:.95rem;font-weight:600;color:var(--accent)}
+.section-card:hover h3,.section-card:hover .section-card-more{color:var(--highlight)}
+.section-card:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:var(--radius-l)}
+@media (prefers-reduced-motion:no-preference){.section-card{transition:transform var(--transition),box-shadow var(--transition)}.section-card:hover{transform:translateY(-2px)}}
+@media (max-width:860px){.section-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.section-cards{grid-template-columns:minmax(0,1fr)}}
+
+/* Página própria de cada seção */
+.section-page-back{padding:clamp(1.5rem,3vw,2.5rem) var(--gutter) 0;max-width:calc(var(--content-wide) + 2*var(--gutter));margin-inline:auto}
+.section-page-back .plants-back{margin-bottom:0}
+.section-page > section:first-of-type{padding-top:clamp(1.5rem,3vw,2.5rem)}
+.section-page > section.band:first-of-type{margin-top:1.5rem}
+.section-pager{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;padding:0 var(--gutter) var(--space-section);max-width:calc(var(--content-wide) + 2*var(--gutter));margin-inline:auto;font-family:var(--f-ui)}
+.section-pager a{display:flex;flex-direction:column;gap:.15rem;min-width:10rem;padding:.8rem 1.1rem;text-decoration:none;border:1.5px solid var(--line);border-radius:var(--radius-l)}
+.section-pager a:hover{border-color:var(--accent)}
+.section-pager small{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.section-pager b{font-size:1.05rem}
+.section-pager .next{margin-left:auto;text-align:right}
