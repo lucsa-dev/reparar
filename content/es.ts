@@ -10,6 +10,7 @@ export const es: Dictionary = {
   nav: {
     label: "Secciones de la página",
     menu: "Menú",
+    mandala: "Mandala",
     items: [{ id: "repair", label: "Qué es" }, { id: "method", label: "Método" }, { id: "huipala", label: "Huipala" }, { id: "territory", label: "Territorio" }, { id: "voices", label: "Voces" }, { id: "field-mission", label: "Misión" }, { id: "fruits", label: "Frutos" }, { id: "archive", label: "Archivo" }, { id: "credits", label: "Alianzas" }, { id: "references", label: "Referencias" }],
   },
   hero: {

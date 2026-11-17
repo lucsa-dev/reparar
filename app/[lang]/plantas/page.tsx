@@ -32,7 +32,7 @@ export default async function PlantsPage({ params }: PlantsPageProps) {
   return (
     <>
       <TopBar locale={lang} ui={content.ui} path="plantas" />
-      <SiteNav content={content.nav} home={localeHref(lang) === "/" ? "/" : `${localeHref(lang)}/`} />
+      <SiteNav content={content.nav} home={localeHref(lang) === "/" ? "/" : `${localeHref(lang)}/`} mandalaHref={localeHref(lang, "mandala")} />
       <main className="plants wide">
         <Link className="plants-back" href={localeHref(lang)}>{copy.back}</Link>
         <span className="label">{copy.label}</span>

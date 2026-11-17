@@ -14,7 +14,7 @@ import { Territory } from "@/components/sections/Territory";
 import { Voices } from "@/components/sections/Voices";
 import { SiteNav } from "@/components/SiteNav";
 import { TopBar } from "@/components/TopBar";
-import { getDictionary, isLocale } from "@/content";
+import { getDictionary, isLocale, localeHref } from "@/content";
 
 export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
@@ -23,7 +23,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
   return (
     <>
       <TopBar locale={lang} ui={content.ui} />
-      <SiteNav content={content.nav} />
+      <SiteNav content={content.nav} mandalaHref={localeHref(lang, "mandala")} />
       <Hero content={content.hero} locale={lang} />
       <Repair content={content.repair} locale={lang} />
       <Method content={content.method} locale={lang} />

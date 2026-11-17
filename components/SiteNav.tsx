@@ -8,9 +8,13 @@ type SiteNavProps = {
   content: Dictionary["nav"];
   /** Path of the landing page when the menu is shown on another page. */
   home?: string;
+  /** Link to the Mandala page, listed after the section anchors. */
+  mandalaHref?: string;
+  /** Marks the page link that is currently open. */
+  current?: "mandala";
 };
 
-export function SiteNav({ content, home = "" }: SiteNavProps) {
+export function SiteNav({ content, home = "", mandalaHref, current }: SiteNavProps) {
   const [open, setOpen] = useState(false);
   return (
     <nav className="site-nav" aria-label={content.label} onKeyDown={(event) => event.key === "Escape" && setOpen(false)}>
@@ -24,6 +28,11 @@ export function SiteNav({ content, home = "" }: SiteNavProps) {
             <a href={`${home}#${id}`} onClick={() => setOpen(false)}>{label}</a>
           </li>
         ))}
+        {mandalaHref && (
+          <li>
+            <a href={mandalaHref} aria-current={current === "mandala" ? "page" : undefined} onClick={() => setOpen(false)}>{content.mandala}</a>
+          </li>
+        )}
       </ul>
     </nav>
   );

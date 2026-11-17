@@ -6,12 +6,14 @@ const nextConfig: NextConfig = {
     return [
       { source: "/", destination: "/pt" },
       { source: "/plantas", destination: "/pt/plantas" },
+      { source: "/mandala", destination: "/pt/mandala" },
     ];
   },
   async redirects() {
     return [
       { source: "/pt", destination: "/", permanent: true },
       { source: "/pt/plantas", destination: "/plantas", permanent: true },
+      { source: "/pt/mandala", destination: "/mandala", permanent: true },
     ];
   },
 };
