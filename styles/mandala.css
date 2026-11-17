@@ -79,3 +79,15 @@
 .md .md-tip .tq{font-size:.84rem;color:var(--muted)}
 .md .md-tip .ts{display:flex;align-items:center;gap:.4rem;font-size:.84rem;font-weight:600}
 .md .md-tip .ts i{width:.7rem;height:.7rem;border-radius:50%;flex:none}
+.md .md-card{position:fixed;z-index:30;pointer-events:none;width:min(340px,calc(100vw - 16px));padding:.9rem 1rem;background:var(--surface-raised);border:1px solid var(--line);border-left:3px solid var(--sol);border-radius:var(--radius-m);box-shadow:var(--shadow-soft);font-family:var(--f-ui);font-size:.88rem;line-height:1.4;color:var(--ink)}
+.md .md-card .pc-name{display:block;font-family:var(--f-display);font-size:1.2rem;font-weight:600}
+.md .md-card .pc-sub{display:block;color:var(--muted);font-size:.8rem;margin-bottom:.4rem}
+.md .md-card p{margin:0 0 .5rem}
+.md .md-card dl{display:grid;grid-template-columns:auto 1fr;gap:.2rem .6rem;margin:0 0 .5rem}
+.md .md-card dt{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--highlight);padding-top:.15rem}
+.md .md-card dd{margin:0}
+.md .md-card .pc-senses{display:flex;flex-wrap:wrap;gap:.6rem;font-size:.8rem;font-weight:600}
+.md .md-card .pc-senses span{display:inline-flex;align-items:center;gap:.3rem}
+.md .md-card .pc-senses i{width:.6rem;height:.6rem;border-radius:50%}
+.md [data-person]{cursor:help;text-decoration:underline dotted var(--muted);text-underline-offset:3px}
+.md .chip[data-person]{text-decoration:none}

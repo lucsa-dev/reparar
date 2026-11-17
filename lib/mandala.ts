@@ -1,6 +1,8 @@
 // @ts-nocheck
 /* Painel "Mandala das Lideranças": as entrevistas da missão de campo lidas pelos 12 sentidos
    da mandala de "Aquarela, semiose e design". Código DOM puro, iniciado pelo componente MandalaDashboard. */
+import peopleData from "@/content/people.json";
+
 export function initMandala() {
 
 const SENSES=[
@@ -204,6 +206,44 @@ function buildMandala(){
  });
 }
 
+const INFO=Object.fromEntries(peopleData.people.map(p=>[p.id,p]));
+function personCardHTML(id){
+ const p=INFO[id];if(!p)return"";
+ const c=counts(e=>e.pid===id),top=SENSES.slice().sort((a,b)=>c[b.id]-c[a.id]).filter(s=>c[s.id]).slice(0,3);
+ const rel=(p.relations||[]).map(r=>`${esc(r.type)}${r.confirmed?"":" (a confirmar)"}`);
+ const place=[p.home.community,p.home.place].filter(Boolean).join(", ");
+ const ints=p.interviews.map(i=>i.date.split("-").reverse().join(".")).join(" · ");
+ return`<b class="pc-name">${esc(p.fullName)}</b>
+ <span class="pc-sub">${esc(place)}</span>
+ <p>${esc(p.summary)}</p>
+ <dl>
+  <dt>Origem</dt><dd>${esc(p.origin)}</dd>
+  <dt>Papéis</dt><dd>${p.roles.map(esc).join("; ")}</dd>
+  <dt>Na Clínica</dt><dd>${p.clinic.since?esc(p.clinic.since)+". ":""}${esc(p.clinic.how)}</dd>
+  ${rel.length?`<dt>Relações</dt><dd>${rel.join("; ")}</dd>`:""}
+  <dt>Entrevista</dt><dd>${esc(ints)}</dd>
+ </dl>
+ ${top.length?`<span class="pc-senses">${top.map(s=>`<span><i style="background:${s.c}"></i>${s.name}</span>`).join("")}</span>`:""}`;
+}
+function buildPersonCards(){
+ const root=document.querySelector(".md");if(!root)return;
+ const card=document.createElement("div");card.className="md-card";card.hidden=true;card.setAttribute("role","tooltip");root.appendChild(card);
+ let cur=null;
+ const show=t=>{
+  const id=t.dataset.person;if(cur===t)return;cur=t;
+  card.innerHTML=personCardHTML(id);card.hidden=false;
+  const r=t.getBoundingClientRect(),w=card.offsetWidth,h=card.offsetHeight,vw=document.documentElement.clientWidth,vh=window.innerHeight;
+  let x=Math.max(8,Math.min(r.left,vw-w-8)),y=r.bottom+8;if(y+h>vh-8)y=Math.max(8,r.top-h-8);
+  card.style.left=x+"px";card.style.top=y+"px";
+ };
+ const hide=()=>{cur=null;card.hidden=true};
+ root.addEventListener("mouseover",e=>{const t=e.target.closest("[data-person]");if(t)show(t)});
+ root.addEventListener("mouseout",e=>{const t=e.target.closest("[data-person]");if(t&&!t.contains(e.relatedTarget))hide()});
+ root.addEventListener("focusin",e=>{const t=e.target.closest("[data-person]");if(t)show(t)});
+ root.addEventListener("focusout",hide);
+ window.addEventListener("scroll",hide,{passive:true});
+}
+
 function buildHover(){
  const svg=document.getElementById("mandala"),box=svg.parentElement;
  const hl=el("path",{fill:"none",stroke:"var(--ink)","stroke-width":2,"pointer-events":"none",opacity:0},svg);
@@ -263,7 +303,7 @@ function counts(filterFn){const c=Array(13).fill(0);ALL.filter(filterFn).forEach
 const esc=s=>s.replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
 const pips=ids=>`<span class="pips">${ids.map(i=>`<span class="pip" title="${S(i).name}" style="background:${S(i).c}"></span>`).join("")}</span>`;
 
-function exHTML(e){return`<div class="ex" ${state.focus===e.key?'style="background:var(--wash);margin:0 -10px;padding:12px 10px;border-radius:10px"':""}><div class="who"><b>${esc(e.person.name)}</b><span class="qtag">${QUESTIONS[e.q-1].s}</span>${pips(e.s)}</div><p class="gist">${esc(e.t)}</p>${e.c.map(q=>`<blockquote>«${esc(q)}»</blockquote>`).join("")}</div>`}
+function exHTML(e){return`<div class="ex" ${state.focus===e.key?'style="background:var(--wash);margin:0 -10px;padding:12px 10px;border-radius:10px"':""}><div class="who"><b data-person="${e.pid}" tabindex="0">${esc(e.person.name)}</b><span class="qtag">${QUESTIONS[e.q-1].s}</span>${pips(e.s)}</div><p class="gist">${esc(e.t)}</p>${e.c.map(q=>`<blockquote>«${esc(q)}»</blockquote>`).join("")}</div>`}
 
 function renderPanel(){
  const P=document.getElementById("panel");
@@ -273,7 +313,7 @@ function renderPanel(){
   const order=SENSES.slice().sort((a,b)=>c[b.id]-c[a.id]);
   const person=state.p?PEOPLE.find(p=>p.id===state.p):null;
   P.innerHTML=`<h3>${scope?esc(scope):"Todas as entrevistas"}</h3>
-  ${person?`<p class="def"><b>${esc(person.name)}</b> · ${esc(person.role)} · ${esc(person.place)}, ${esc(person.date)}</p>`:`<p class="def">Que sentidos aparecem com mais força ${state.q?"nesta pergunta":"no conjunto das falas"}. Clique em uma barra ou numa cor da mandala para ler os trechos.</p>`}
+  ${person?`<p class="def"><b data-person="${person.id}" tabindex="0">${esc(person.name)}</b> · ${esc(person.role)} · ${esc(person.place)}, ${esc(person.date)}</p>`:`<p class="def">Que sentidos aparecem com mais força ${state.q?"nesta pergunta":"no conjunto das falas"}. Clique em uma barra ou numa cor da mandala para ler os trechos.</p>`}
   <div class="bars">${order.map(s=>`<div class="bar" data-s="${s.id}" role="button" tabindex="0"><span>${s.name}</span><span class="track"><span class="fill" style="width:${c[s.id]/max*100}%;background:${s.c}"></span></span><span class="v">${c[s.id]}</span></div>`).join("")}</div>
   ${person?ALL.filter(visible).map(exHTML).join(""):""}`;
   P.querySelectorAll(".bar").forEach(b=>{const f=()=>selectSense(+b.dataset.s);b.addEventListener("click",f);b.addEventListener("keydown",ev=>{if(ev.key==="Enter")f()})});
@@ -297,7 +337,7 @@ function buildChips(){
  const qr=document.getElementById("qRow"),pr=document.getElementById("pRow");
  const mk=(row,label,val,key,n)=>{const b=document.createElement("button");b.className="chip";b.innerHTML=esc(label)+(n!=null?`<span class="n">${n}</span>`:"");b.dataset.key=key;b.dataset.val=val==null?"":val;b.addEventListener("click",()=>{state[key]=(state[key]===val||val==null)?null:val;state.focus=null;render()});row.appendChild(b)};
  mk(qr,"Todas",null,"q");QUESTIONS.forEach(q=>mk(qr,q.s,q.id,"q",ALL.filter(e=>e.q===q.id).length));
- mk(pr,"Todas",null,"p");PEOPLE.forEach(p=>mk(pr,p.name,p.id,"p"));
+ mk(pr,"Todas",null,"p");PEOPLE.forEach(p=>mk(pr,p.name,p.id,"p"));pr.querySelectorAll(".chip").forEach(b=>{if(b.dataset.val)b.dataset.person=b.dataset.val});
 }
 function syncChips(){document.querySelectorAll(".chip[data-key]").forEach(b=>{const k=b.dataset.key,v=b.dataset.val;const cur=state[k];const val=v===""?null:(k==="q"?+v:v);b.setAttribute("aria-pressed",String(cur===val))})}
 
@@ -306,7 +346,7 @@ function heat(tableId,rows,rowLabel,filterFor,prime){
  const data=rows.map(r=>counts(filterFor(r)));
  const max=Math.max(1,...data.flatMap(c=>c.slice(1)));
  let h=`<thead><tr><th></th>${SENSES.map(s=>`<th><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:${s.c};margin-bottom:4px"></span> ${s.name}</th>`).join("")}</tr></thead><tbody>`;
- rows.forEach((r,ri)=>{h+=`<tr class="${prime&&prime(r)?"prime":""}"><th>${esc(rowLabel(r))}</th>`;SENSES.forEach(s=>{const v=data[ri][s.id];const a=v?0.18+0.82*v/max:0;const dark=a>.55;h+=`<td class="${v?"":"z"}" data-r="${ri}" data-s="${s.id}" style="background:${v?hexA(s.c,a):"var(--surface)"};color:${dark?"#fff":"var(--ink)"}" title="${esc(rowLabel(r))} · ${s.name}: ${v}">${v||"·"}</td>`});h+="</tr>"});
+ rows.forEach((r,ri)=>{h+=`<tr class="${prime&&prime(r)?"prime":""}"><th${tableId==="heatP"?` data-person="${r.id}" tabindex="0"`:""}>${esc(rowLabel(r))}</th>`;SENSES.forEach(s=>{const v=data[ri][s.id];const a=v?0.18+0.82*v/max:0;const dark=a>.55;h+=`<td class="${v?"":"z"}" data-r="${ri}" data-s="${s.id}" style="background:${v?hexA(s.c,a):"var(--surface)"};color:${dark?"#fff":"var(--ink)"}" title="${esc(rowLabel(r))} · ${s.name}: ${v}">${v||"·"}</td>`});h+="</tr>"});
  T.innerHTML=h+"</tbody>";
  T.querySelectorAll("td").forEach(td=>td.addEventListener("click",()=>{const r=rows[+td.dataset.r];if(tableId==="heatP"){state.p=r.id;state.q=null}else{state.q=r.id;state.p=null}state.sense=+td.dataset.s;state.focus=null;render();document.getElementById("mandala").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth",block:"start"})}));
 }
@@ -315,11 +355,11 @@ function hexA(hex,a){const n=parseInt(hex.slice(1),16);return`rgba(${n>>16},${(n
 function buildThreads(){
  document.getElementById("threads").innerHTML=THREADS.map(t=>`<article class="thread">${pips(t.s)}<div class="tt">${esc(t.t)}</div>${t.wiphala?`<div class="md-wiph" aria-label="Escala Huipala">${["--w1","--w2","--w3","--w5","--w6","--w7","--w4"].map(c=>`<span style="background:var(${c})"></span>`).join("")}</div><div class="src">vermelho → laranja → amarelo → verde → azul → roxo, e o branco como utopia</div>`:""}<p>${esc(t.p)}</p><blockquote>«${esc(t.q)}»</blockquote><div class="src">${esc(t.src)}</div></article>`).join("");
  document.getElementById("qlist").innerHTML=QUESTIONS.map(q=>`<li><b>${q.s.split(" · ")[1]}.</b> ${esc(q.l)}</li>`).join("");
- document.getElementById("files").innerHTML=PEOPLE.map(p=>`<div><b>${esc(p.name)}</b>: ${p.files.map(esc).join(", ")}</div>`).join("");
+ document.getElementById("files").innerHTML=PEOPLE.map(p=>`<div><b data-person="${p.id}" tabindex="0">${esc(p.name)}</b>: ${p.files.map(esc).join(", ")}</div>`).join("");
 }
 
 function render(){syncChips();drawDots();renderPanel()}
-buildMandala();buildHover();buildChips();buildThreads();
+buildMandala();buildHover();buildPersonCards();buildChips();buildThreads();
 heat("heatP",PEOPLE,p=>p.name,p=>e=>e.pid===p.id);
 heat("heatQ",QUESTIONS,q=>q.s,q=>e=>e.q===q.id,q=>q.id===2);
 render();

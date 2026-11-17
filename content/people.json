@@ -1,0 +1,240 @@
+{
+  "$comment": "Pessoas entrevistadas na missão de campo da Clínica Ambiental (2024–2025). Os 'id' são os mesmos usados no painel da Mandala (lib/mandala.ts). 'relations.confirmed: false' marca vínculos que ainda precisam ser confirmados com a equipe.",
+  "people": [
+    {
+      "id": "adolfo",
+      "name": "Adolfo",
+      "fullName": "Adolfo Maldonado",
+      "origin": "Espanha; chegou à Amazônia equatoriana em 1987",
+      "home": { "place": "Lago Agrio", "community": null, "province": "Sucumbíos" },
+      "roles": ["médico sanitarista", "cofundador e coordenador da Clínica Ambiental", "professor universitário"],
+      "organizations": ["Clínica Ambiental", "Acción Ecológica", "Universidad Andina Simón Bolívar"],
+      "clinic": { "since": "2008", "how": "Criou a Clínica com outras organizações depois de ver os desenhos das crianças da fronteira fumigada perderem a cor." },
+      "relations": [
+        { "to": "bella", "type": "atendeu o parto de um dos filhos de Bella no subcentro de Pacayacu", "confirmed": true },
+        { "to": "galo", "type": "conhecidos desde o subcentro de Pacayacu", "confirmed": true },
+        { "to": "carlos", "type": "se conheceram nas escolas de líderes comunitários (2005–2006)", "confirmed": true },
+        { "to": "arley", "type": "conhecidos desde que Arley tinha 12 anos", "confirmed": true }
+      ],
+      "interviews": [{ "date": "2025-02-23", "place": "Amazonas", "files": ["entrevista Adolfo take 1–6"] }],
+      "themes": ["origem da Clínica", "reparação", "câncer e cuidado", "Huipala", "nomes das plantas"],
+      "summary": "Médico espanhol que trocou a busca pela «llaga» pelo cuidado da alma das crianças da fronteira. Formula os princípios da Clínica: recuperar o solo para recuperar a esperança."
+    },
+    {
+      "id": "maria",
+      "name": "María Pantoja",
+      "fullName": "María Pantoja",
+      "origin": "nasceu na Colômbia e cresceu em Santo Domingo, Equador",
+      "home": { "place": "Lago Agrio", "community": null, "province": "Sucumbíos" },
+      "roles": ["presidenta da Clínica Ambiental", "naturopata", "presidenta da sua comunidade", "acompanha pacientes de oncologia"],
+      "organizations": ["Clínica Ambiental"],
+      "clinic": { "since": "cerca de 2010", "how": "Chegou por um convênio da organização em que trabalhava com saúde comunitária «y después ya no me dejaron ir»." },
+      "relations": [],
+      "interviews": [{ "date": "2025-01-31", "place": "Lago Agrio", "files": ["Audio Maria take 1–8"] }],
+      "themes": ["curar e sanar", "permacultura popular", "Huipala", "mulheres e equidade"],
+      "summary": "Trabalha com plantas e cura desde jovem. Para ela, a Huipala só funciona quando a mudança começa em si mesma."
+    },
+    {
+      "id": "carlos",
+      "name": "Carlos Aldaz",
+      "fullName": "Carlos Aldaz",
+      "origin": "Montalvo, província de Los Ríos; a família migrou para a Amazônia em 1980",
+      "home": { "place": "Shushufindi", "community": "km 18 da via Lago Agrio–Shushufindi", "province": "Sucumbíos" },
+      "roles": ["agricultor permacultor", "cofundador da Clínica Ambiental"],
+      "organizations": ["Clínica Ambiental", "Red de Guardianes de Semillas"],
+      "clinic": { "since": "2008", "how": "Depois de um acidente de carro, largou o transporte e foi para a finca; conheceu Adolfo nas escolas de líderes comunitários." },
+      "farm": "Isla de Esperanza Hicama («riqueza del campo amazónico»)",
+      "relations": [{ "to": "cecilia", "type": "casado com Cecilia", "confirmed": true }],
+      "interviews": [
+        { "date": "2024-12-07", "place": "Shushufindi", "files": ["entrevista Carlos 1–2"] },
+        { "date": "2025-02-06", "place": "Shushufindi", "files": ["Carlos take 1–4"] }
+      ],
+      "themes": ["clínica de sanar a terra", "ilhas de esperança", "transição agroecológica"],
+      "summary": "Transformou pasto em finca permacultural no meio dos poços de petróleo, para mostrar que «sí se puede»."
+    },
+    {
+      "id": "cecilia",
+      "name": "Cecilia Núñez",
+      "fullName": "Cecilia Núñez",
+      "origin": "província de Bolívar",
+      "home": { "place": "Shushufindi", "community": "Nueva Quevedo, vecindario Mirador", "province": "Sucumbíos" },
+      "roles": ["agricultora permacultora"],
+      "organizations": ["Clínica Ambiental", "Red de Guardianes de Semillas"],
+      "clinic": { "since": "2008", "how": "Chegou com Carlos, por meio de um encontro de direitos humanos." },
+      "farm": "Isla de Esperanza Hicama",
+      "relations": [{ "to": "carlos", "type": "casada com Carlos", "confirmed": true }],
+      "interviews": [
+        { "date": "2024-12-07", "place": "Shushufindi", "files": ["entrevista Cecilia 1–3"] },
+        { "date": "2025-02-06", "place": "Shushufindi", "files": ["Cecília take 1–3"] }
+      ],
+      "themes": ["alimento é remédio", "Huipala", "sementes"],
+      "summary": "Vinte anos na finca, quase no topo da Huipala. Os beija-flores entram em casa porque há comida para todos."
+    },
+    {
+      "id": "carmen",
+      "name": "Carmen Zambrano",
+      "fullName": "Carmen Zambrano",
+      "origin": "Manabí; chegou à Amazônia em 1984, aos 23 anos",
+      "home": { "place": "Shushufindi", "community": null, "province": "Sucumbíos" },
+      "roles": ["militante dos afetados pela Texaco", "cofundadora da Clínica Ambiental", "primeira coordenadora de mulheres da UDAPT", "catequista por 20 anos"],
+      "organizations": ["Clínica Ambiental", "UDAPT (Unión de Afectados por Texaco)", "Acción Ecológica"],
+      "clinic": { "since": "2008", "how": "«La clínica ambiental la hicimos nosotros mismos.»" },
+      "relations": [],
+      "interviews": [{ "date": "2024-12-08", "place": "Shushufindi", "files": ["Carmen Entrevista 1–4"] }],
+      "themes": ["caso Texaco", "origem da permacultura na Clínica", "pambamesa", "espiritualidade"],
+      "summary": "Viu o paraíso da selva desaparecer com a Texaco e ficou ao lado dos afetados. Pede amor e paciência."
+    },
+    {
+      "id": "bella",
+      "name": "Belia (Bella)",
+      "fullName": "Belia",
+      "origin": "La Victoria, Macará (Loja), na fronteira com o Peru",
+      "home": { "place": "Pacayacu", "community": null, "province": "Sucumbíos" },
+      "roles": ["auxiliar de enfermagem", "cofundadora da Clínica Ambiental", "permacultora (nível roxo da Huipala)", "terapeuta autônoma"],
+      "organizations": ["Clínica Ambiental", "Frente de Defensa de la Amazonía"],
+      "clinic": { "since": "cerca de 2008", "how": "Fez as pesquisas de campo com Adolfo e foi convidada a começar a Clínica; levou um cesto de produtos à primeira reunião." },
+      "relations": [
+        { "to": "galo", "type": "casada com Galo", "confirmed": true },
+        { "to": "adolfo", "type": "Adolfo fez o parto de um de seus filhos", "confirmed": true }
+      ],
+      "interviews": [{ "date": "2024-12-16", "place": "Pacayacu", "files": ["entrevista Bella 1–7"] }],
+      "themes": ["flores e cor", "mulheres e autonomia", "Huipala", "bosque comestível"],
+      "summary": "Chamada de louca por plantar flores ao lado do llantén «para darle el color». Fala da decisão de voltar a mexer as asas."
+    },
+    {
+      "id": "galo",
+      "name": "Galo Rodríguez",
+      "fullName": "Galo Rodríguez",
+      "origin": "rio Napo (Pompeya, antiga San Isidro); descendência kichwa pela família Chihuango",
+      "home": { "place": "Pacayacu", "community": null, "province": "Sucumbíos" },
+      "roles": ["agricultor", "ex-trabalhador da abertura de poços de petróleo", "agropecuarista formado"],
+      "organizations": ["Clínica Ambiental"],
+      "clinic": { "since": "depois de Bella", "how": "Conheceu Adolfo no subcentro de Pacayacu; Bella entrou primeiro na Clínica." },
+      "relations": [
+        { "to": "bella", "type": "casado com Bella", "confirmed": true },
+        { "to": "adolfo", "type": "conhecidos desde o subcentro de Pacayacu", "confirmed": true }
+      ],
+      "interviews": [{ "date": "2024-12-16", "place": "Pacayacu", "files": ["entrevista Galo 1–3"] }],
+      "themes": ["memória do rio", "chacra ancestral", "invasão de terras"],
+      "summary": "Abriu a selva para os primeiros poços e depois deixou o pasto virar mata. Para ele, antes da permacultura havia a chacra."
+    },
+    {
+      "id": "julia",
+      "name": "Julia Eva Vargas",
+      "fullName": "Julia Eva Vargas",
+      "origin": "Argentina; no Equador desde 2010",
+      "home": { "place": "Cascales", "community": null, "province": "Sucumbíos" },
+      "roles": ["atriz e artista popular", "costureira", "agricultora"],
+      "organizations": ["Clínica Ambiental"],
+      "clinic": { "since": "cerca de 2021", "how": "Conheceu a Clínica numa feira orgânica ao chegar à Amazônia." },
+      "relations": [{ "to": "pablo", "type": "companheira de Pablo; mãe de Iris", "confirmed": true }],
+      "interviews": [{ "date": "2024-12-03", "place": "Cascales", "files": ["entrevista Julia 1–2"] }],
+      "themes": ["arte que repara", "mulheres e identidade", "permacultura viva"],
+      "summary": "Vê na Clínica uma família e uma contenção emocional. Mensagem: sair dos moldes."
+    },
+    {
+      "id": "pablo",
+      "name": "Pablo Andrés Yepes",
+      "fullName": "Pablo Andrés Yepes",
+      "origin": "Quito",
+      "home": { "place": "Cascales", "community": "finca das tias-avós", "province": "Sucumbíos" },
+      "roles": ["artista circense", "permacultor"],
+      "organizations": ["Clínica Ambiental"],
+      "clinic": { "since": "cerca de 2021", "how": "Viu um cartaz na estrada e foi à Feria de la Esperanza." },
+      "relations": [{ "to": "julia", "type": "companheiro de Julia", "confirmed": true }],
+      "interviews": [{ "date": "2024-12-03", "place": "Cascales", "files": ["entrevista Pablo 1–2"] }],
+      "themes": ["reparação como relação", "arte e alegria", "saber ancestral"],
+      "summary": "Para ele, a reparação se busca refazendo laços, não esperando que alguém a traga."
+    },
+    {
+      "id": "lexie",
+      "name": "Lexie Crawford",
+      "fullName": "Lexie Crawford",
+      "origin": "Estados Unidos; em Lago Agrio há 11 anos",
+      "home": { "place": "Lago Agrio", "community": "Amisacho", "province": "Sucumbíos" },
+      "roles": ["bióloga e micóloga", "professora de cursos da Clínica", "cofundadora do laboratório de Amisacho"],
+      "organizations": ["Clínica Ambiental"],
+      "clinic": { "since": "cerca de 2017", "how": "Um curso de abelhas nativas a levou à rede da Clínica; depois foi sócia e teve a finca certificada." },
+      "relations": [],
+      "interviews": [{ "date": "2025-02-07", "place": "Lago Agrio", "files": ["Lexie take 1–3"] }],
+      "themes": ["fungos e solo vivo", "memória das plantas", "rede de ecossistema"],
+      "summary": "Aprendeu com os fungos que «tu sobrevivencia mejora la mía». Leva às comunidades as máquinas e técnicas para processar o que o bosque dá."
+    },
+    {
+      "id": "arley",
+      "name": "Arley (Ale) Payaguaje",
+      "fullName": "Arley Payaguaje",
+      "origin": "nacionalidade Siekopai",
+      "home": { "place": "Sekoya Remolino", "community": "Sekoya Remolino", "province": "Sucumbíos" },
+      "roles": ["coordenador da Fundación Yakum", "pesquisador de frutas ancestrais"],
+      "organizations": ["Fundación Yakum", "Clínica Ambiental"],
+      "clinic": { "since": "2019 (curso de permacultura)", "how": "Conheceu Adolfo aos 12 anos e se aproximou da Clínica no curso de permacultura." },
+      "relations": [{ "to": "adolfo", "type": "conhecidos desde a infância de Arley", "confirmed": true }],
+      "interviews": [{ "date": "2025", "place": "Sekoya Remolino", "files": ["entrevista Arley take 1–4"] }],
+      "themes": ["frutas dos avós", "nomes em paicoca", "o bosque vale mais que o ouro"],
+      "summary": "Redescobriu 25 das 88 frutas que os avós comiam em Lagartococha e as plantou com 48 famílias."
+    },
+    {
+      "id": "petra",
+      "name": "Petra & Johannes",
+      "fullName": "Petra e Johannes",
+      "origin": "Áustria; viveram em Lago Agrio de 1990 a 1993",
+      "home": { "place": "Amazonas", "community": "Finca Beso de la Amazonía", "province": "Sucumbíos" },
+      "roles": ["agricultores", "professora de matemática (Petra)", "engenheiro industrial (Johannes)", "empresa Cal One"],
+      "organizations": ["Clínica Ambiental"],
+      "clinic": { "since": "2020", "how": "Uma ex-aluna mostrou girassóis sem químicos e os levou aos cursos de permacultura." },
+      "relations": [],
+      "interviews": [{ "date": "2025-02-23", "place": "Amazonas", "files": ["entrevista Petra e Johannes take 1–3"] }],
+      "themes": ["permacultura para sempre", "produtos únicos", "autonomia alimentar"],
+      "summary": "Casal com 42 anos de casamento que voltou à Amazônia para viver um sonho de autonomia alimentar."
+    },
+    {
+      "id": "gloria",
+      "name": "Gloria",
+      "fullName": "Gloria",
+      "origin": "nacionalidade Shuar",
+      "home": { "place": "Sharup", "community": "reserva da Associação Shuar Sharup", "province": "Sucumbíos" },
+      "roles": ["guardiã de sementes", "conhecedora de plantas medicinais", "liderança comunitária"],
+      "organizations": ["Clínica Ambiental", "Associação Shuar Sharup"],
+      "clinic": { "since": null, "how": "Entrou por uma oficina que uma vizinha trouxe; a Clínica ajudou a tornar o território uma reserva." },
+      "relations": [
+        { "to": "carmenr", "type": "mãe de Carmen Rivera", "confirmed": true },
+        { "to": "paulina", "type": "mãe de Paulina", "confirmed": false }
+      ],
+      "interviews": [
+        { "date": "2024-11-25", "place": "Sharup", "files": ["Rec 001–003 Gloria Sharup", "Rec007–008 Gloria Sharup"] },
+        { "date": "2025-01-14", "place": "Sharup", "files": ["entrevista Gloria 14.01.25 (consulta sobre plantas)"] }
+      ],
+      "themes": ["sementes e remédios", "experimentar com as plantas", "nomes ancestrais"],
+      "summary": "Recolhe as sementes que a mãe lhe ensinou e as esconde sob as árvores. Inventou o adubo da sua «platanera de los sueños»."
+    },
+    {
+      "id": "carmenr",
+      "name": "Carmen Rivera",
+      "fullName": "Carmen Rivera",
+      "origin": "nacionalidade Shuar",
+      "home": { "place": "Sharup", "community": "reserva da Associação Shuar Sharup", "province": "Sucumbíos" },
+      "roles": ["jovem liderança", "restauradora de territórios (curso)"],
+      "organizations": ["Clínica Ambiental", "Associação Shuar Sharup"],
+      "clinic": { "since": null, "how": "Junto com a mãe e a comunidade de Sharup." },
+      "relations": [{ "to": "gloria", "type": "filha de Gloria", "confirmed": true }],
+      "interviews": [{ "date": "2024-11-25", "place": "Sharup", "files": ["Rec 004–006 Carmen Rivera"] }],
+      "themes": ["esperança para os povos", "presença como resistência", "nomes ancestrais"],
+      "summary": "Para ela, reparar é voltar a viver como quando eram crianças, a partir do saber ancestral."
+    },
+    {
+      "id": "paulina",
+      "name": "Paulina",
+      "fullName": "Paulina",
+      "origin": "nacionalidade Shuar",
+      "home": { "place": "Sharup", "community": "reserva da Associação Shuar Sharup", "province": "Sucumbíos" },
+      "roles": ["jovem agricultora"],
+      "organizations": ["Clínica Ambiental", "Associação Shuar Sharup"],
+      "clinic": { "since": null, "how": "Se inscreveu num curso de permacultura sem saber o que era." },
+      "relations": [{ "to": "gloria", "type": "filha de Gloria", "confirmed": false }],
+      "interviews": [{ "date": "2024-11-25", "place": "Sharup", "files": ["Rec009 Paulina"] }],
+      "themes": ["ensinar o que aprende", "bosque comestível", "nomes e usos"],
+      "summary": "Levou o que aprendeu ao pai, que fumigava o café. Quer uma comunidade cheia de frutas."
+    }
+  ]
+}
