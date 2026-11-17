@@ -1,5 +1,6 @@
 import { Icon, type IconName } from "@/components/Icon";
 import { PartnerLogos } from "@/components/PartnerLogos";
+import { SectionMore, type More } from "@/components/SectionMore";
 import { SectionHeading } from "@/components/SectionHeading";
 import { contacts } from "@/content/contacts";
 import type { Dictionary } from "@/content/types";
@@ -7,7 +8,7 @@ import type { Dictionary } from "@/content/types";
 const groupIcons: IconName[] = ["pin", "pin", "graduation", "handshake"];
 const groupFlags = ["/flags/ceara.png", "/flags/equador.png"];
 
-export function Credits({ content }: { content: Dictionary["credits"] }) {
+export function Credits({ content, more }: { content: Dictionary["credits"]; more?: More }) {
   return (
     <section id="credits">
       <div className="wrap">
@@ -26,12 +27,14 @@ export function Credits({ content }: { content: Dictionary["credits"] }) {
             </div>
           ))}
         </div>
+        {more ? <SectionMore more={more} /> : <>
         <h3 className="subhead">{content.contactsTitle}</h3>
         <div className="contact mt-half">
           <span><Icon name="mail" size={16} /> {content.correspondingAuthor} <code>{contacts.authorEmail}</code></span>
           <span><Icon name="arrow" size={16} /> <a href={contacts.laraPage} target="_blank" rel="noopener">{content.laraPage}</a></span>
           <span><Icon name="mail" size={16} /> Clínica Ambiental: <code>{contacts.clinicEmail}</code> · {content.clinicLocation}</span>
         </div>
+        </>}
       </div>
     </section>
   );

@@ -1,3 +1,4 @@
+import { SectionMore, type More } from "@/components/SectionMore";
 import { SplitLayout } from "@/components/SplitLayout";
 import { SectionPhotos } from "@/components/SectionPhotos";
 import { Icon, type IconName } from "@/components/Icon";
@@ -8,12 +9,13 @@ import type { Dictionary } from "@/content/types";
 
 const elementIcons: IconName[] = ["home", "coins", "heartPulse", "medal", "shield"];
 
-export function Repair({ content, locale }: { content: Dictionary["repair"]; locale: Locale }) {
+export function Repair({ content, locale, more }: { content: Dictionary["repair"]; locale: Locale; more?: More }) {
   return (
     <section id="repair">
-      <SplitLayout side="right" media={<SectionPhotos section="repair" locale={locale} />}>
+      <SplitLayout side="right" wideMedia={Boolean(more)} media={<SectionPhotos section="repair" locale={locale} />}>
         <SectionHeading label={content.label} title={content.title} />
         <RichText as="p" html={content.introHtml} />
+        {more ? <SectionMore more={more} /> : <>
         <ul className="five">
           {content.elements.map((element, index) => (
             <li key={element.name}>
@@ -23,6 +25,7 @@ export function Repair({ content, locale }: { content: Dictionary["repair"]; loc
           ))}
         </ul>
         <RichText as="p" html={content.closingHtml} />
+        </>}
       </SplitLayout>
     </section>
   );

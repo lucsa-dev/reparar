@@ -8,6 +8,14 @@ const heroPhotos = [
   { plantId: "platanillo", file: "p070-1.jpg" },
 ];
 
+const archivePhotos = [
+  { plantId: "chonta", file: "p040-1.jpg" },
+  { plantId: "granadilla", file: "p041-2.jpg" },
+  { plantId: "achiote", file: "p007-1.jpg" },
+  { plantId: "zapallo", file: "p018-1.jpg" },
+  { plantId: "huito", file: "p043-2.jpg" },
+  { plantId: "tabaco", file: "p051-1.jpg" },
+];
 
 export type HomePhoto = { src: string; name: string };
 
@@ -20,3 +28,4 @@ function localize(photos: typeof heroPhotos, locale: Locale): HomePhoto[] {
 }
 
 export const getHeroPhotos = (locale: Locale) => localize(heroPhotos, locale);
+export const getArchivePhotos = (locale: Locale) => localize(archivePhotos, locale);

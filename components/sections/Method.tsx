@@ -1,3 +1,4 @@
+import { SectionMore, type More } from "@/components/SectionMore";
 import { SplitLayout } from "@/components/SplitLayout";
 import { SectionPhotos } from "@/components/SectionPhotos";
 import { Icon, type IconName } from "@/components/Icon";
@@ -7,7 +8,7 @@ import type { Dictionary } from "@/content/types";
 
 const stageIcons: IconName[] = ["eye", "sprout", "sun"];
 
-export function Method({ content, locale }: { content: Dictionary["method"]; locale: Locale }) {
+export function Method({ content, locale, more }: { content: Dictionary["method"]; locale: Locale; more?: More }) {
   return (
     <section id="method" className="band">
       <div className="wide">
@@ -22,17 +23,19 @@ export function Method({ content, locale }: { content: Dictionary["method"]; loc
               <span className="step">{stage.step}</span>
               <h3>{stage.name}</h3>
               {stage.originalName && <span className="es" lang="es">{stage.originalName}</span>}
+              {!more && <>
               <p className="side"><b><Icon name="pin" size={14} />{content.ecuadorLabel}</b>{stage.ecuador}</p>
               <p className="side"><b><Icon name="pin" size={14} />{content.cearaLabel}</b>{stage.ceara}</p>
+              </>}
             </article>
           ))}
         </div>
-        <div className="cross">
+        {more ? <SectionMore more={more} /> : <div className="cross">
           <span className="muted">{content.crossLabel}</span>
           {content.crossItems.map((item) => (
             <span className="chip" key={item}>{item}</span>
           ))}
-        </div>
+        </div>}
       </div>
     </section>
   );

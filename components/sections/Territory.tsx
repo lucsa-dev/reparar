@@ -1,15 +1,17 @@
+import { SectionMore, type More } from "@/components/SectionMore";
 import { SplitLayout } from "@/components/SplitLayout";
 import { SectionPhotos } from "@/components/SectionPhotos";
 import { SectionHeading } from "@/components/SectionHeading";
 import type { Locale } from "@/content";
 import type { Dictionary } from "@/content/types";
 
-export function Territory({ content, locale }: { content: Dictionary["territory"]; locale: Locale }) {
+export function Territory({ content, locale, more }: { content: Dictionary["territory"]; locale: Locale; more?: More }) {
   return (
     <section id="territory">
-      <SplitLayout side="left" media={<SectionPhotos section="territory" locale={locale} showBookNote />}>
+      <SplitLayout side="left" wideMedia={Boolean(more)} media={<SectionPhotos section="territory" locale={locale} showBookNote />}>
         <SectionHeading label={content.label} title={content.title} />
         <p>{content.intro}</p>
+        {more ? <SectionMore more={more} /> : <>
         <ol className="timeline">
           {content.timeline.map((entry) => (
             <li key={entry.year} className={entry.key ? "key" : undefined}>
@@ -22,6 +24,7 @@ export function Territory({ content, locale }: { content: Dictionary["territory"
           ))}
         </ol>
         <p className="small muted subhead">{content.closing}</p>
+        </>}
       </SplitLayout>
     </section>
   );

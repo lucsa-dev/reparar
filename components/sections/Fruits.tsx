@@ -1,3 +1,4 @@
+import { SectionMore, type More } from "@/components/SectionMore";
 import { SplitLayout } from "@/components/SplitLayout";
 import { FruitVideos } from "@/components/FruitVideos";
 import { Icon, type IconName } from "@/components/Icon";
@@ -7,7 +8,7 @@ import type { Dictionary } from "@/content/types";
 
 const fruitIcons: IconName[] = ["book", "sprout", "film", "graduation", "document", "archive"];
 
-export function Fruits({ content, locale }: { content: Dictionary["fruits"]; locale: Locale }) {
+export function Fruits({ content, locale, more }: { content: Dictionary["fruits"]; locale: Locale; more?: More }) {
   return (
     <section id="fruits">
       <SplitLayout side="left" media={<FruitVideos />}>
@@ -17,8 +18,8 @@ export function Fruits({ content, locale }: { content: Dictionary["fruits"]; loc
             <div key={item.title}>
               <Icon name={fruitIcons[index]} size={26} className="card-icon" />
               <h3>{item.title}</h3>
-              <p>{item.description}</p>
-              {item.links?.map(({ href, label }) => (
+              {!more && <p>{item.description}</p>}
+              {!more && item.links?.map(({ href, label }) => (
                 <a className="fruit-link" key={href} href={href} target="_blank" rel="noopener">
                   {label}
                   <Icon name="arrow" size={16} />
@@ -27,6 +28,7 @@ export function Fruits({ content, locale }: { content: Dictionary["fruits"]; loc
             </div>
           ))}
         </div>
+        {more && <SectionMore more={more} />}
       </SplitLayout>
     </section>
   );

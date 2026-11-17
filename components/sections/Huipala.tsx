@@ -1,3 +1,4 @@
+import { SectionMore, type More } from "@/components/SectionMore";
 import { SplitLayout } from "@/components/SplitLayout";
 import { SectionPhotos } from "@/components/SectionPhotos";
 import { Icon, type IconName } from "@/components/Icon";
@@ -20,7 +21,7 @@ const ladder = [
   { color: "var(--w4)", light: false },
 ];
 
-export function Huipala({ content, locale }: { content: Dictionary["huipala"]; locale: Locale }) {
+export function Huipala({ content, locale, more }: { content: Dictionary["huipala"]; locale: Locale; more?: More }) {
   return (
     <section id="huipala">
       <SplitLayout side="right" wideMedia media={<SectionPhotos section="huipala" locale={locale} />}>
@@ -39,12 +40,13 @@ export function Huipala({ content, locale }: { content: Dictionary["huipala"]; l
               <span className="step">{index === 0 ? "0" : index}</span>
               <b>{level.name}</b>
               <span className="element">{level.element}</span>
-              <span className="hint">{level.hint}</span>
+              {!more && <span className="hint">{level.hint}</span>}
             </li>
           ))}
         </ol>
-        <p className="small muted ui levels-note">{content.levelsNote}</p>
+        {more ? <SectionMore more={more} /> : <p className="small muted ui levels-note">{content.levelsNote}</p>}
       </div>
+      {!more && <>
       <div className="wrap">
         <h3 className="subhead">{content.spheresTitle}</h3>
         <p className="small mt-half">{content.spheresIntro}</p>
@@ -119,6 +121,7 @@ export function Huipala({ content, locale }: { content: Dictionary["huipala"]; l
           ))}
         </div>
       </div>
+      </>}
     </section>
   );
 }

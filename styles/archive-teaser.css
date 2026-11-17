@@ -1,0 +1,8 @@
+.archive-strip{list-style:none;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:.75rem;margin:1.8rem 0;padding:0}
+/* Arcos em fileira, como as pessoas no alto do símbolo */
+.archive-strip figure{position:relative;margin:0;aspect-ratio:3/4.4;overflow:hidden;border-radius:var(--radius-pill) var(--radius-pill) var(--radius-m) var(--radius-m)}
+.archive-strip img{display:block;width:100%;height:100%;object-fit:cover}
+.archive-strip figcaption{position:absolute;inset:auto 0 0;padding:1.6rem .7rem .6rem;font-family:var(--f-ui);font-size:.82rem;font-weight:600;line-height:1.2;color:#fff;pointer-events:none;background:linear-gradient(transparent,var(--overlay))}
+.archive-cta{display:inline-flex;align-items:center;gap:.5rem}
+@media (max-width:860px){.archive-strip{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:480px){.archive-strip{grid-template-columns:repeat(2,minmax(0,1fr))}}

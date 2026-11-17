@@ -1,20 +1,22 @@
 import { Fragment } from "react";
 import { FieldGallery } from "@/components/FieldGallery";
 import { SectionPhotos } from "@/components/SectionPhotos";
+import { SectionMore, type More } from "@/components/SectionMore";
 import { SplitLayout } from "@/components/SplitLayout";
 import { SectionHeading } from "@/components/SectionHeading";
 import type { Locale } from "@/content";
 import type { Dictionary } from "@/content/types";
 
-export function FieldMission({ content, locale }: { content: Dictionary["fieldMission"]; locale: Locale }) {
+export function FieldMission({ content, locale, more }: { content: Dictionary["fieldMission"]; locale: Locale; more?: More }) {
   return (
     <section id="field-mission">
       <div className="wide">
-        <SplitLayout side="right" media={<SectionPhotos section="fieldMission" locale={locale} />}>
+        <SplitLayout side="right" wideMedia={Boolean(more)} media={<SectionPhotos section="fieldMission" locale={locale} />}>
           <div>
           <SectionHeading label={content.label} title={content.title} />
           <p>{content.intro}</p>
         </div>
+        {more ? <SectionMore more={more} /> : <>
         <ol className="timeline timeline-dates">
           {content.rows.map((row, index) => (
             <Fragment key={`${row.date}-${row.place}`}>
@@ -32,10 +34,13 @@ export function FieldMission({ content, locale }: { content: Dictionary["fieldMi
           ))}
         </ol>
         <p className="small muted ui mt-1">{content.source}</p>
+        </>}
         </SplitLayout>
+        {!more && <>
         <h3 className="subhead">{content.galleryTitle}</h3>
         <p className="small mt-half">{content.galleryIntro}</p>
         <FieldGallery locale={locale} />
+        </>}
       </div>
     </section>
   );

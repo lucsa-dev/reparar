@@ -1,0 +1,14 @@
+/* Página própria de cada seção */
+.section-page-back{padding:clamp(1.5rem,3vw,2.5rem) var(--gutter) 0;max-width:calc(var(--content-wide) + 2*var(--gutter));margin-inline:auto}
+.section-page-back .plants-back{margin-bottom:0}
+.section-page > section:first-of-type{padding-top:clamp(1.5rem,3vw,2.5rem)}
+.section-page > section.band:first-of-type{margin-top:1.5rem}
+.section-pager{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;padding:0 var(--gutter) var(--space-section);max-width:calc(var(--content-wide) + 2*var(--gutter));margin-inline:auto;font-family:var(--f-ui)}
+.section-pager a{display:flex;flex-direction:column;gap:.15rem;min-width:10rem;padding:.8rem 1.1rem;text-decoration:none;border:1.5px solid var(--line);border-radius:var(--radius-l)}
+.section-pager a:hover{border-color:var(--accent)}
+.section-pager small{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.section-pager b{font-size:1.05rem}
+.section-pager .next{margin-left:auto;text-align:right}
+
+/* Botão que leva da página inicial à página da seção */
+.section-more{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.4rem}
