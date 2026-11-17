@@ -42,6 +42,7 @@ export default async function PlantsPage({ params }: PlantsPageProps) {
           <p>{copy.draftNotice}</p>
           <p>{copy.healthNotice}</p>
           <p>{copy.photoCredit}</p>
+          {copy.cearaLanguageNote && <p>{copy.cearaLanguageNote}</p>}
         </div>
         <PlantCatalog locale={lang} />
       </main>

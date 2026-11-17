@@ -2,8 +2,8 @@
 
 import { useMemo, useState } from "react";
 import type { Locale } from "@/content";
-import { catalog, entryMatchesCategory, entryTitle, type CatalogEntry } from "@/content/plant-catalog";
-import { plantCategories, plantCopy, type PlantCategory } from "@/content/plants";
+import { catalog, entryHasReport, entryMatchesCategory, entryRegion, entryTitle, type CatalogEntry } from "@/content/plant-catalog";
+import { plantCategories, plantCopy, plantRegions, type PlantCategory, type PlantRegion } from "@/content/plants";
 import { PlantCard } from "./PlantCard";
 
 type Filter = "all" | "reports" | PlantCategory;
@@ -13,8 +13,12 @@ function normalize(text: string) {
 }
 
 function searchableText(entry: CatalogEntry, locale: Locale) {
-  const { plant, photos } = entry;
+  const { plant, ceara, photos } = entry;
   const parts = [entryTitle(entry, locale), ...photos.map((photo) => photo.fullName)];
+  if (ceara) {
+    const fields = [ceara.otherNames, ceara.scientificName, ceara.place, ceara.note, "Lagoa dos Cavalos Ceará"];
+    parts.push(...fields.filter((part) => part !== undefined), ...ceara.uses.flatMap(({ for: use, part, preparation }) => [use, part, preparation].filter((text) => text !== undefined)));
+  }
   if (plant) {
     const localNames = plant.localNames?.map(({ name, language }) => `${name} ${language}`) ?? [];
     const details = [plant.scientificName, plant.meaning?.[locale], plant.story?.[locale]].filter((part) => part !== undefined);
@@ -25,7 +29,7 @@ function searchableText(entry: CatalogEntry, locale: Locale) {
 
 function matchesFilter(entry: CatalogEntry, filter: Filter) {
   if (filter === "all") return true;
-  if (filter === "reports") return entry.plant !== undefined;
+  if (filter === "reports") return entryHasReport(entry);
   return entryMatchesCategory(entry, filter);
 }
 
@@ -33,17 +37,21 @@ export function PlantCatalog({ locale }: { locale: Locale }) {
   const copy = plantCopy[locale];
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState<Filter>("all");
+  const [region, setRegion] = useState<PlantRegion | "all">("all");
 
   // Plants with recorded accounts come first; species known only from the book follow.
   const sorted = useMemo(
     () =>
       [...catalog].sort(
-        (a, b) => Number(!a.plant) - Number(!b.plant) || entryTitle(a, locale).localeCompare(entryTitle(b, locale), locale),
+        (a, b) => Number(!entryHasReport(a)) - Number(!entryHasReport(b)) || entryTitle(a, locale).localeCompare(entryTitle(b, locale), locale),
       ),
     [locale],
   );
   const visible = sorted.filter(
-    (entry) => matchesFilter(entry, filter) && searchableText(entry, locale).includes(normalize(query.trim())),
+    (entry) =>
+      (region === "all" || entryRegion(entry) === region) &&
+      matchesFilter(entry, filter) &&
+      searchableText(entry, locale).includes(normalize(query.trim())),
   );
   const options: { value: Filter; label: string }[] = [
     { value: "all", label: copy.all },
@@ -58,6 +66,13 @@ export function PlantCatalog({ locale }: { locale: Locale }) {
           <span>{copy.searchLabel}</span>
           <input type="search" value={query} placeholder={copy.searchPlaceholder} onChange={(event) => setQuery(event.target.value)} />
         </label>
+        <div className="plants-filters" role="group" aria-label={copy.regionLabel}>
+          {(["all", ...plantRegions] as const).map((value) => (
+            <button key={value} type="button" aria-pressed={region === value} onClick={() => setRegion(value)}>
+              {value === "all" ? copy.allRegions : copy.regions[value]}
+            </button>
+          ))}
+        </div>
         <div className="plants-filters" role="group" aria-label={copy.filterLabel}>
           {options.map(({ value, label }) => (
             <button key={value} type="button" aria-pressed={filter === value} onClick={() => setFilter(value)}>{label}</button>

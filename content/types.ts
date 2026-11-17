@@ -80,6 +80,10 @@ export type Dictionary = {
     intro: string;
     timeline: { year: string; event: string; source?: string; key?: boolean }[];
     closing: string;
+    /** Life in the communities before the irrigation scheme (Braga, 2010). */
+    wayOfLife: { title: string; intro: string; items: { name: string; description: string }[]; quote: string; cite: string; source: string };
+    /** What the 2011 conduct adjustment agreement promised and what had happened by 2018 (Braga, 2020, ch. 1). */
+    tac: { title: string; intro: string; promiseLabel: string; outcomeLabel: string; rows: { promise: string; outcome: string }[]; quote: string; cite: string; source: string };
   };
   voices: {
     label: string;

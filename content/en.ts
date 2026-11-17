@@ -27,7 +27,7 @@ export const en: Dictionary = {
     },
     facts: [
       { value: "3", label: "stages of the method: open your eyes, act, rejoice" },
-      { value: "782", label: "families in 10 communities affected by the second phase of the PITR" },
+      { value: "139", label: "families in 10 communities affected by the second phase of the PITR" },
       { value: "2008", label: "year Clínica Ambiental and the Resistance Commission were founded" },
       { value: "117", label: "transcripts from the field mission in Ecuador (2024–2025)" },
     ],
@@ -60,7 +60,7 @@ export const en: Dictionary = {
         originalName: "¡Abre los ojos!",
         ecuador: "Participatory Action Research carried out with affected people to understand the problems.",
         ceara:
-          "Health, climate extremes and the social fabric. The Porfírio Nogueira da Costa Association chose the theme of health and illness; the women brought medicinal plants. This gave rise to the group that became the Bem Viver Collective in 2017.",
+          "Health, soil and the social fabric. In meetings of the Porfírio Nogueira da Costa Association, the community chose to research folk health knowledge about medicinal plants. Then came participatory mapping of health problems, a conversation circle on folk herbal medicine and the pharmaceutical industry, and an inventory of native and cultivated plants. In June 2017, 12 people, most of them women, formed the group that became the Bem Viver Collective.",
       },
       {
         step: "Stage 2",
@@ -68,7 +68,7 @@ export const en: Dictionary = {
         originalName: "¡Actúa!",
         ecuador: "Socio-environmental intervention: the affected population acts to change its situation, through agroecology and permaculture.",
         ceara:
-          "Agroecology and Bem Viver (“good living”). Integrative health practices, an ethnobotanical study and application of the Huipala Proposal. Small projects funded through public calls.",
+          "Agroecology and Buen Vivir. Fortnightly meetings of the Collective, a herbal medicine study group, 70 plant samples collected for the Prisco Bezerra Herbarium (UFC), children illustrating the booklet, and the Huipala Proposal put into practice. Small projects funded by calls from Cáritas and the Lutheran Diakonia Foundation (2018).",
       },
       {
         step: "Stage 3",
@@ -76,7 +76,7 @@ export const en: Dictionary = {
         originalName: "¡Alégrate!",
         ecuador: "Joy as a pillar of transformation: exchanges, agroecological fairs, culture and audiovisual work.",
         ceara:
-          "Resistance, solidarity and hope. Since 2021, the Bem Viver Space has produced medicinal herbs, vegetables, fruit and humus, and has hosted workshops and exchanges.",
+          "Resistance, solidarity and hope. Exchanges with neighboring communities (2017), medicinal plant and flower swap fairs (2020), photo exhibitions, film screenings, yoga and capoeira. Since 2021, the Bem Viver Space has produced medicinal herbs, vegetables, fruit and humus, and hosts workshops and exchanges.",
       },
     ],
     crossLabel: "running through all three stages:",
@@ -155,46 +155,87 @@ export const en: Dictionary = {
     label: "the territory",
     title: "Lagoa dos Cavalos, Russas",
     intro:
-      "The Tabuleiro de Russas Irrigation Project (PITR), built by Dnocs, Brazil's federal drought-relief agency, and added to the PAC federal infrastructure program in 2007, covers Russas, Limoeiro do Norte and Morada Nova, with 14,365 hectares of usable farmland. The first phase fragmented 22 rural communities through forced migration and pesticide contamination. The second affected ways of life based on agroforestry, beekeeping, sheep farming and family farming, with the loss of native forest, collective areas and technologies for living with the semi-arid climate.",
+      "Lagoa dos Cavalos lies in the Peixe district of Russas, 145 km from Fortaleza, in the backlands of the Lower Jaguaribe valley. The Tabuleiro de Russas Irrigation Project (PITR), built by Dnocs, Brazil's federal drought-relief agency, and added to the PAC federal infrastructure program in 2007, covers Russas, Limoeiro do Norte and Morada Nova, with 14,365 hectares of usable farmland. The first phase (1992–2004) destroyed 22 rural communities and affected 782 families, through forced migration and pesticide contamination. The second affected ways of life based on agroforestry, beekeeping, sheep farming and family farming, with the loss of native forest, collective areas and technologies for living with the semi-arid climate.",
     timeline: [
-      { year: "1992", event: "The first phase of the PITR begins (until 2004). 22 communities fragmented." },
-      {
-        year: "2007",
-        key: true,
-        event:
-          "Public-utility decree for expropriation, on April 4. 782 families from Escondida, Bananeiras, Sítio Junco, Lagoa dos Cavalos, Córrego Salgado, Barbatão, Sussuarana, Peixe, Cipó and Santa Terezinha.",
-      },
+      { year: "1954", event: "Seu Antônio, who had arrived in Córrego Salgado in 1934, buys the land where Lagoa dos Cavalos now stands. The name, the elders say, comes from cowhands who caught some runaway horses at the lake.", source: "Braga, 2010" },
+      { year: "1986", key: true, event: "São Vicente Project: 21 families farm a 20-hectare community field together and harvest up to 6,000 kilos of grain. Community organizing begins “under the cashew trees”.", source: "Braga, 2010" },
+      { year: "1988–89", event: "Flour house, seed bank and courses on alternative technologies. Beekeeping begins in 1989." },
+      { year: "1992", event: "The first phase of the PITR begins (until 2004): 22 communities destroyed and 782 families affected across 10,765 hectares." },
+      { year: "1995", event: "Electricity arrives and the Porfírio Nogueira da Costa Community Association is founded." },
+      { year: "2001", event: "Rainwater cisterns, built with the families' own labor, secure drinking water for every home." },
+      { year: "2002–03", event: "An underground dam, with Cáritas, and the first agroforestry and agrosilvopastoral systems, with the NGO Esplar, in Córrego Salgado." },
+      { year: "2007", key: true, event: "Public-utility decree for expropriation, on April 4. 139 families from Escondida, Bananeiras, Barbatão, Cipó, Córrego Salgado, Junco, Lagoa dos Cavalos, Peixe, Santa Terezinha and Sussuarana." },
       { year: "2008", event: "The Resistance Commission is formed. In Ecuador, Clínica Ambiental is born." },
       { year: "2009", event: "Public hearing in August. The Commission collectively drafts an alternative territorial proposal." },
-      {
-        year: "2011",
-        key: true,
-        event:
-          "Conduct Adjustment Agreement signed with the Federal Public Prosecutor's Office and Dnocs on August 18. An analysis of 2011–2018 found threats to and violations of fundamental rights.",
-        source: "Braga & Meireles, Conexões, 2020",
-      },
-      {
-        year: "2017",
-        key: true,
-        event: "The research group becomes the Bem Viver Collective of Popular Researchers in Health and Agroecology.",
-      },
+      { year: "2010", event: "In January, the Commission delivers its Community Resettlement Proposal, covering 2,096 hectares, to Dnocs. Lara Braga defends her master's dissertation “Agronegócio cercando agroecologia”." },
+      { year: "2011", key: true, event: "Conduct Adjustment Agreement signed with the Federal Public Prosecutor's Office and Dnocs on August 18. An analysis of 2011–2018 found threats to and violations of fundamental rights.", source: "Braga & Meireles, Conexões, 2020" },
+      { year: "2013", event: "On September 25, farmers occupy the Dnocs construction site to demand that the agreement be honored." },
+      { year: "2014", event: "Houses handed over in the Lagoa dos Cavalos and Peixe resettlements (November) and in Cipó (December), with no electricity connected and no title deeds." },
+      { year: "2015", event: "The Federal Public Prosecutor's Office takes enforcement of the agreement to court." },
+      { year: "2016", event: "Treated water reaches the Lagoa dos Cavalos resettlement through the community's own initiative." },
+      { year: "2017", key: true, event: "The research group becomes the Bem Viver Collective of Popular Researchers in Health and Agroecology." },
+      { year: "2018", event: "Inventory of 80 medicinal plants. In October, the associations sign the farming plan and the concession contract for 73.10 hectares." },
       { year: "2019", event: "Project approved by the UFC Ethics Committee (opinion no. 3.507.932/2019)." },
-      { year: "2020", event: "Thesis “Bem viver, saúde e reparação: tecendo diálogos urgentes”, also defended before a community examination panel." },
+      { year: "2020", event: "Thesis “Bem viver, saúde e reparação: tecendo diálogos urgentes”, also defended before a community examination panel, and the medicinal plants booklet is published." },
       { year: "2021", key: true, event: "Opening of the Bem Viver Space, a collective area for agroecological production and training." },
       { year: "2024–25", event: "Field mission in the Ecuadorian Amazon with members of Clínica Ambiental." },
       { year: "2026", key: true, event: "Article published in the journal Mercator (v. 25, e25009), on May 10." },
     ],
     closing: "Today, the communities of Cipó, Lagoa dos Cavalos, Peixe and Santa Terezinha continue to fight for access to land for family farming.",
+    wayOfLife: {
+      title: "Before the irrigation project: a backlands way of life",
+      intro: "In 2009, Lara Braga's master's research recorded how 79 families in Lagoa dos Cavalos, Junco, Barbatão and Córrego Salgado lived. With little land, they had built, over more than twenty years of organizing, ways of living with the semi-arid climate:",
+      items: [
+        { name: "intercropping", description: "corn, beans and cassava planted among cashew trees and carnaúba palms; cashew leaves fertilize the beans, and carnaúba grown alongside gives more straw" },
+        { name: "beekeeping", description: "since 1989, apiaries in preserved woodland and the Floremel honey house in Córrego Salgado, free of pesticides. Today only its ruins remain" },
+        { name: "water", description: "rainwater cisterns for drinking and cooking, wells with desalinators, an underground dam and a water main planned by the families themselves" },
+        { name: "agroforestry", description: "an agrosilvopastoral system and reforestation in previously cleared areas" },
+        { name: "seeds", description: "a native seed bank and swaps between communities, rejecting GM seeds" },
+        { name: "backyards", description: "dozens of plants that are both food and medicine: guava, pomegranate, corama, malvarisco, boldo, lemongrass, aroeira, cumaru" },
+        { name: "Serrote da Tapera", description: "the communities' “postcard” hill, where the yearly mass gathers about 2,000 people" },
+        { name: "knowing the land", description: "the moon guides planting, and choosing the best seeds is passed down through generations" },
+      ],
+      quote: "“As I see it, with the expropriation we'll lose a lot of these plants. In fact, we're already losing them. […] Above all the cashew and the carnaúba, which will be hit hardest.”",
+      cite: "Lúcio, young beekeeper and farmer from Lagoa dos Cavalos, at a 2009 workshop (free translation from Portuguese)",
+      source: "Source: BRAGA, L. Q. V. Agronegócio cercando agroecologia: modo de vida e conflito socioambiental em comunidades agrícolas de Tabuleiro de Russas, Ceará. Dissertação (Mestrado em Saúde Pública), UFC, 2010, ch. 4.",
+    },
+    tac: {
+      title: "The 2011 agreement: what was promised and what happened",
+      intro: "On August 18, 2011, the Federal Public Prosecutor's Office, Dnocs and the Commission in Defense of the Families of the Second Phase signed a Conduct Adjustment Agreement (TAC). The thesis read the case documents up to 2018 and found that almost every clause had been breached:",
+      promiseLabel: "The agreement promised",
+      outcomeLabel: "By 2018",
+      rows: [
+        { promise: "To preserve the communities of Cipó, Lagoa dos Cavalos and Peixe as the base for resettling the others", outcome: "The three communities still stand and gained resettlements around them: a victory of the resistance." },
+        { promise: "To hand over the new house before any eviction", outcome: "Houses were handed over in 2014 with no electricity connected. In 2017, only one meter worked, and the wiring was being stolen from the poles." },
+        { promise: "A water and power point in each farming area", outcome: "In 2015, Cipó was buying water at R$ 60–80 per 7,000 liters. In Lagoa dos Cavalos, treated water only arrived in 2016, through the community's own initiative." },
+        { promise: "Green Belt: 10 meters of trees chosen by the communities, as a shield against pesticides", outcome: "Only a few carnaúba palms were planted, on part of the land, and they died in the drought." },
+        { promise: "To expand the legal forest reserve around the communities, for the bees", outcome: "Dnocs claimed there was no land available (2015). Using the reserve for beekeeping was still unresolved in 2018." },
+        { promise: "A free, collective concession of 3 to 4 hectares per family", outcome: "The contract for 73.10 hectares was only signed in October 2018, without the changes the families requested for rain-fed farming." },
+        { promise: "Small plots near the communities, with those expropriated selected without a tender", outcome: "Dnocs did not answer the proposed criteria and blamed the delay on the lack of water." },
+        { promise: "Title deeds for the houses", outcome: "By 2017, no deeds had been issued." },
+      ],
+      quote: "“We've gone more than eight years without putting a seed in the ground, and we have to eat to survive.”",
+      cite: "Resident, at a public hearing of the Federal Public Prosecutor's Office, 2013 (free translation from Portuguese)",
+      source: "Source: BRAGA, L. Q. V. Bem viver, saúde e reparação: tecendo diálogos urgentes. Tese (Doutorado em Desenvolvimento e Meio Ambiente), UFC, 2020, ch. 1, based on the TAC, prosecutors' meeting minutes (2015), a Public Defender's Office meeting record (2017) and a federal court hearing record (2018).",
+    },
   },
   voices: {
     label: "feminist ecologies of knowledge",
     title: "Who sustains the struggle",
     intro:
-      "The Bem Viver Collective is made up mainly of women: mothers, farmers, teachers, students and community leaders. They were the ones who proposed knowledge about medicinal plants as a research topic, the same folk medicine that women in the community practiced before them. The research treats these women as researchers.",
+      "The Bem Viver Collective is made up mainly of women: mothers, farmers, teachers, students and community leaders. They were the ones who proposed knowledge about medicinal plants as a research topic, the same folk medicine that women in the community practiced before them. In the fight against expropriation, they were the ones who called the families together, founded associations and stood up in the meetings with Dnocs. The research treats these women as researchers.",
     quotes: [
       {
         text: "“The struggle hasn't stopped since 2007. Those of us who organized those meetings took the lead in calling the families together […]. A tangle of things that women got involved in and keep getting involved in.”",
         author: "Anna Keyle, farmer and educator, Bem Viver Collective (free translation from Portuguese)",
+      },
+      {
+        text: "“In a way, women lost their fear of speaking, started to express themselves more and to fight harder against what was wrong. […] If we were already empowered, if we already had an important role in the community, now it has grown.”",
+        author: "Osarina Lima, farmer and entrepreneur, Lagoa dos Cavalos (free translation from Portuguese)",
+      },
+      {
+        text: "“We realized we had practically stopped using medicinal plants! […] From then on, we really went back to using them: people started getting hold of species, some started swapping, and they began planting in their backyards again.”",
+        author: "Erivânia Ferreira, farmer and mother, Bem Viver Collective (free translation from Portuguese)",
       },
       {
         text: "“Just like the women who developed this medicine in the past, our collective is also made up only of women. […] Struggling and going after what is ours by right is a feminine trait.”",
@@ -239,11 +280,13 @@ export const en: Dictionary = {
     items: [
       {
         title: "Medicinal plants booklet",
-        description: "“Plantas medicinais, conhecimentos populares em saúde e luta por terra: uma cartilha em defesa da vida” (in Portuguese), written with the women of the Collective.", links: [{ href: "https://drive.google.com/file/d/1Jtd4nYeeyt1cz69j-UivwZdQQLvay7ss/view?usp=sharing", label: "Read the booklet (in Portuguese)" }]
+        description: "“Plantas medicinais, conhecimentos populares em saúde e luta por terra: uma cartilha em defesa da vida” (in Portuguese), written with the women of the Collective, illustrated by children from the community and published in 2020, with recipes from Lagoa dos Cavalos.", links: [{ href: "https://drive.google.com/file/d/1Jtd4nYeeyt1cz69j-UivwZdQQLvay7ss/view?usp=sharing", label: "Read the booklet (in Portuguese)" }]
       },
+      { title: "Inventory of 80 medicinal plants", description: "Made in 2018 by the Collective with 24 farmers. 70 samples went to the Prisco Bezerra Herbarium (UFC). It is in this site's plant archive." },
       { title: "Bem Viver Space", description: "A collective area since 2021: medicinal herbs, traditional vegetables, fruit trees, humus, workshops and exchanges.", links: [{ href: "https://www.instagram.com/coletivo.bemviver/", label: "Bem Viver Collective on Instagram" }] },
       { title: "Two short documentaries", description: "In partnership with the Caroá Audiovisual Collective and the Ivens Dias Branco School of Social Gastronomy.", links: [{ href: "https://www.youtube.com/watch?v=iVvl3MRPU7s", label: "Watch: Lagoa dos Cavalos e o Bem Viver" }, { href: "https://www.youtube.com/watch?v=kDiJanz7bkE", label: "Watch: PANC na Lagoa dos Cavalos (in Portuguese)" }] },
       { title: "A thesis with a community panel", description: "The community took part in evaluating the knowledge produced about it and with it." },
+      { title: "Master's dissertation (2010)", description: "“Agronegócio cercando agroecologia” (in Portuguese), Lara Braga's first study in Lagoa dos Cavalos: way of life, beekeeping and the conflict with the irrigation project." },
       { title: "Two scientific articles", description: "Mercator (2026), on the reparation method; Conexões (2020), on the conduct adjustment agreement and the conflict.", links: [{ href: "https://doi.org/10.36517/rm2026.e25009", label: "Read the article in Mercator (2026, in Portuguese)" }, { href: "https://doi.org/10.21439/conexoes.v14i2.1876", label: "Read the article in Conexões (2020, in Portuguese)" }] },
       { title: "Unconventional food plants in Lagoa dos Cavalos", description: "Research by Osarina Lima, born in Russas, on the community's unconventional food plants, with an agroecological garden, recipes and a growing calendar for farmers.", links: [{ href: "https://gastronomiasocial.org.br/laboratorio-de-criac/osarina-lima/", label: "Read about the research (in Portuguese)" }] },
       { title: "Ecuador archive", description: "Audio, photos and 117 transcripts of interviews with the people who make up Clínica Ambiental." },
@@ -252,7 +295,7 @@ export const en: Dictionary = {
   archive: {
     label: "plant archive",
     title: "The plants that hold this story",
-    intro: "Here are 135 species from the Acervo Botânico book, with the names, meanings, uses and stories told in the territories. The photos show the species, not the communities.",
+    intro: "Here are the 80 medicinal plants from the Lagoa dos Cavalos inventory and 135 species from the Acervo Botânico book, with the names, uses and stories told in Ceará and Ecuador. The photos show the species, not the communities.",
     cta: "Explore the archive",
   },
   credits: {
@@ -262,13 +305,13 @@ export const en: Dictionary = {
       {
         title: "In Ceará",
         description:
-          "Bem Viver Collective of Popular Researchers in Health and Agroecology · Porfírio Nogueira da Costa Community Association · Lagoa dos Cavalos Community · Caroá Audiovisual Collective",
+          "Bem Viver Collective of Popular Researchers in Health and Agroecology · Porfírio Nogueira da Costa Community Association · Lagoa dos Cavalos and Cipó Resettled Families Associations · Russas Rural Workers' Union · Cáritas of the Diocese of Limoeiro do Norte · Lagoa dos Cavalos Community · Caroá Audiovisual Collective",
       },
       { title: "In Ecuador", description: "Clínica Ambiental, coordinated by Adolfo Maldonado · its members · Shuar and Siekoya Indigenous communities" },
       {
         title: "University",
         description:
-          "Lara de Queiroz Viana Braga (PhD in Environment and Development) and Antônio Jeovah de Andrade Meireles (professor, PhD in Physical Geography), of UFC · PPGGeo/UFC",
+          "Lara de Queiroz Viana Braga (PhD in Environment and Development) and Antônio Jeovah de Andrade Meireles (professor, PhD in Physical Geography), of UFC · PPGGeo/UFC · Tramas research group, Prisco Bezerra Herbarium and Farmácia Viva project (UFC)",
       },
       { title: "Support", description: "FUNCAP, Postdoctoral Call 09/2023 · Capes (PPGGeo/UFC, rating 7)" },
     ],
@@ -284,6 +327,9 @@ export const en: Dictionary = {
       'BRAGA, L. Q. V.; MEIRELES, A. J. A. Diálogos para reparação socioambiental integradora em uma pesquisa participativa de base comunitária. <em>Mercator</em>, v. 25, e25009, 2026. <a href="https://periodicos.ufc.br/mercator/article/view/100570" target="_blank" rel="noopener">periodicos.ufc.br/mercator/article/view/100570</a>',
       'BRAGA, L. Q. V.; MEIRELES, A. J. A. Os sentidos da resolução negociada de um conflito socioambiental no sertão do Ceará. <em>Conexões – Ciência e Tecnologia</em>, v. 14, n. 2, p. 86–97, 2020. <a href="https://doi.org/10.21439/conexoes.v14i2.1876" target="_blank" rel="noopener">doi.org/10.21439/conexoes.v14i2.1876</a>',
       "BRAGA, L. Q. V. <em>Bem viver, saúde e reparação: tecendo diálogos urgentes</em>. PhD thesis (Development and Environment) – Federal University of Ceará, Fortaleza, 2020.",
+      "BRAGA, L. Q. V. <em>Agronegócio cercando agroecologia: modo de vida e conflito socioambiental em comunidades agrícolas de Tabuleiro de Russas, Ceará</em>. Master's dissertation (Public Health) – Federal University of Ceará, Fortaleza, 2010.",
+      "COLETIVO DE PESQUISA BEM VIVER. <em>Plantas medicinais, conhecimentos populares em saúde e luta por terra: uma cartilha em defesa da vida</em>. Fortaleza: Expressão Gráfica e Editora, 2020.",
+      "BRAGA, L. Q. V. Direitos da natureza e justiça ambiental: um debate. In: MORAES, G. O.; FREIRE, G. M. C. A.; FERRAZ, D. S. (eds.). <em>Do direito ambiental aos direitos da natureza: teoria e prática</em>. Fortaleza: Mucuripe, 2019, p. 41–60.",
       'CLÍNICA AMBIENTAL. Soluciones socioambientales. <a href="https://www.clinicambiental.org/" target="_blank" rel="noopener">clinicambiental.org</a> · <a href="https://www.clinicambiental.org/certificacion-huipala/" target="_blank" rel="noopener">Huipala Certification</a> · <a href="https://www.clinicambiental.org/wp-content/uploads/docs/publicaciones/alerta7huipala.pdf" target="_blank" rel="noopener">Alerta Naranja no. 7 (Huipala Proposal, 2013)</a>',
       "MALDONADO, A. <em>Una propuesta de reparación socio-ecosistémica a los impactos del metabolismo de la actividad petrolera para la Amazonía ecuatoriana</em>. PhD thesis (Collective Health, Environment and Society), Universidad Andina Simón Bolívar, Quito, 2018.",
       "BERISTAIN, C. M. (ed.). <em>El derecho a la reparación en los conflictos socioambientales</em>. Bilbao: Hegoa, 2010.",

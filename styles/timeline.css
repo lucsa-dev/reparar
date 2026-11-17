@@ -14,3 +14,10 @@
 .timeline-dates .timeline-year{padding-block:1rem .25rem}
 .timeline-dates .timeline-year::after{display:none}
 .timeline-dates .timeline-year .yr{font-family:var(--f-display);font-size:1.3rem;font-weight:600}
+.tac-table{width:100%;margin-top:1.2rem;border-collapse:collapse;font-family:var(--f-ui);font-size:.95rem;line-height:1.45}
+.tac-table th{padding:.5rem .7rem;text-align:left;font-family:var(--f-label);font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--highlight);border-bottom:2px solid var(--sol)}
+.tac-table td{padding:.65rem .7rem;vertical-align:top;border-bottom:1px solid var(--line)}
+.tac-table td:first-child{font-weight:600;width:42%}
+@media (max-width:560px){.tac-table thead{display:none}.tac-table tr{display:grid;padding:.6rem 0;border-bottom:1px solid var(--line)}.tac-table td{border:0;padding:.15rem 0;width:auto}}
+.way-of-life{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:560px){.way-of-life{grid-template-columns:minmax(0,1fr)}}

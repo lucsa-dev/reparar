@@ -6,7 +6,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import type { Locale } from "@/content";
 import type { Dictionary } from "@/content/types";
 
-const fruitIcons: IconName[] = ["book", "sprout", "film", "graduation", "document", "archive"];
+const fruitIcons: IconName[] = ["book", "heartPulse", "sprout", "film", "graduation", "graduation", "document", "sprout", "archive"];
 
 export function Fruits({ content, locale, more }: { content: Dictionary["fruits"]; locale: Locale; more?: More }) {
   return (

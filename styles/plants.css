@@ -45,3 +45,7 @@
 .plant-photo-skeleton svg{color:var(--muted);opacity:.45}
 .plant-no-report{font-family:var(--f-ui);font-size:.92rem;color:var(--muted);font-style:italic}
 @media (prefers-reduced-motion:no-preference){.plant-track{scroll-behavior:smooth}}
+.plant-uses{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}
+.plant-uses li{display:grid;gap:.15rem;padding-left:.7rem;border-left:2px solid var(--sol);font-size:.96rem;line-height:1.45}
+.plant-uses p{margin:0}
+.plant-uses b{font-family:var(--f-ui);font-size:.88rem}

@@ -27,7 +27,7 @@ export const pt: Dictionary = {
     },
     facts: [
       { value: "3", label: "etapas do método: abrir os olhos, atua, alegra-te" },
-      { value: "782", label: "famílias de 10 comunidades atingidas pela 2ª etapa do PITR" },
+      { value: "139", label: "famílias de 10 comunidades atingidas pela 2ª etapa do PITR" },
       { value: "2008", label: "ano de fundação da Clínica Ambiental e da Comissão da Resistência" },
       { value: "117", label: "transcrições da missão de campo no Equador (2024–2025)" },
     ],
@@ -60,7 +60,7 @@ export const pt: Dictionary = {
         originalName: "¡Abre los ojos!",
         ecuador: "Investigação-Ação Participativa feita com as pessoas atingidas para entender os problemas.",
         ceara:
-          "Saúde, extremos climáticos e tecido social. A Associação Porfírio Nogueira da Costa escolheu o tema saúde-doença; as mulheres trouxeram as plantas medicinais. Nasce o grupo que, em 2017, vira o Coletivo Bem Viver.",
+          "Saúde, solo e tecido social. Nas reuniões da Associação Porfírio Nogueira da Costa, a comunidade escolheu pesquisar os saberes populares em saúde com plantas medicinais. Vieram o mapeamento participativo dos problemas de saúde, uma roda de conversa sobre fitoterapia popular e indústria farmacêutica e o inventário das plantas nativas e cultivadas. Em junho de 2017, 12 pessoas, a maioria mulheres, formam o grupo que vira o Coletivo Bem Viver.",
       },
       {
         step: "Etapa 2",
@@ -68,7 +68,7 @@ export const pt: Dictionary = {
         originalName: "¡Actúa!",
         ecuador: "Intervenção socioambiental: a população atingida age para mudar sua situação, com agroecologia e permacultura.",
         ceara:
-          "Agroecologia e Bem Viver. Práticas integrativas de saúde, estudo etnobotânico e aplicação da Proposta Huipala. Pequenos projetos aprovados em editais.",
+          "Agroecologia e Bem Viver. Reuniões quinzenais do Coletivo, grupo de estudos em fitoterapia, coleta de 70 amostras de plantas para o Herbário Prisco Bezerra (UFC), crianças ilustrando a cartilha e aplicação da Proposta Huipala. Pequenos projetos aprovados em editais da Cáritas Diocesana e da Fundação Luterana de Diaconia (2018).",
       },
       {
         step: "Etapa 3",
@@ -76,7 +76,7 @@ export const pt: Dictionary = {
         originalName: "¡Alégrate!",
         ecuador: "A alegria como pilar da transformação: intercâmbios, feiras agroecológicas, cultura e audiovisual.",
         ceara:
-          "Resistência, solidariedade e esperança. Desde 2021, o Espaço Bem Viver produz ervas medicinais, hortaliças, frutas e húmus, e recebe oficinas e intercâmbios.",
+          "Resistência, solidariedade e esperança. Intercâmbio com comunidades vizinhas (2017), feiras de troca de plantas medicinais e flores (2020), exposições de fotos, sessões de cinema, yoga e capoeira. Desde 2021, o Espaço Bem Viver produz ervas medicinais, hortaliças, frutas e húmus, e recebe oficinas e intercâmbios.",
       },
     ],
     crossLabel: "atravessando as três etapas:",
@@ -155,46 +155,87 @@ export const pt: Dictionary = {
     label: "o território",
     title: "Lagoa dos Cavalos, Russas",
     intro:
-      "O Perímetro Irrigado Tabuleiro de Russas (PITR), obra do Dnocs que entrou no PAC em 2007, cobre Russas, Limoeiro do Norte e Morada Nova, com 14.365 hectares de área agrícola útil. A primeira etapa fragmentou 22 comunidades rurais por migração forçada e contaminação por agrotóxicos. A segunda atingiu modos de vida baseados em agroflorestas, apicultura, ovinocultura e agricultura familiar, com perda de mata nativa, de áreas coletivas e de tecnologias de convivência com o semiárido.",
+      "Lagoa dos Cavalos fica no distrito de Peixe, em Russas, a 145 km de Fortaleza, no sertão do Baixo Jaguaribe. O Perímetro Irrigado Tabuleiro de Russas (PITR), obra do Dnocs que entrou no PAC em 2007, cobre Russas, Limoeiro do Norte e Morada Nova, com 14.365 hectares de área agrícola útil. A primeira etapa (1992–2004) destruiu 22 comunidades rurais e atingiu 782 famílias, com migração forçada e contaminação por agrotóxicos. A segunda atingiu modos de vida baseados em agroflorestas, apicultura, ovinocultura e agricultura familiar, com perda de mata nativa, de áreas coletivas e de tecnologias de convivência com o semiárido.",
     timeline: [
-      { year: "1992", event: "Começa a 1ª etapa do PITR (até 2004). 22 comunidades fragmentadas." },
-      {
-        year: "2007",
-        key: true,
-        event:
-          "Decreto de utilidade pública para desapropriação, em 4 de abril. 782 famílias de Escondida, Bananeiras, Sítio Junco, Lagoa dos Cavalos, Córrego Salgado, Barbatão, Sussuarana, Peixe, Cipó e Santa Terezinha.",
-      },
+      { year: "1954", event: "Seu Antônio, chegado ao Córrego Salgado em 1934, compra as terras onde hoje fica Lagoa dos Cavalos. O nome, contam os antigos, vem dos vaqueiros que pegaram ali uns cavalos fugidos.", source: "Braga, 2010" },
+      { year: "1986", key: true, event: "Projeto São Vicente: 21 famílias cultivam juntas um campo comunitário de 20 hectares e chegam a colher 6.000 quilos de grãos. Começa a organização comunitária, “debaixo dos cajueiros”.", source: "Braga, 2010" },
+      { year: "1988–89", event: "Casa de farinha, casa de sementes e cursos de tecnologias alternativas. Em 1989 começa a apicultura." },
+      { year: "1992", event: "Começa a 1ª etapa do PITR (até 2004): 22 comunidades destruídas e 782 famílias atingidas em 10.765 hectares." },
+      { year: "1995", event: "Chega a energia elétrica e nasce a Associação Comunitária Porfírio Nogueira da Costa." },
+      { year: "2001", event: "As cisternas de placa, construídas com o trabalho das famílias, garantem água de beber a todas as casas." },
+      { year: "2002–03", event: "Barragem subterrânea, com a Cáritas, e as primeiras agroflorestas e sistemas agrossilvopastoris, com o Esplar, no Córrego Salgado." },
+      { year: "2007", key: true, event: "Decreto de utilidade pública para desapropriação, em 4 de abril. 139 famílias de Escondida, Bananeiras, Barbatão, Cipó, Córrego Salgado, Junco, Lagoa dos Cavalos, Peixe, Santa Terezinha e Sussuarana." },
       { year: "2008", event: "Forma-se a Comissão da Resistência. No Equador, nasce a Clínica Ambiental." },
       { year: "2009", event: "Audiência pública em agosto. A Comissão elabora coletivamente uma proposta territorial alternativa." },
-      {
-        year: "2011",
-        key: true,
-        event:
-          "Termo de Ajustamento de Conduta assinado com MPF e Dnocs em 18 de agosto. A análise de 2011–2018 encontrou ameaças e violações de direitos fundamentais.",
-        source: "Braga & Meireles, Conexões, 2020",
-      },
-      {
-        year: "2017",
-        key: true,
-        event: "O grupo de pesquisa vira o Coletivo de Pesquisadoras e Pesquisadores Populares em Saúde e Agroecologia Bem Viver.",
-      },
+      { year: "2010", event: "Em janeiro, a Comissão entrega ao Dnocs a Proposta de Reassentamento das Comunidades, com 2.096 hectares. Lara Braga defende a dissertação “Agronegócio cercando agroecologia”." },
+      { year: "2011", key: true, event: "Termo de Ajustamento de Conduta assinado com MPF e Dnocs em 18 de agosto. A análise de 2011–2018 encontrou ameaças e violações de direitos fundamentais.", source: "Braga & Meireles, Conexões, 2020" },
+      { year: "2013", event: "Em 25 de setembro, agricultoras e agricultores ocupam o canteiro de obras do Dnocs para cobrar o cumprimento do TAC." },
+      { year: "2014", event: "Entrega das casas dos reassentamentos de Lagoa dos Cavalos e Peixe (novembro) e do Cipó (dezembro), sem energia ligada e sem título." },
+      { year: "2015", event: "O Ministério Público Federal leva a execução do TAC à Justiça." },
+      { year: "2016", event: "A água tratada chega ao reassentamento de Lagoa dos Cavalos por iniciativa da própria comunidade." },
+      { year: "2017", key: true, event: "O grupo de pesquisa vira o Coletivo de Pesquisadoras e Pesquisadores Populares em Saúde e Agroecologia Bem Viver." },
+      { year: "2018", event: "Inventário de 80 plantas medicinais. Em outubro, as associações assinam o plano de exploração agrícola e o contrato de concessão de 73,10 hectares." },
       { year: "2019", event: "Projeto aprovado no Comitê de Ética da UFC (parecer nº 3.507.932/2019)." },
-      { year: "2020", event: "Tese “Bem viver, saúde e reparação: tecendo diálogos urgentes”, defendida também diante de uma banca popular." },
+      { year: "2020", event: "Tese “Bem viver, saúde e reparação: tecendo diálogos urgentes”, defendida também diante de uma banca popular, e cartilha de plantas medicinais publicada." },
       { year: "2021", key: true, event: "Inauguração do Espaço Bem Viver, área coletiva de produção agroecológica e formação." },
       { year: "2024–25", event: "Missão de campo na Amazônia equatoriana com associados e associadas da Clínica Ambiental." },
       { year: "2026", key: true, event: "Artigo publicado na revista Mercator (v. 25, e25009), em 10 de maio." },
     ],
     closing: "Hoje, as comunidades Cipó, Lagoa dos Cavalos, Peixe e Santa Terezinha seguem lutando por acesso à terra para a agricultura familiar.",
+    wayOfLife: {
+      title: "Antes do perímetro: um modo de vida do sertão",
+      intro: "Em 2009, a pesquisa de mestrado de Lara Braga registrou como viviam 79 famílias de Lagoa dos Cavalos, Junco, Barbatão e Córrego Salgado. Com pouca terra, elas tinham construído, em mais de vinte anos de organização, alternativas de convivência com o semiárido:",
+      items: [
+        { name: "roçado consorciado", description: "milho, feijão e mandioca entre cajueiros e carnaubeiras; a folha do cajueiro aduba o feijão, e a carnaúba plantada junto dá mais palha" },
+        { name: "apicultura", description: "desde 1989, apiários nas matas preservadas e a casa do mel Floremel, no Córrego Salgado, sem agrotóxicos. Hoje, dela restam escombros" },
+        { name: "água", description: "cisternas de placa para beber e cozinhar, poços com dessalinizadores, uma barragem subterrânea e uma adutora planejada pelas próprias famílias" },
+        { name: "agrofloresta", description: "sistema agrossilvopastoril e reflorestamento em áreas antes desmatadas" },
+        { name: "sementes", description: "casa de sementes crioulas e trocas entre comunidades, recusando as transgênicas" },
+        { name: "quintais", description: "dezenas de plantas que são comida e remédio: goiaba, romã, corama, malvarisco, boldo, capim-santo, aroeira, cumaru" },
+        { name: "Serrote da Tapera", description: "o “cartão-postal” das comunidades, onde a missa anual reúne cerca de 2 mil pessoas" },
+        { name: "saber da terra", description: "a lua orienta o plantio, e a escolha das melhores sementes passa de geração em geração" },
+      ],
+      quote: "“No meu ver, com a desapropriação, a gente vai perder muito dessas plantas aí. Aliás, já está perdendo. […] Principalmente o cajueiro e a carnaúba, que serão as mais prejudicadas.”",
+      cite: "Lúcio, jovem apicultor e agricultor de Lagoa dos Cavalos, em oficina de 2009",
+      source: "Fonte: BRAGA, L. Q. V. Agronegócio cercando agroecologia: modo de vida e conflito socioambiental em comunidades agrícolas de Tabuleiro de Russas, Ceará. Dissertação (Mestrado em Saúde Pública), UFC, 2010, cap. 4.",
+    },
+    tac: {
+      title: "O TAC: o que foi prometido e o que aconteceu",
+      intro: "Em 18 de agosto de 2011, o Ministério Público Federal, o Dnocs e a Comissão em Defesa das Famílias da 2ª Etapa assinaram um Termo de Ajustamento de Conduta. A tese leu os documentos do processo até 2018 e encontrou descumprimento em quase todas as cláusulas:",
+      promiseLabel: "O TAC prometia",
+      outcomeLabel: "Até 2018",
+      rows: [
+        { promise: "Preservar as comunidades do Cipó, de Lagoa dos Cavalos e do Peixe, base para o reassentamento das demais", outcome: "As três comunidades continuam de pé e ganharam reassentamentos ao redor: uma conquista da resistência." },
+        { promise: "Entregar a nova casa antes de qualquer desocupação", outcome: "As casas foram entregues em 2014 sem energia ligada. Em 2017, um único medidor funcionava, e a fiação dos postes estava sendo roubada." },
+        { promise: "Um ponto de água e luz em cada área de produção", outcome: "Em 2015, o Cipó comprava água a R$ 60–80 por 7 mil litros. Em Lagoa dos Cavalos, a água tratada só chegou em 2016, por iniciativa da comunidade." },
+        { promise: "Cordão Verde: 10 metros de árvores escolhidas pelas comunidades, contra os agrotóxicos", outcome: "Plantaram só algumas carnaúbas, em parte do terreno, e elas morreram na seca." },
+        { promise: "Ampliar a reserva legal ao redor das comunidades, para as abelhas", outcome: "O Dnocs alegou falta de terras (2015). O uso da reserva para a apicultura seguia em aberto em 2018." },
+        { promise: "Concessão gratuita e coletiva de 3 a 4 hectares por família", outcome: "O contrato de 73,10 hectares só foi assinado em outubro de 2018, sem as mudanças pedidas pelas famílias para a agricultura de sequeiro." },
+        { promise: "Lotes pequenos perto das comunidades, com seleção dos expropriados sem licitação", outcome: "O Dnocs não respondeu à proposta de critérios e justificou a demora com a falta de água." },
+        { promise: "Títulos de propriedade das casas", outcome: "Em 2017, nenhum título tinha sido entregue." },
+      ],
+      quote: "“Estamos há mais de oito anos sem colocar uma semente no chão e temos que comer para sobreviver.”",
+      cite: "Morador, em audiência pública do Ministério Público Federal, 2013",
+      source: "Fonte: BRAGA, L. Q. V. Bem viver, saúde e reparação: tecendo diálogos urgentes. Tese (Doutorado em Desenvolvimento e Meio Ambiente), UFC, 2020, cap. 1, a partir do TAC, de atas de reunião do MPF (2015), da memória de reunião da DPU (2017) e do termo de audiência da Justiça Federal (2018).",
+    },
   },
   voices: {
     label: "ecologias feministas de saberes",
     title: "Quem sustenta a luta",
     intro:
-      "O Coletivo Bem Viver é formado principalmente por mulheres: mães, agricultoras, professoras, estudantes e lideranças. Foram elas que propuseram como tema de pesquisa os saberes sobre plantas medicinais, a mesma medicina popular que as mulheres da comunidade praticavam antes delas. A pesquisa trata essas mulheres como pesquisadoras.",
+      "O Coletivo Bem Viver é formado principalmente por mulheres: mães, agricultoras, professoras, estudantes e lideranças. Foram elas que propuseram como tema de pesquisa os saberes sobre plantas medicinais, a mesma medicina popular que as mulheres da comunidade praticavam antes delas. Na luta contra a desapropriação, eram elas que convocavam as famílias, fundavam associações e enfrentavam as reuniões com o Dnocs. A pesquisa trata essas mulheres como pesquisadoras.",
     quotes: [
       {
         text: "“Desde 2007 que a luta não parou. A gente que era articuladora dessas reuniões, ficamos à frente para convocar as famílias […]. Um emaranhado de coisas que as mulheres se envolveram e continuam a se envolver.”",
         author: "Anna Keyle, agricultora e pedagoga, Coletivo Bem Viver",
+      },
+      {
+        text: "“As mulheres de certa forma perderam o medo de falar, passaram a se expressar mais e a brigar mais por aquilo que estava errado. […] Se já éramos empoderadas, se já tínhamos um papel importante na comunidade, agora ele se ampliou.”",
+        author: "Osarina Lima, agricultora e empreendedora, Lagoa dos Cavalos",
+      },
+      {
+        text: "“A gente percebeu que praticamente não usava mais as plantas medicinais! […] A partir desse momento, a gente voltou realmente a fazer uso dessas plantas: as pessoas começaram a adquirir espécies, algumas a fazer trocas, já começaram a plantar de novo nos seus quintais.”",
+        author: "Erivânia Ferreira, agricultora e mãe, Coletivo Bem Viver",
       },
       {
         text: "“Como no passado as mulheres que desenvolviam essa medicina, o nosso coletivo também são só mulheres. […] É uma característica feminina a luta e ir atrás do que é nosso por direito.”",
@@ -239,11 +280,13 @@ export const pt: Dictionary = {
     items: [
       {
         title: "Cartilha de plantas medicinais",
-        description: "“Plantas medicinais, conhecimentos populares em saúde e luta por terra: uma cartilha em defesa da vida”, escrita com as mulheres do Coletivo.", links: [{ href: "https://drive.google.com/file/d/1Jtd4nYeeyt1cz69j-UivwZdQQLvay7ss/view?usp=sharing", label: "Ler a cartilha" }]
+        description: "“Plantas medicinais, conhecimentos populares em saúde e luta por terra: uma cartilha em defesa da vida”, escrita com as mulheres do Coletivo, ilustrada por crianças da comunidade e publicada em 2020, com receitas de Lagoa dos Cavalos.", links: [{ href: "https://drive.google.com/file/d/1Jtd4nYeeyt1cz69j-UivwZdQQLvay7ss/view?usp=sharing", label: "Ler a cartilha" }]
       },
+      { title: "Inventário de 80 plantas medicinais", description: "Feito em 2018 pelo Coletivo com 24 agricultoras e agricultores. 70 amostras foram ao Herbário Prisco Bezerra (UFC). Está no acervo de plantas deste site." },
       { title: "Espaço Bem Viver", description: "Área coletiva desde 2021: ervas medicinais, hortaliças tradicionais, frutíferas, húmus, oficinas e intercâmbios.", links: [{ href: "https://www.instagram.com/coletivo.bemviver/", label: "Coletivo Bem Viver no Instagram" }] },
       { title: "Dois minidocumentários", description: "Em parceria com o Coletivo Audiovisual Caroá e a Escola de Gastronomia Social Ivens Dias Branco.", links: [{ href: "https://www.youtube.com/watch?v=iVvl3MRPU7s", label: "Assistir: Lagoa dos Cavalos e o Bem Viver" }, { href: "https://www.youtube.com/watch?v=kDiJanz7bkE", label: "Assistir: PANC na Lagoa dos Cavalos" }] },
       { title: "Tese com banca popular", description: "A comunidade participou da avaliação do conhecimento produzido sobre ela e com ela." },
+      { title: "Dissertação de mestrado (2010)", description: "“Agronegócio cercando agroecologia”, o primeiro estudo de Lara Braga em Lagoa dos Cavalos: modo de vida, apicultura e o conflito com o perímetro irrigado." },
       { title: "Dois artigos científicos", description: "Mercator (2026), sobre o método de reparação; Conexões (2020), sobre o TAC e o conflito.", links: [{ href: "https://doi.org/10.36517/rm2026.e25009", label: "Ler o artigo na Mercator (2026)" }, { href: "https://doi.org/10.21439/conexoes.v14i2.1876", label: "Ler o artigo na Conexões (2020)" }] },
       { title: "PANC na Lagoa dos Cavalos", description: "Pesquisa de Osarina Lima, nascida em Russas, sobre as plantas alimentícias não convencionais da comunidade, com horta agroecológica, receitas e um calendário de cultivo para agricultoras e agricultores.", links: [{ href: "https://gastronomiasocial.org.br/laboratorio-de-criac/osarina-lima/", label: "Conhecer a pesquisa" }] },
       { title: "Acervo Equador", description: "Áudios, fotos e 117 transcrições de entrevistas com quem faz a Clínica Ambiental." },
@@ -252,7 +295,7 @@ export const pt: Dictionary = {
   archive: {
     label: "acervo de plantas",
     title: "As plantas que guardam essa história",
-    intro: "São 135 espécies do livro Acervo Botânico e os nomes, significados, usos e histórias contados nos territórios. As fotos mostram as espécies, não as comunidades.",
+    intro: "São as 80 plantas medicinais do inventário de Lagoa dos Cavalos e as 135 espécies do livro Acervo Botânico, com os nomes, usos e histórias contados no Ceará e no Equador. As fotos mostram as espécies, não as comunidades.",
     cta: "Explorar o acervo",
   },
   credits: {
@@ -262,13 +305,13 @@ export const pt: Dictionary = {
       {
         title: "No Ceará",
         description:
-          "Coletivo de Pesquisadoras e Pesquisadores Populares em Saúde e Agroecologia Bem Viver · Associação Comunitária Porfírio Nogueira da Costa · Comunidade Lagoa dos Cavalos · Coletivo Audiovisual Caroá",
+          "Coletivo de Pesquisadoras e Pesquisadores Populares em Saúde e Agroecologia Bem Viver · Associação Comunitária Porfírio Nogueira da Costa · Associações dos Reassentados de Lagoa dos Cavalos e do Cipó · Sindicato dos Trabalhadores Rurais de Russas · Cáritas Diocesana de Limoeiro do Norte · Comunidade Lagoa dos Cavalos · Coletivo Audiovisual Caroá",
       },
       { title: "No Equador", description: "Clínica Ambiental, coordenada por Adolfo Maldonado · associadas e associados · comunidades indígenas Shuar e Siekoya" },
       {
         title: "Universidade",
         description:
-          "Lara de Queiroz Viana Braga (doutora em Meio Ambiente e Desenvolvimento) e Antônio Jeovah de Andrade Meireles (professor, doutor em Geografia Física), da UFC · PPGGeo/UFC",
+          "Lara de Queiroz Viana Braga (doutora em Meio Ambiente e Desenvolvimento) e Antônio Jeovah de Andrade Meireles (professor, doutor em Geografia Física), da UFC · PPGGeo/UFC · Núcleo Tramas, Herbário Prisco Bezerra e projeto Farmácia Viva (UFC)",
       },
       { title: "Apoio", description: "FUNCAP, Edital Pós-Doutorado 09/2023 · Capes (PPGGeo/UFC, conceito 7)" },
     ],
@@ -284,6 +327,9 @@ export const pt: Dictionary = {
       'BRAGA, L. Q. V.; MEIRELES, A. J. A. Diálogos para reparação socioambiental integradora em uma pesquisa participativa de base comunitária. <em>Mercator</em>, v. 25, e25009, 2026. <a href="https://periodicos.ufc.br/mercator/article/view/100570" target="_blank" rel="noopener">periodicos.ufc.br/mercator/article/view/100570</a>',
       'BRAGA, L. Q. V.; MEIRELES, A. J. A. Os sentidos da resolução negociada de um conflito socioambiental no sertão do Ceará. <em>Conexões – Ciência e Tecnologia</em>, v. 14, n. 2, p. 86–97, 2020. <a href="https://doi.org/10.21439/conexoes.v14i2.1876" target="_blank" rel="noopener">doi.org/10.21439/conexoes.v14i2.1876</a>',
       "BRAGA, L. Q. V. <em>Bem viver, saúde e reparação: tecendo diálogos urgentes</em>. Tese (Doutorado em Desenvolvimento e Meio Ambiente) – Universidade Federal do Ceará, Fortaleza, 2020.",
+      "BRAGA, L. Q. V. <em>Agronegócio cercando agroecologia: modo de vida e conflito socioambiental em comunidades agrícolas de Tabuleiro de Russas, Ceará</em>. Dissertação (Mestrado em Saúde Pública) – Universidade Federal do Ceará, Fortaleza, 2010.",
+      "COLETIVO DE PESQUISA BEM VIVER. <em>Plantas medicinais, conhecimentos populares em saúde e luta por terra: uma cartilha em defesa da vida</em>. Fortaleza: Expressão Gráfica e Editora, 2020.",
+      "BRAGA, L. Q. V. Direitos da natureza e justiça ambiental: um debate. In: MORAES, G. O.; FREIRE, G. M. C. A.; FERRAZ, D. S. (orgs.). <em>Do direito ambiental aos direitos da natureza: teoria e prática</em>. Fortaleza: Mucuripe, 2019, p. 41–60.",
       'CLÍNICA AMBIENTAL. Soluciones socioambientales. <a href="https://www.clinicambiental.org/" target="_blank" rel="noopener">clinicambiental.org</a> · <a href="https://www.clinicambiental.org/certificacion-huipala/" target="_blank" rel="noopener">Certificação Huipala</a> · <a href="https://www.clinicambiental.org/wp-content/uploads/docs/publicaciones/alerta7huipala.pdf" target="_blank" rel="noopener">Alerta Naranja nº 7 (Proposta Huipala, 2013)</a>',
       "MALDONADO, A. <em>Una propuesta de reparación socio-ecosistémica a los impactos del metabolismo de la actividad petrolera para la Amazonía ecuatoriana</em>. Tese (Doutorado em Saúde Coletiva, Ambiente e Sociedade), Universidad Andina Simón Bolívar, Quito, 2018.",
       "BERISTAIN, C. M. (org.). <em>El derecho a la reparación en los conflictos socioambientales</em>. Bilbao: Hegoa, 2010.",
