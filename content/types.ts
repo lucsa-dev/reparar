@@ -42,8 +42,16 @@ export type Dictionary = {
     introHtml: string;
     levelsIntro: string;
     levelsAria: string;
-    levels: string[];
+    /** From present reality (red) up to the utopian horizon (white), as in the Alerta Naranja nº 7 matrix. */
+    levels: { name: string; element: string; hint: string }[];
     levelsNote: string;
+    spheresTitle: string;
+    spheresIntro: string;
+    spheres: { title: string; items: string; value: string; shifts: string[] }[];
+    processTitle: string;
+    processHtml: string;
+    adaptHtml: string;
+    sourceHtml: string;
     matrixTitle: string;
     matrixIntro: string;
     dimensions: string[];

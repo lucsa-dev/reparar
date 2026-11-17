@@ -86,12 +86,35 @@ export const en: Dictionary = {
     label: "the tool",
     title: "Huipala Proposal",
     introHtml:
-      'The Alternative Comprehensive Community Reparation System (RICA), known as the Huipala Proposal, starts from situations in which people were stripped of their voice and their power to decide, in personal, family and community life. Since 2013 it has worked as a Participatory Guarantee System: the Clínica assesses which level each property has reached and issues the <a href="https://www.clinicambiental.org/certificacion-huipala/" target="_blank" rel="noopener">Huipala Certification</a>.',
-    levelsIntro: "There are seven levels of work, from present reality to the desired utopia, each across the individual, family and community spheres:",
-    levelsAria: "The seven levels of the Huipala Proposal",
-    levels: ["Enjoy", "Make good use", "Enrich", "Reduce consumption", "Decontaminate", "Do not waste", "Do not pollute"],
+      "The Alternative Comprehensive Community Reparation System (RICA), known as the Huipala Proposal, was born in 2013, when the Clínica reviewed its first five years of work card by card with the communities. It starts from situations in which people were stripped of their voice and their power to decide, in personal, family and community life, and proposes a dialogue between academic and popular knowledge. It works as a Participatory Guarantee System: properties are assessed by peers and receive the <a href=\"https://www.clinicambiental.org/certificacion-huipala/\" target=\"_blank\" rel=\"noopener\">Huipala Certification</a>.",
+    levelsIntro: "The matrix is a ladder of colors. It starts from red, today's reality, and climbs seven levels to white, the utopian horizon each community dreams of:",
+    levelsAria: "The Huipala Proposal's ladder of colors, from present reality to utopia",
+    levels: [
+      { name: "Present reality", element: "earth", hint: "agrochemicals, monoculture, violence at home, a fragmented community" },
+      { name: "Do not pollute", element: "water", hint: "a training plan, a farm map, medicinal plants, no family violence" },
+      { name: "Do not waste", element: "fire", hint: "no agrochemicals, only organic fertilizer, composting, seed fairs" },
+      { name: "Decontaminate", element: "air", hint: "cleaning affected sites, flowers for bees, labor exchanges with neighbors" },
+      { name: "Reduce consumption", element: "ether", hint: "a farm integrated with the home, barter between neighbors, family decisions by consensus" },
+      { name: "Enrich", element: "light", hint: "food sovereignty, homemade technologies, community management of water and forest" },
+      { name: "Make good use", element: "space", hint: "energy sovereignty, the forest as a source of knowledge, mobilized organizations" },
+      { name: "Enjoy", element: "utopia", hint: "art is made by hand, dreams are shared, celebration leads to unity" },
+    ],
     levelsNote:
-      "Levels in the order listed on the Clínica's website. The colors refer to the wiphala, which gives the proposal its name; the website does not specify an exact match between level and color.",
+      "Levels, colors and practices from the matrix in Alerta Naranja no. 7 (Clínica Ambiental, 2013). When it placed the wiphala colors on the matrix, the Clínica noticed they matched the chakras, and linked each level to an element, from earth to space.",
+    spheresTitle: "Three spheres, three values",
+    spheresIntro: "Each level is read across three columns, because an economic model that only values money fragmented all three:",
+    spheres: [
+      { title: "Personal", items: "knowledge · skills · attitudes", value: "coherence", shifts: ["from ignorance to valuing one's own knowledge", "from feeling incapable to making art", "from selfishness to solidarity"] },
+      { title: "Family", items: "production · marketing · energies", value: "ethics", shifts: ["from monoculture to the integrated farm", "from abandonment in sales to self-management", "from exhaustion to 'alterative' energies that change life for the better"] },
+      { title: "Community", items: "joy · organization", value: "aesthetics", shifts: ["from fear to joy", "from fragmentation to an organization able to face its problems"] },
+    ],
+    processTitle: "How it is assessed",
+    processHtml:
+      "Every six months, each farmer visits another farmer's land with the <em>Guía de Seguimiento y Control</em>, a yes-or-no questionnaire for every cell of the matrix: is there domestic violence? Do the children know more than ten forest plants? Do community festivities celebrate life? The assessor averages the levels reached in each column and grants the matching color. The farm's products carry that seal, which producers and buyers see as a symbol to keep improving. Over time the Clínica also created certificates for those who take the permaculture course, for communities that care for nature and for protected forests.",
+    adaptHtml:
+      "The Clínica warns that the matrix is not universal: it was made for the problems of one stretch of the Ecuadorian Amazon. The grid can be reproduced anywhere, but each cell must be filled in with the people themselves, starting by gathering their dreams as the point of arrival. That is what the Bem Viver Collective did in Ceará.",
+    sourceHtml:
+      "Source: <a href=\"https://www.clinicambiental.org/wp-content/uploads/docs/publicaciones/alerta7huipala.pdf\" target=\"_blank\" rel=\"noopener\">Alerta Naranja no. 7, «La propuesta Huipala» (Clínica Ambiental, 2013)</a> and field mission interviews.",
     matrixTitle: "The Bem Viver Collective's Reparation Matrix",
     matrixIntro:
       "In Ceará, the dimensions of the Ecuadorian method became a flowchart linking the local and the global, the individual and the community, the popular and the scientific:",

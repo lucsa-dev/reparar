@@ -21,7 +21,7 @@
   --overlay:rgba(44,26,15,.72);
 
   /* sete cores da wiphala, usadas só na régua Huipala */
-  --w1:#c8332b; --w2:#e07a1f; --w3:#e8c22e; --w4:#f5f4ef; --w5:#3d8b3d; --w6:#2f5fa8; --w7:#6b3fa0;
+  --w1:#c8332b; --w2:#e07a1f; --w3:#e8c22e; --w4:#f5f4ef; --w5:#3d8b3d; --w6:#2f5fa8; --w7:#6b3fa0; --w8:#5aa9d6;
 
   /* Tipografia */
   --f-display:var(--font-lora),Georgia,"Times New Roman",serif;

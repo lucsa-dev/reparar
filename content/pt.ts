@@ -86,12 +86,35 @@ export const pt: Dictionary = {
     label: "a ferramenta",
     title: "Proposta Huipala",
     introHtml:
-      'O Sistema de Reparação Integral Comunitária Alterativa (RICA), chamado Proposta Huipala, parte de situações em que se tirou das pessoas a palavra e o poder de decidir, na vida pessoal, familiar e comunitária. Desde 2013 funciona como Sistema Participativo de Garantia: a Clínica avalia em que nível estão as propriedades e emite a <a href="https://www.clinicambiental.org/certificacion-huipala/" target="_blank" rel="noopener">Certificação Huipala</a>.',
-    levelsIntro: "São sete níveis de trabalho, da realidade atual à utopia desejada, cada um nas esferas individual, familiar e comunitária:",
-    levelsAria: "Os sete níveis da Proposta Huipala",
-    levels: ["Disfrutar", "Aprovechar", "Enriquecer", "Reducir el consumo", "Descontaminar", "No malgastar", "No contaminar"],
+      "O Sistema de Reparação Integral Comunitária Alterativa (RICA), chamado Proposta Huipala, nasceu em 2013, quando a Clínica avaliou com as comunidades, cartão por cartão, seus cinco primeiros anos de trabalho. Parte de situações em que se tirou das pessoas a palavra e o poder de decidir, na vida pessoal, familiar e comunitária, e propõe um diálogo entre o saber acadêmico e o popular. Funciona como Sistema Participativo de Garantia: as propriedades são avaliadas por pares e recebem a <a href=\"https://www.clinicambiental.org/certificacion-huipala/\" target=\"_blank\" rel=\"noopener\">Certificação Huipala</a>.",
+    levelsIntro: "A matriz é uma escada de cores. Parte do vermelho, a realidade de hoje, e sobe por sete níveis até o branco, o horizonte utópico que cada comunidade sonha:",
+    levelsAria: "A escada de cores da Proposta Huipala, da realidade atual à utopia",
+    levels: [
+      { name: "Realidade atual", element: "terra", hint: "agrotóxicos, monocultivo, violência em casa, comunidade fragmentada" },
+      { name: "No contaminar", element: "água", hint: "plano de formação, plano da finca, plantas medicinais, nenhuma violência familiar" },
+      { name: "No malgastar", element: "fogo", hint: "nenhum agrotóxico, só adubo orgânico, compostagem, feiras de sementes" },
+      { name: "Descontaminar", element: "ar", hint: "limpar os lugares afetados, flores para as abelhas, cambiamanos com vizinhos" },
+      { name: "Reducir el consumo", element: "éter", hint: "finca integrada à casa, troca entre vizinhos, decisões por consenso familiar" },
+      { name: "Enriquecer", element: "luz", hint: "soberania alimentar, tecnologias caseiras, gestão comunitária da água e do bosque" },
+      { name: "Aprovechar", element: "espaço", hint: "soberania energética, o bosque como fonte de conhecimento, organizações mobilizadas" },
+      { name: "Disfrutar", element: "utopia", hint: "faz-se arte com as mãos, partilham-se os sonhos, a celebração leva à união" },
+    ],
     levelsNote:
-      "Níveis na ordem em que o site da Clínica os lista. As cores remetem à wiphala, que dá nome à proposta; o site não indica a correspondência exata entre nível e cor.",
+      "Níveis, cores e práticas segundo a matriz do Alerta Naranja nº 7 (Clínica Ambiental, 2013). Ao pôr as cores da wiphala na matriz, a Clínica percebeu que elas coincidiam com os chakras, e associou cada nível a um elemento, da terra ao espaço.",
+    spheresTitle: "Três esferas, três valores",
+    spheresIntro: "Cada nível é lido em três colunas, porque o modelo econômico que só prioriza o dinheiro fragmentou as três:",
+    spheres: [
+      { title: "Pessoal", items: "conhecimentos · habilidades · atitudes", value: "coerência", shifts: ["do desconhecimento à valorização dos saberes próprios", "da sensação de incapacidade a fazer arte", "do egoísmo à solidariedade"] },
+      { title: "Familiar", items: "produção · comercialização · energias", value: "ética", shifts: ["do monocultivo à finca integral", "do abandono na venda à autogestão", "do desgaste a energias alterativas, que alteram a vida para melhor"] },
+      { title: "Comunitária", items: "alegria · organização", value: "estética", shifts: ["do medo à alegria", "da fragmentação a uma organização capaz de enfrentar seus problemas"] },
+    ],
+    processTitle: "Como se avalia",
+    processHtml:
+      "A cada seis meses, cada camponês ou camponesa visita a finca de outro com a <em>Guía de Seguimiento y Control</em>, um questionário de sim ou não para cada casa da matriz: há violência intrafamiliar? As crianças conhecem mais de dez plantas do bosque? As festas da comunidade celebram a vida? O avaliador faz a média dos níveis alcançados em cada coluna e concede a cor correspondente. Os produtos da finca saem com esse selo, que produtores e compradores enxergam como um símbolo para seguir se superando. Com o tempo, a Clínica criou também certificados para quem faz o curso de permacultura, para comunidades que cuidam da natureza e para selvas protegidas.",
+    adaptHtml:
+      "A Clínica avisa que a matriz não é universal: foi feita para os problemas de um trecho da Amazônia equatoriana. A grade pode ser reproduzida em qualquer lugar, mas o conteúdo de cada casa deve ser preenchido com a própria gente, começando por recolher os sonhos como ponto de chegada. Foi o que o Coletivo Bem Viver fez no Ceará.",
+    sourceHtml:
+      "Fonte: <a href=\"https://www.clinicambiental.org/wp-content/uploads/docs/publicaciones/alerta7huipala.pdf\" target=\"_blank\" rel=\"noopener\">Alerta Naranja nº 7, «La propuesta Huipala» (Clínica Ambiental, 2013)</a> e entrevistas da missão de campo.",
     matrixTitle: "A Matriz de Reparação do Coletivo Bem Viver",
     matrixIntro:
       "No Ceará, as dimensões do método equatoriano viraram um fluxograma que liga as escalas local e global, individual e comunitária, popular e científica:",
