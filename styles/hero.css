@@ -47,3 +47,18 @@ header.hero:has(.hero-mandala-fig){padding-top:clamp(1rem,2.5vw,2rem)}
   .hero-mandala{width:100%;min-width:0}
   header.hero{padding-top:1rem}
 }
+/* Bloco de leitura da mandala na capa: ocupa o lugar do texto enquanto um sentido está aberto */
+.hero-main:has(.hero-mandala-fig) > .hero-text,.hero-main:has(.hero-mandala-fig) > .hero-panel-wrap{grid-column:1;grid-row:1;min-width:0}
+.hero-main:has(.hero-mandala-fig) > .hero-mandala-fig{grid-column:2;grid-row:1}
+.hero-main.is-reading > .hero-text{visibility:hidden}
+.hero-panel-wrap{position:relative;z-index:1;align-self:stretch}
+.hero-panel-wrap .panel{max-height:calc(100svh - 11rem);position:sticky;top:3.5rem}
+.hero-panel-wrap .panel[hidden]{display:none}
+@media (max-width:860px){
+  .hero-main:has(.hero-mandala-fig) > .hero-mandala-fig{grid-column:1;grid-row:1}
+  .hero-main:has(.hero-mandala-fig) > .hero-panel-wrap{grid-row:2}
+  .hero-main:has(.hero-mandala-fig) > .hero-text{grid-row:3}
+  .hero-main.is-reading > .hero-text{visibility:visible}
+  .hero-panel-wrap .panel{max-height:none;position:static}
+}
+.hero-panel-wrap{pointer-events:none}.hero-panel-wrap .panel{pointer-events:auto}

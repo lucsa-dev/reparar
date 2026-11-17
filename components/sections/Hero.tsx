@@ -1,16 +1,16 @@
 import Link from "next/link";
 import { Icon, type IconName } from "@/components/Icon";
 import { RichText } from "@/components/RichText";
-import { HeroMandala } from "@/components/HeroMandala";
+import { HeroMandala, HeroMandalaPanel } from "@/components/HeroMandala";
 import { localeHref, type Locale } from "@/content";
 import type { Dictionary } from "@/content/types";
 
 const factIcons: IconName[] = ["layers", "users", "calendar", "document"];
 
-const mandalaCopy: Record<Locale, { label: string; title: string; hint: string; cta: string }> = {
-  pt: { label: "Mandala das Lideranças", title: "15 vozes da Clínica Ambiental lidas pelos 12 sentidos da mandala", hint: "Clique para explorar as falas", cta: "Explorar a Mandala das Lideranças →" },
-  es: { label: "Mandala de los Liderazgos", title: "15 voces de la Clínica Ambiental leídas por los 12 sentidos de la mandala", hint: "Haz clic para explorar las voces", cta: "Explorar la Mandala de los Liderazgos →" },
-  en: { label: "Leaders' Mandala", title: "15 voices from the Clínica Ambiental read through the mandala's 12 senses", hint: "Click to explore the voices", cta: "Explore the Leaders' Mandala →" },
+const mandalaCopy: Record<Locale, { label: string; title: string; hint: string; cta: string; close: string; more: string }> = {
+  pt: { label: "Mandala das Lideranças", title: "15 vozes da Clínica Ambiental lidas pelos 12 sentidos da mandala", hint: "Clique para ler as falas", cta: "Explorar a Mandala das Lideranças →", close: "× Fechar", more: "Abrir a Mandala completa →" },
+  es: { label: "Mandala de los Liderazgos", title: "15 voces de la Clínica Ambiental leídas por los 12 sentidos de la mandala", hint: "Haz clic para leer las voces", cta: "Explorar la Mandala de los Liderazgos →", close: "× Cerrar", more: "Abrir la Mandala completa →" },
+  en: { label: "Leaders' Mandala", title: "15 voices from the Clínica Ambiental read through the mandala's 12 senses", hint: "Click to read the voices", cta: "Explore the Leaders' Mandala →", close: "× Close", more: "Open the full Mandala →" },
 };
 
 export function Hero({ content, locale }: { content: Dictionary["hero"]; locale: Locale }) {
@@ -22,8 +22,9 @@ export function Hero({ content, locale }: { content: Dictionary["hero"]; locale:
           <RichText as="h1" html={content.titleHtml} />
           <p className="lede">{content.lede}</p>
         </div>
+        <HeroMandalaPanel />
         <figure className="hero-mandala-fig">
-          <HeroMandala href={localeHref(locale, "mandala")} hint={mandalaCopy[locale].hint} label={mandalaCopy[locale].label} />
+          <HeroMandala href={localeHref(locale, "mandala")} hint={mandalaCopy[locale].hint} label={mandalaCopy[locale].label} close={mandalaCopy[locale].close} more={mandalaCopy[locale].more} />
           <figcaption>
             <span>{mandalaCopy[locale].title}</span>
             <Link href={localeHref(locale, "mandala")}>{mandalaCopy[locale].cta}</Link>

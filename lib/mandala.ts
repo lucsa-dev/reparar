@@ -308,7 +308,7 @@ function drawDots(){
    const isF=state.focus===d.e.key;
    const c=el("circle",{cx:x,cy:y,r:(d.rank===0?6.2:4.2)+(isF?2.5:0),fill:S(d.sid).c,stroke:isF?"var(--ink)":"var(--bg)","stroke-width":isF?2:1.2,opacity:on?1:.12,class:"dot",tabindex:on?"0":"-1"},g);
    const tt=el("title",{},c);tt.textContent=d.e.person.name+" · P"+d.e.q+" · "+S(d.sid).name;
-   c.addEventListener("click",()=>{if(HERO){location.href=opts.href;return}state.focus=d.e.key;state.sense=d.sid;render()});
+   c.addEventListener("click",()=>{state.focus=d.e.key;state.sense=d.sid;render();revealPanel()});
    c.addEventListener("keydown",ev=>{if(ev.key==="Enter"){state.focus=d.e.key;state.sense=d.sid;render()}});
   });
  });
@@ -327,6 +327,7 @@ const pips=ids=>`<span class="pips">${ids.map(i=>`<span class="pip" title="${S(i
 function exHTML(e){return`<div class="ex" ${state.focus===e.key?'style="background:var(--wash);margin:0 -10px;padding:12px 10px;border-radius:10px"':""}><div class="who"><b data-person="${e.pid}" tabindex="0">${esc(e.person.name)}</b><span class="qtag">${QUESTIONS[e.q-1].s}</span>${pips(e.s)}</div><p class="gist">${esc(e.t)}</p>${e.c.map(q=>`<blockquote>«${esc(q)}»</blockquote>`).join("")}</div>`}
 
 function renderPanel(){if(!document.getElementById("panel"))return;
+ if(HERO){const P0=document.getElementById("panel"),on=state.sense!=null;P0.hidden=!on;document.querySelector(".hero-main")?.classList.toggle("is-reading",on);if(!on)return}
  const P=document.getElementById("panel");
  const scope=[state.q?QUESTIONS[state.q-1].s:null,state.p?PEOPLE.find(p=>p.id===state.p).name:null].filter(Boolean).join(" · ");
  if(state.sense==null){
@@ -348,11 +349,12 @@ function renderPanel(){if(!document.getElementById("panel"))return;
  <p class="def">${esc(s.def)}</p><p class="lens">${esc(s.lens)}</p>
  <h3>${list.length} trecho${list.length===1?"":"s"}</h3>
  ${list.length?list.map(exHTML).join(""):`<p class="empty">Nenhum trecho com este sentido neste recorte.</p>`}
- <p style="margin:14px 0"><button class="chip" id="clearS">Ver todos os sentidos</button></p>`;
+ <p style="margin:14px 0;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center"><button class="chip" id="clearS">${HERO?esc(opts.close||"Fechar"):"Ver todos os sentidos"}</button>${HERO?`<a href="${opts.href}">${esc(opts.more||"")}</a>`:""}</p>`;
  document.getElementById("clearS").addEventListener("click",()=>{state.sense=null;state.focus=null;render()});
 }
 
-function selectSense(id){if(HERO){location.href=opts.href;return}state.sense=state.sense===id?null:id;state.focus=null;render()}
+function selectSense(id){state.sense=state.sense===id?null:id;state.focus=null;render();revealPanel()}
+function revealPanel(){if(!HERO||state.sense==null||window.innerWidth>860)return;const P=document.getElementById("panel");if(P)P.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth",block:"start"})}
 
 function buildChips(){
  const qr=document.getElementById("qRow"),pr=document.getElementById("pRow");
@@ -380,7 +382,7 @@ function buildThreads(){
 }
 
 function render(){syncChips();drawDots();renderPanel()}
-if(HERO){buildMandala();buildHover();drawDots();return}
+if(HERO){buildMandala();buildHover();buildPersonCards();render();document.addEventListener("keydown",ev=>{if(ev.key==="Escape"&&state.sense!=null){state.sense=null;state.focus=null;render()}});return}
 buildMandala();buildHover();buildPersonCards();buildChips();buildQA();buildThreads();
 heat("heatP",PEOPLE,p=>p.name,p=>e=>e.pid===p.id);
 heat("heatQ",QUESTIONS,q=>q.s,q=>e=>e.q===q.id,q=>q.id===2);
