@@ -245,6 +245,23 @@ function buildPersonCards(){
  window.addEventListener("scroll",hide,{passive:true});
 }
 
+function buildQA(){
+ const box=document.getElementById("qa");if(!box)return;
+ box.innerHTML=QUESTIONS.map(q=>{
+  const ex=ALL.filter(e=>e.q===q.id);
+  const who=PEOPLE.filter(p=>ex.some(e=>e.pid===p.id));
+  const miss=PEOPLE.filter(p=>!who.includes(p));
+  const [num,short]=q.s.split(" · ");
+  return`<details class="qa"${q.id===2?" open":""}>
+  <summary><span class="qa-num">${esc(num)}</span><span class="qa-head"><b>${esc(short)}</b><span class="qa-q">${esc(q.l)}</span></span><span class="qa-count">${who.length} de ${PEOPLE.length} pessoas</span></summary>
+  <div class="qa-list">${who.map(p=>{const info=INFO[p.id];return`<article class="qa-p">
+   <header><b data-person="${p.id}" tabindex="0">${esc(p.name)}</b>${info?`<span class="pc-flags">${flags(info.countries)}</span>`:""}<span class="qa-meta">${esc(p.place)}</span></header>
+   ${ex.filter(e=>e.pid===p.id).map(e=>`<div class="qa-ex">${pips(e.s)}<p class="gist">${esc(e.t)}</p>${e.c.map(c=>`<blockquote>«${esc(c)}»</blockquote>`).join("")}</div>`).join("")}
+  </article>`}).join("")}</div>
+  ${miss.length?`<p class="qa-miss">Sem trecho registrado nesta pergunta: ${miss.map(p=>esc(p.name)).join(", ")}.</p>`:""}
+ </details>`}).join("");
+}
+
 function buildHover(){
  const svg=document.getElementById("mandala"),box=svg.parentElement;
  const hl=el("path",{fill:"none",stroke:"var(--ink)","stroke-width":2,"pointer-events":"none",opacity:0},svg);
@@ -360,7 +377,7 @@ function buildThreads(){
 }
 
 function render(){syncChips();drawDots();renderPanel()}
-buildMandala();buildHover();buildPersonCards();buildChips();buildThreads();
+buildMandala();buildHover();buildPersonCards();buildChips();buildQA();buildThreads();
 heat("heatP",PEOPLE,p=>p.name,p=>e=>e.pid===p.id);
 heat("heatQ",QUESTIONS,q=>q.s,q=>e=>e.q===q.id,q=>q.id===2);
 render();

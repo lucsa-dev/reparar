@@ -94,3 +94,29 @@
 .md .md-card .pc-name{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
 .md .md-card .pc-flags{display:inline-flex;gap:.3rem}
 .md .md-card .pc-flag{display:block;width:21px;height:14px;border-radius:2px;box-shadow:0 0 0 1px var(--line)}
+.md #qa{display:grid;gap:.6rem}
+.md .qa{background:var(--surface-raised);border:1px solid var(--line);border-radius:var(--radius-l);overflow:hidden}
+.md .qa summary{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:.9rem;align-items:center;padding:1rem 1.2rem;cursor:pointer;list-style:none}
+.md .qa summary::-webkit-details-marker{display:none}
+.md .qa summary:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.md .qa-num{display:grid;place-items:center;width:2.4rem;height:2.4rem;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:.9rem}
+.md .qa-head{display:grid;gap:.1rem;min-width:0}
+.md .qa-head b{font-family:var(--f-display);font-size:1.25rem;font-weight:600}
+.md .qa-q{color:var(--muted);font-size:.95rem}
+.md .qa-count{font-size:.8rem;font-weight:700;color:var(--muted);white-space:nowrap}
+.md .qa-count::after{content:"▾";margin-left:.5rem;display:inline-block;transition:transform .2s}
+.md .qa[open] .qa-count::after{transform:rotate(180deg)}
+.md .qa-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:.8rem;padding:0 1.2rem 1.1rem}
+.md .qa-p{background:var(--surface);border-radius:var(--radius-m);padding:.9rem 1rem;min-width:0}
+.md .qa-p header{display:flex;flex-wrap:wrap;align-items:center;gap:.45rem;margin-bottom:.3rem}
+.md .qa-p header b{font-weight:700}
+.md .qa-p .pc-flags{display:inline-flex;gap:.25rem}
+.md .qa-p .pc-flag{display:block;width:18px;height:12px;border-radius:2px;box-shadow:0 0 0 1px var(--line)}
+.md .qa-meta{font-size:.8rem;color:var(--muted);margin-left:auto}
+.md .qa-ex + .qa-ex{margin-top:.7rem;padding-top:.7rem;border-top:1px solid var(--line)}
+.md .qa-ex .pips{margin:0 0 .3rem}
+.md .qa-ex .gist{margin:0 0 .35rem}
+.md .qa-ex blockquote{margin:.3rem 0;padding-left:.8rem;border-left:3px solid var(--sol);font-family:var(--f-display);font-style:italic;font-size:1rem;line-height:1.45}
+.md .qa-miss{margin:0;padding:0 1.2rem 1rem;font-size:.84rem;color:var(--muted)}
+@media (max-width:640px){.md .qa summary{grid-template-columns:auto minmax(0,1fr)}.md .qa-count{grid-column:2}.md .qa-list{grid-template-columns:1fr}}
+.md [hidden]{display:none!important}
