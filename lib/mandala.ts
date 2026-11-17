@@ -202,8 +202,34 @@ function buildMandala(){
   const[nx,ny]=pt(R1+15,a);
   const n=el("text",{x:nx,y:ny,"text-anchor":"middle","dominant-baseline":"central","font-size":11,"font-weight":700,fill:"#fff","pointer-events":"none",style:"font-family:var(--f-ui)"},lab);n.textContent=s.id;
  });
- const ql=document.getElementById("qlabels");
- for(let q=1;q<=8;q++){const t=el("text",{x:0,y:-ring(q),"font-size":9.5,"font-weight":600,fill:"var(--ink)",stroke:"var(--bg)","stroke-width":3.2,"paint-order":"stroke","stroke-linejoin":"round","text-anchor":"middle","dominant-baseline":"middle",style:"font-family:var(--f-ui);pointer-events:none"},ql);t.textContent=QUESTIONS[q-1].s.split(" · ")[1]}
+}
+
+function buildHover(){
+ const svg=document.getElementById("mandala"),box=svg.parentElement;
+ const hl=el("path",{fill:"none",stroke:"var(--ink)","stroke-width":2,"pointer-events":"none",opacity:0},svg);
+ const tip=document.createElement("div");tip.className="md-tip";tip.hidden=true;box.appendChild(tip);
+ const band=(R1-R0)/8;let last="";
+ const hide=()=>{tip.hidden=true;hl.setAttribute("opacity",0);last=""};
+ const move=ev=>{
+  const m=svg.getScreenCTM();if(!m)return;
+  const p=new DOMPoint(ev.clientX,ev.clientY).matrixTransform(m.inverse());
+  const r=Math.hypot(p.x,p.y);
+  if(r<R0||r>R1){hide();return}
+  const q=Math.min(8,Math.floor((r-R0)/band)+1);
+  let deg=Math.atan2(p.y,p.x)*180/Math.PI+90;if(deg<0)deg+=360;
+  const i=Math.round(deg/30)%12,s=SENSES[i],Q=QUESTIONS[q-1],key=i+"-"+q;
+  if(key!==last){
+   last=key;
+   hl.setAttribute("d",arc(R0+band*(q-1),R0+band*q,ang(i)-Math.PI/12,ang(i)+Math.PI/12));hl.setAttribute("opacity",1);
+   const n=ALL.filter(e=>e.q===q&&e.s.includes(s.id)).length;
+   tip.innerHTML=`<b>${esc(Q.s.split(" · ")[1])}</b><span class="tq">${esc(Q.l)}</span><span class="ts"><i style="background:${s.c}"></i>${esc(s.name)} · ${n} trecho${n===1?"":"s"}</span>`;
+  }
+  tip.hidden=false;
+  const br=box.getBoundingClientRect(),cx=ev.clientX-br.left,cy=ev.clientY-br.top,w=tip.offsetWidth,h=tip.offsetHeight;
+  let x=Math.max(0,Math.min(cx-w/2,br.width-w)),y=cy-h-16;if(y<0)y=cy+18;
+  tip.style.left=x+"px";tip.style.top=y+"px";
+ };
+ svg.addEventListener("pointermove",move);svg.addEventListener("pointerdown",move);svg.addEventListener("pointerleave",hide);
 }
 
 function drawDots(){
@@ -293,7 +319,7 @@ function buildThreads(){
 }
 
 function render(){syncChips();drawDots();renderPanel()}
-buildMandala();buildChips();buildThreads();
+buildMandala();buildHover();buildChips();buildThreads();
 heat("heatP",PEOPLE,p=>p.name,p=>e=>e.pid===p.id);
 heat("heatQ",QUESTIONS,q=>q.s,q=>e=>e.q===q.id,q=>q.id===2);
 render();
