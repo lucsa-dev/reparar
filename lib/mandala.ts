@@ -3,7 +3,9 @@
    da mandala de "Aquarela, semiose e design". Código DOM puro, iniciado pelo componente MandalaDashboard. */
 import peopleData from "@/content/people.json";
 
-export function initMandala() {
+/** Builds the dashboard; with { hero: true, href } builds only the mandala and links clicks to the full page. */
+export function initMandala(opts = {}) {
+const HERO = !!opts.hero;
 
 const SENSES=[
  {id:1,name:"Vida",pig:"azul cerúleo",c:"#2E86C1",def:"Energia potencial, primordial, criadora. A primeiridade de Peirce. Na aquarela, a primeira pincelada de água no papel.",lens:"Nas falas: a terra que volta a produzir, a regeneração, a chance de recomeçar."},
@@ -188,6 +190,7 @@ const pt=(r,a)=>[r*Math.cos(a),r*Math.sin(a)];
 function arc(r1,r2,a1,a2){const[x1,y1]=pt(r2,a1),[x2,y2]=pt(r2,a2),[x3,y3]=pt(r1,a2),[x4,y4]=pt(r1,a1);return`M${x1},${y1}A${r2},${r2} 0 0 1 ${x2},${y2}L${x3},${y3}A${r1},${r1} 0 0 0 ${x4},${y4}Z`}
 
 function buildMandala(){
+ if(HERO)document.getElementById("mandala").setAttribute("viewBox","-400 -326 800 652");
  const rings=document.getElementById("rings"),sec=document.getElementById("sectors"),lab=document.getElementById("labels");
  for(let q=1;q<=8;q++){el("circle",{r:R0+(R1-R0)*q/8,fill:"none",stroke:"var(--line)","stroke-width":q===2?1.4:.7,"stroke-dasharray":q===2?"":"2 3"},rings)}
  el("circle",{r:R0,fill:"none",stroke:"var(--line)"},rings);
@@ -199,7 +202,7 @@ function buildMandala(){
   g.addEventListener("click",()=>selectSense(s.id));
   g.addEventListener("keydown",ev=>{if(ev.key==="Enter"||ev.key===" "){ev.preventDefault();selectSense(s.id)}});
   const a=ang(i),[lx,ly]=pt(RL+12,a);
-  const t=el("text",{x:lx,y:ly,"text-anchor":Math.abs(Math.cos(a))<.2?"middle":(Math.cos(a)>0?"start":"end"),"dominant-baseline":"middle","font-size":13,"font-weight":600,fill:"var(--ink)",style:"cursor:pointer;font-family:var(--f-ui)"},lab);
+  const t=el("text",{x:lx,y:ly,"text-anchor":Math.abs(Math.cos(a))<.2?"middle":(Math.cos(a)>0?"start":"end"),"dominant-baseline":"middle","font-size":HERO?16:13,"font-weight":600,fill:"var(--ink)",style:"cursor:pointer;font-family:var(--f-ui)"},lab);
   t.textContent=s.name;t.addEventListener("click",()=>selectSense(s.id));
   const[nx,ny]=pt(R1+15,a);
   const n=el("text",{x:nx,y:ny,"text-anchor":"middle","dominant-baseline":"central","font-size":11,"font-weight":700,fill:"#fff","pointer-events":"none",style:"font-family:var(--f-ui)"},lab);n.textContent=s.id;
@@ -280,7 +283,7 @@ function buildHover(){
    last=key;
    hl.setAttribute("d",arc(R0+band*(q-1),R0+band*q,ang(i)-Math.PI/12,ang(i)+Math.PI/12));hl.setAttribute("opacity",1);
    const n=ALL.filter(e=>e.q===q&&e.s.includes(s.id)).length;
-   tip.innerHTML=`<b>${esc(Q.s.split(" · ")[1])}</b><span class="tq">${esc(Q.l)}</span><span class="ts"><i style="background:${s.c}"></i>${esc(s.name)} · ${n} trecho${n===1?"":"s"}</span>`;
+   tip.innerHTML=`<b>${esc(Q.s.split(" · ")[1])}</b><span class="tq">${esc(Q.l)}</span><span class="ts"><i style="background:${s.c}"></i>${esc(s.name)} · ${n} trecho${n===1?"":"s"}</span>${HERO?`<span class="tq">${esc(opts.hint||"")}</span>`:""}`;
   }
   tip.hidden=false;
   const br=box.getBoundingClientRect(),cx=ev.clientX-br.left,cy=ev.clientY-br.top,w=tip.offsetWidth,h=tip.offsetHeight;
@@ -305,7 +308,7 @@ function drawDots(){
    const isF=state.focus===d.e.key;
    const c=el("circle",{cx:x,cy:y,r:(d.rank===0?6.2:4.2)+(isF?2.5:0),fill:S(d.sid).c,stroke:isF?"var(--ink)":"var(--bg)","stroke-width":isF?2:1.2,opacity:on?1:.12,class:"dot",tabindex:on?"0":"-1"},g);
    const tt=el("title",{},c);tt.textContent=d.e.person.name+" · P"+d.e.q+" · "+S(d.sid).name;
-   c.addEventListener("click",()=>{state.focus=d.e.key;state.sense=d.sid;render()});
+   c.addEventListener("click",()=>{if(HERO){location.href=opts.href;return}state.focus=d.e.key;state.sense=d.sid;render()});
    c.addEventListener("keydown",ev=>{if(ev.key==="Enter"){state.focus=d.e.key;state.sense=d.sid;render()}});
   });
  });
@@ -323,7 +326,7 @@ const pips=ids=>`<span class="pips">${ids.map(i=>`<span class="pip" title="${S(i
 
 function exHTML(e){return`<div class="ex" ${state.focus===e.key?'style="background:var(--wash);margin:0 -10px;padding:12px 10px;border-radius:10px"':""}><div class="who"><b data-person="${e.pid}" tabindex="0">${esc(e.person.name)}</b><span class="qtag">${QUESTIONS[e.q-1].s}</span>${pips(e.s)}</div><p class="gist">${esc(e.t)}</p>${e.c.map(q=>`<blockquote>«${esc(q)}»</blockquote>`).join("")}</div>`}
 
-function renderPanel(){
+function renderPanel(){if(!document.getElementById("panel"))return;
  const P=document.getElementById("panel");
  const scope=[state.q?QUESTIONS[state.q-1].s:null,state.p?PEOPLE.find(p=>p.id===state.p).name:null].filter(Boolean).join(" · ");
  if(state.sense==null){
@@ -349,7 +352,7 @@ function renderPanel(){
  document.getElementById("clearS").addEventListener("click",()=>{state.sense=null;state.focus=null;render()});
 }
 
-function selectSense(id){state.sense=state.sense===id?null:id;state.focus=null;render()}
+function selectSense(id){if(HERO){location.href=opts.href;return}state.sense=state.sense===id?null:id;state.focus=null;render()}
 
 function buildChips(){
  const qr=document.getElementById("qRow"),pr=document.getElementById("pRow");
@@ -377,6 +380,7 @@ function buildThreads(){
 }
 
 function render(){syncChips();drawDots();renderPanel()}
+if(HERO){buildMandala();buildHover();drawDots();return}
 buildMandala();buildHover();buildPersonCards();buildChips();buildQA();buildThreads();
 heat("heatP",PEOPLE,p=>p.name,p=>e=>e.pid===p.id);
 heat("heatQ",QUESTIONS,q=>q.s,q=>e=>e.q===q.id,q=>q.id===2);
