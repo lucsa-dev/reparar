@@ -202,7 +202,8 @@ function buildMandala(){
   const[nx,ny]=pt(R1+15,a);
   const n=el("text",{x:nx,y:ny,"text-anchor":"middle","dominant-baseline":"central","font-size":11,"font-weight":700,fill:"#fff","pointer-events":"none",style:"font-family:var(--f-ui)"},lab);n.textContent=s.id;
  });
- for(let q=1;q<=8;q++){const[x,y]=pt(ring(q),ang(0)-Math.PI/12-0.06);const t=el("text",{x:x-2,y:y,"font-size":9,fill:"var(--muted)","text-anchor":"end",style:"font-family:var(--f-ui)"},lab);t.textContent="P"+q}
+ const ql=document.getElementById("qlabels");
+ for(let q=1;q<=8;q++){const t=el("text",{x:0,y:-ring(q),"font-size":9.5,"font-weight":600,fill:"var(--ink)",stroke:"var(--bg)","stroke-width":3.2,"paint-order":"stroke","stroke-linejoin":"round","text-anchor":"middle","dominant-baseline":"middle",style:"font-family:var(--f-ui);pointer-events:none"},ql);t.textContent=QUESTIONS[q-1].s.split(" · ")[1]}
 }
 
 function drawDots(){
