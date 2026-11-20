@@ -11,6 +11,7 @@ export const pt: Dictionary = {
     label: "Seções do site",
     menu: "Menu",
     mandala: "Mandala",
+    about: "Sobre a Lara",
     items: [{ id: "repair", label: "O que é" }, { id: "method", label: "Método" }, { id: "huipala", label: "Huipala" }, { id: "territory", label: "Território" }, { id: "voices", label: "Vozes" }, { id: "field-mission", label: "Missão" }, { id: "fruits", label: "Frutos" }, { id: "archive", label: "Acervo" }, { id: "credits", label: "Parcerias" }, { id: "references", label: "Referências" }],
   },
   hero: {

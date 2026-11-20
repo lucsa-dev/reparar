@@ -1,0 +1,74 @@
+/* Página "Sobre mim" de Lara Braga (/lara) */
+.ab{padding-inline:var(--gutter);padding-block:clamp(2rem,4vw,3.5rem) var(--space-section)}
+.ab-wrap{max-width:var(--content-wide);margin-inline:auto}
+.ab section{padding:clamp(2.5rem,5vw,4rem) 0 0}
+.ab h2{margin-bottom:.8rem}
+.ab-intro{max-width:62ch;color:var(--muted);margin:0 0 1.6rem}
+
+/* Abertura */
+.ab-hero{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(1.25rem,4vw,3rem);align-items:start}
+.ab-monogram{display:grid;place-items:center;width:clamp(5.5rem,13vw,9.5rem);aspect-ratio:1;border-radius:46% 54% 52% 48% / 55% 45% 55% 45%;background:var(--brand-green);color:var(--brand-cream);font-family:var(--f-display);font-size:clamp(2rem,5vw,3.4rem);font-style:italic;box-shadow:inset 0 0 0 6px color-mix(in srgb,var(--sol) 55%,transparent)}
+.ab h1{font-size:clamp(2.2rem,5.4vw,3.8rem);margin-bottom:1rem}
+.ab h1 em{font-style:italic;font-weight:500;color:var(--accent)}
+.ab-lede{max-width:64ch;font-size:clamp(1.05rem,1.6vw,1.22rem);color:var(--muted);margin:0}
+.ab-roles{display:flex;flex-wrap:wrap;gap:.45rem;list-style:none;margin:1.4rem 0 0;padding:0}
+.ab-roles li{padding:.3rem .75rem;font-family:var(--f-ui);font-size:.86rem;border:1.5px solid var(--line);border-radius:var(--radius-pill);background:var(--surface-raised)}
+
+/* Quem sou */
+.ab-about{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:start}
+.ab-about p{max-width:64ch}
+.ab-quote{margin:0;padding:1.4rem 1.5rem;background:var(--surface);border-left:4px solid var(--sol);border-radius:0 var(--radius-l) var(--radius-l) 0}
+.ab-quote p{margin:0 0 .8rem;font-family:var(--f-display);font-size:1.18rem;font-style:italic;line-height:1.45}
+.ab-quote cite{display:block;font-family:var(--f-ui);font-size:.85rem;font-style:normal;color:var(--muted)}
+.ab-quote.wide{margin-top:2rem;max-width:62ch}
+
+/* Roteiro */
+.ab-stations{list-style:none;margin:0;padding:0;position:relative}
+.ab-stations::before{content:"";position:absolute;left:calc(7rem + .7rem);top:.6rem;bottom:.6rem;width:2px;background:var(--sol);opacity:.45}
+.ab-stations > li{display:grid;grid-template-columns:7rem minmax(0,1fr);gap:2.4rem;padding-block:0 2rem;position:relative}
+.ab-stations > li::after{content:"";position:absolute;left:calc(7rem + .7rem - .42rem);top:.55rem;width:.85rem;height:.85rem;border-radius:50%;background:var(--bg);border:2px solid var(--sol)}
+.ab-stations > li.key::after{background:var(--brand-terracotta);border-color:var(--brand-terracotta)}
+.ab-when{text-align:right;font-family:var(--f-ui);padding-top:.2rem}
+.ab-num{display:block;font-size:.75rem;letter-spacing:.12em;color:var(--muted)}
+.ab-when b{font-family:var(--f-display);font-size:1.25rem;font-variant-numeric:tabular-nums;font-weight:600}
+.ab-stations article{padding:1.1rem 1.3rem 1.2rem;background:var(--surface-raised);border:1.5px solid var(--line);border-radius:var(--radius-l)}
+.ab-stations li.key article{border-color:color-mix(in srgb,var(--brand-terracotta) 45%,var(--line))}
+.ab-place{display:flex;align-items:center;gap:.35rem;font-family:var(--f-ui);font-size:.85rem;color:var(--highlight);font-weight:600}
+.ab-place svg{flex:none}
+.ab-stations h3{font-size:1.3rem;margin:.35rem 0 .6rem}
+.ab-stations article p{margin:0 0 .8rem}
+.ab-marks{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;margin:0;padding:0}
+.ab-marks li{padding:.22rem .65rem;font-family:var(--f-ui);font-size:.82rem;line-height:1.35;background:var(--surface);border-radius:var(--radius-s)}
+.ab-source{display:block;margin-top:.75rem;font-family:var(--f-ui);font-size:.8rem;color:var(--muted)}
+
+/* Como trabalho */
+.ab-method dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:0}
+.ab-method dl > div{padding:1.1rem 1.2rem;border-top:3px solid var(--accent);background:var(--surface);border-radius:0 0 var(--radius-m) var(--radius-m)}
+.ab-method dt{font-family:var(--f-display);font-size:1.1rem;font-weight:600;margin-bottom:.35rem}
+.ab-method dd{margin:0;font-size:.95rem}
+
+/* Produções */
+.ab-works ul{list-style:none;margin:0;padding:0;max-width:72ch}
+.ab-works li{display:grid;grid-template-columns:3.5rem minmax(0,1fr);gap:1rem;padding:.8rem 0;border-bottom:1px solid var(--line)}
+.ab-year{font-family:var(--f-ui);font-weight:700;font-variant-numeric:tabular-nums;color:var(--highlight)}
+.ab-works b{font-weight:600}
+.ab-works a{text-decoration:none}
+.ab-works a:hover b{text-decoration:underline}
+.ab-works a svg{vertical-align:-2px;color:var(--accent)}
+.ab-works small{display:block;margin-top:.2rem;font-family:var(--f-ui);font-size:.86rem;color:var(--muted)}
+
+.ab-contact .contact{margin-bottom:1rem}
+
+@media (max-width:860px){
+  .ab-about{grid-template-columns:minmax(0,1fr)}
+  .ab-method dl{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:600px){
+  .ab-hero{grid-template-columns:minmax(0,1fr)}
+  .ab-method dl{grid-template-columns:minmax(0,1fr)}
+  .ab-stations::before{left:.42rem}
+  .ab-stations > li{grid-template-columns:minmax(0,1fr);gap:.5rem;padding-left:1.8rem}
+  .ab-stations > li::after{left:0;top:.3rem}
+  .ab-when{text-align:left;display:flex;align-items:baseline;gap:.6rem;padding-top:0}
+  .ab-num{display:inline}
+}

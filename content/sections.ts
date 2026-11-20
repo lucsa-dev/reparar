@@ -16,7 +16,7 @@ export const sectionPages = [
 export type SectionId = (typeof sectionPages)[number]["id"];
 
 /** Pages that live outside the section route but appear in the menu and on the landing page. */
-const otherPages: Record<string, string> = { archive: "plantas", mandala: "mandala" };
+const otherPages: Record<string, string> = { archive: "plantas", mandala: "mandala", about: "lara" };
 
 export function pageSlug(id: string): string | undefined {
   return sectionPages.find((page) => page.id === id)?.slug ?? otherPages[id];
