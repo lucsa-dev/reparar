@@ -1,5 +1,5 @@
 /* Clínica Ambiental Ceará | O Encontro das Águas — capa como um estuário:
-   abertura com curvas de nível, mapa da rota e o rio que desce pelas seções até o mar. */
+   abertura com curvas de nível e o rio que desce pelas seções até o mar. */
 .mono{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
 
 /* ---------- Abertura ---------- */
@@ -22,61 +22,14 @@
 @keyframes est-drip{to{top:50px;opacity:0}}
 
 /* ---------- Cabeçalhos de parte ---------- */
-.estuary-part{background:var(--lama)}
 .part{max-width:calc(var(--content-wide) + 2*var(--gutter));margin-inline:auto;padding:clamp(4rem,12vh,8rem) var(--gutter) clamp(2rem,6vh,4rem)}
 .part .mono{color:var(--highlight)}
 .part h2{font-weight:350;font-size:clamp(2.1rem,4.6vw,4rem);line-height:1.04;letter-spacing:-.02em;margin:.35em 0 0;max-width:22ch}
 .part h2 em{font-style:italic;font-weight:300;color:var(--accent)}
 
-/* ---------- Mapa da rota ---------- */
-.rm{position:relative;height:520vh;padding:0;background:var(--mar)}
-.rm::before{display:none}
-.rm-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--mar);color:var(--areia)}
-.rm-map{position:absolute;inset:0;width:100%;height:100%;display:block}
-.rm-overlay{position:absolute;inset:0;pointer-events:none}
-.rm-lbl{position:absolute;left:0;top:0;white-space:nowrap;transition:opacity .5s;will-change:transform}
-.rm-lbl.country{font-family:var(--f-mono);font-size:11px;letter-spacing:.32em;color:rgba(239,228,206,.62);text-transform:uppercase}
-.rm-lbl.sea{font-family:var(--f-display);font-style:italic;font-size:15px;letter-spacing:.28em;color:rgba(167,220,214,.5)}
-.rm-lbl.river{font-family:var(--f-display);font-style:italic;font-size:14px;color:var(--mare)}
-.rm-lbl.city{font-family:var(--f-body);font-size:12px;color:rgba(239,228,206,.8);padding-left:12px}
-.rm-lbl.city::before{content:"";position:absolute;left:0;top:50%;width:5px;height:5px;margin-top:-2.5px;border-radius:50%;background:var(--areia)}
-.rm-mk{position:absolute;left:0;top:0;will-change:transform;font-family:var(--f-body)}
-.rm-mk .dot{position:absolute;width:14px;height:14px;left:-7px;top:-7px;border-radius:50%;background:var(--caranguejo);box-shadow:0 0 0 3px var(--lama)}
-.rm-mk.ce .dot{background:var(--sol-sertao)}
-.rm-mk .dot::after{content:"";position:absolute;inset:-3px;border-radius:50%;border:2px solid var(--caranguejo)}
-.rm-mk.ce .dot::after{border-color:var(--sol-sertao)}
-@media (prefers-reduced-motion:no-preference){.rm-mk .dot::after{animation:est-ping 2.4s ease-out infinite}}
-@keyframes est-ping{from{transform:scale(1);opacity:.9}to{transform:scale(3.2);opacity:0}}
-.rm-mk .tag{position:absolute;left:16px;top:-15px;padding:6px 11px;border-radius:999px;background:rgba(20,13,9,.82);border:1px solid rgba(167,220,214,.22);font-size:12px;white-space:nowrap;line-height:1.3}
-.rm-mk.ce .tag{left:auto;right:16px}
-.rm-mk .tag small{display:block;font-family:var(--f-mono);font-size:9.5px;letter-spacing:.1em;opacity:.6;margin-top:1px}
-.rm-tip{position:absolute;left:0;top:0;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:var(--mare-viva);box-shadow:0 0 0 4px rgba(207,243,238,.25),0 0 24px 6px rgba(167,220,214,.55);transition:opacity .3s}
-.rm-cards{position:absolute;left:clamp(16px,5vw,72px);top:50%;width:min(400px,calc(100vw - 32px));pointer-events:none}
-.rm-card{position:absolute;left:0;right:0;top:0;transform:translateY(calc(-50% + 18px));opacity:0;transition:opacity .55s,transform .55s;
-  background:rgba(20,13,9,.74);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(167,220,214,.18);border-radius:var(--radius-l);padding:26px 28px}
-.rm-card.on{opacity:1;transform:translateY(-50%)}
-.rm-card .mono{color:var(--camarao)}
-.rm-card h3{font-weight:400;font-size:clamp(1.6rem,2.5vw,2.1rem);line-height:1.08;letter-spacing:-.01em;margin:.35em 0 .45em;color:var(--areia)}
-.rm-card p{margin:0;font-size:1rem;line-height:1.55;opacity:.85}
-.rm-card .coord{display:block;margin-top:16px;color:var(--mare);opacity:.7}
-.rm-chap{position:absolute;right:clamp(16px,3vw,40px);top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:6px;transition:opacity .4s}
-.rm-chap.hide{opacity:0;pointer-events:none}
-.rm-chap button{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;justify-content:flex-end;font-family:var(--f-body);font-size:12.5px;color:rgba(239,228,206,.55);padding:4px 0}
-.rm-chap button:focus-visible{outline:2px solid var(--mare);outline-offset:3px}
-.rm-chap button i{width:18px;height:2px;background:currentColor;transition:width .3s}
-.rm-chap button.on{color:var(--mare-viva)}
-.rm-chap button.on i{width:36px}
-.rm-note{position:absolute;left:clamp(16px,5vw,72px);bottom:18px;color:rgba(239,228,206,.4)}
-@media (max-width:760px){
-  .rm-cards{top:auto;bottom:24px}
-  .rm-card{top:auto;bottom:0;transform:translateY(18px)}
-  .rm-card.on{transform:none}
-  .rm-chap,.rm-note{display:none}
-}
-
-/* Passagem do mar do mapa para o sertão */
-.estuary-bridge{height:40vh;background:linear-gradient(var(--mar-fundo),#c9b993 92%,#ece0c2)}
-:root[data-theme="dark"] .estuary-bridge{background:linear-gradient(var(--mar-fundo),#2a1d14 92%,#271a12)}
+/* Passagem da abertura (lama) para o sertão, onde o rio nasce */
+.estuary-bridge{height:22vh;background:linear-gradient(var(--lama),#8a7458 55%,#ece0c2)}
+:root[data-theme="dark"] .estuary-bridge{background:linear-gradient(var(--lama),#271a12)}
 
 /* ---------- O rio pelas seções ---------- */
 .rv{position:relative;isolation:isolate}
@@ -89,8 +42,9 @@
 .scene > section::before{opacity:.5}
 .scene{position:relative;color:var(--ink)}
 .scene-tag{position:absolute;top:1.6rem;z-index:2;color:var(--highlight);opacity:.85}
-.scene-tag.left{left:var(--gutter)}
-.scene-tag.right{right:var(--gutter);text-align:right}
+/* ao lado da água, que corre no meio da margem */
+.scene-tag.left{left:calc((100% - var(--content-wide)) / 4 + 2.4rem)}
+.scene-tag.right{right:calc((100% - var(--content-wide)) / 4 + 2.4rem);text-align:right}
 @media (max-width:1180px){.scene-tag{display:none}}
 
 /* Cada trecho tem seu chão e sua luz (tema claro) */

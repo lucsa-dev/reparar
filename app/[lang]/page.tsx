@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import { Contours, PartHeader, Scene, SeaEnd } from "@/components/Estuary";
 import { River } from "@/components/River";
-import { RouteMap } from "@/components/RouteMap";
 import { ArchiveTeaser } from "@/components/sections/ArchiveTeaser";
 import { BigQuote } from "@/components/sections/BigQuote";
 import { Credits } from "@/components/sections/Credits";
@@ -41,10 +40,6 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <div className="scrollhint mono wide"><i />{copy.hint}</div>
       </div>
 
-      <div className="estuary-part ink-dark">
-        <PartHeader label={copy.part.label} titleHtml={copy.part.titleHtml} />
-      </div>
-      <RouteMap copy={copy} />
       <div className="estuary-bridge" aria-hidden="true" />
 
       <div className="rv">
