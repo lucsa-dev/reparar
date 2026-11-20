@@ -1,19 +1,25 @@
 import type { Metadata, Viewport } from "next";
-import { DM_Sans, Lora } from "next/font/google";
+import { Fraunces, Instrument_Sans, Space_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 import { getDictionary, isLocale, localeDetails, localeHref, locales } from "@/content";
 import { themeInitScript } from "@/lib/theme";
 import "@/styles/index.css";
 
-const lora = Lora({
+const fraunces = Fraunces({
   subsets: ["latin"],
   style: ["normal", "italic"],
-  variable: "--font-lora",
+  axes: ["opsz"],
+  variable: "--font-fraunces",
 });
-const dmSans = DM_Sans({
+const instrument = Instrument_Sans({
   subsets: ["latin"],
-  variable: "--font-dm-sans",
+  variable: "--font-instrument",
+});
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-space-mono",
 });
 
 type LangParams = { params: Promise<{ lang: string }> };
@@ -24,7 +30,7 @@ export function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
 }
 
-export const viewport: Viewport = { viewportFit: "cover", themeColor: "#1E1711" };
+export const viewport: Viewport = { viewportFit: "cover", themeColor: "#241812" };
 
 export async function generateMetadata({ params }: LangParams): Promise<Metadata> {
   const { lang } = await params;
@@ -35,6 +41,7 @@ export async function generateMetadata({ params }: LangParams): Promise<Metadata
     description: meta.description,
     icons: {
       icon: [
+        { url: "/brand/icon.svg", type: "image/svg+xml" },
         { url: "/brand/favicon-32.png", sizes: "32x32", type: "image/png" },
         { url: "/brand/favicon-192.png", sizes: "192x192", type: "image/png" },
       ],
@@ -54,7 +61,7 @@ export default async function RootLayout({ children, params }: LangParams & { ch
     <html
       lang={localeDetails[lang].htmlLang}
       data-theme="dark"
-      className={`${lora.variable} ${dmSans.variable}`}
+      className={`${fraunces.variable} ${instrument.variable} ${spaceMono.variable}`}
       suppressHydrationWarning
     >
       <head>

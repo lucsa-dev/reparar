@@ -72,3 +72,4 @@
   .ab-when{text-align:left;display:flex;align-items:baseline;gap:.6rem;padding-top:0}
   .ab-num{display:inline}
 }
+.ab section::before{display:none}

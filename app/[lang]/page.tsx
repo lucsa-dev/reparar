@@ -1,4 +1,7 @@
 import { notFound } from "next/navigation";
+import { Contours, PartHeader, Scene, SeaEnd } from "@/components/Estuary";
+import { River } from "@/components/River";
+import { RouteMap } from "@/components/RouteMap";
 import { ArchiveTeaser } from "@/components/sections/ArchiveTeaser";
 import { BigQuote } from "@/components/sections/BigQuote";
 import { Credits } from "@/components/sections/Credits";
@@ -15,30 +18,53 @@ import { Voices } from "@/components/sections/Voices";
 import { SiteNav } from "@/components/SiteNav";
 import { TopBar } from "@/components/TopBar";
 import { getDictionary, isLocale } from "@/content";
+import { estuary } from "@/content/estuary";
 import { pageHref, sectionUi, type SectionId } from "@/content/sections";
 
 export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   if (!isLocale(lang)) notFound();
   const content = getDictionary(lang);
+  const copy = estuary[lang];
   /** Each section shows a summary here and links to its own page. */
   const more = (id: SectionId) => ({ href: pageHref(lang, id), label: sectionUi[lang].more });
+  const tag = (i: number) => `${String(i + 1).padStart(2, "0")} · ${copy.scenes[i]}`;
   return (
     <>
-      <TopBar locale={lang} ui={content.ui} />
-      <SiteNav content={content.nav} locale={lang} />
-      <Hero content={content.hero} locale={lang} />
-      <Repair content={content.repair} locale={lang} more={more("repair")} />
-      <Method content={content.method} locale={lang} more={more("method")} />
-      <Huipala content={content.huipala} locale={lang} more={more("huipala")} />
-      <Territory content={content.territory} locale={lang} more={more("territory")} />
-      <Voices content={content.voices} locale={lang} more={more("voices")} />
-      <BigQuote content={content.bigQuote} />
-      <FieldMission content={content.fieldMission} locale={lang} more={more("field-mission")} />
-      <Fruits content={content.fruits} locale={lang} more={more("fruits")} />
-      <ArchiveTeaser content={content.archive} locale={lang} />
-      <Credits content={content.credits} more={more("credits")} />
-      <References content={content.references} locale={lang} more={more("references")} />
+      <div className="estuary-head ink-dark" id="top">
+        <TopBar locale={lang} ui={content.ui} />
+      </div>
+      <SiteNav content={content.nav} locale={lang} tone="dark" />
+      <div className="estuary-hero ink-dark">
+        <Contours />
+        <Hero content={content.hero} locale={lang} />
+        <div className="scrollhint mono wide"><i />{copy.hint}</div>
+      </div>
+
+      <div className="estuary-part ink-dark">
+        <PartHeader label={copy.part.label} titleHtml={copy.part.titleHtml} />
+      </div>
+      <RouteMap copy={copy} />
+      <div className="estuary-bridge" aria-hidden="true" />
+
+      <div className="rv">
+        <River copy={copy} />
+        <Scene kind="sertao" side="l" tag={tag(0)}>
+          <PartHeader label={copy.bridge.label} titleHtml={copy.bridge.titleHtml} />
+        </Scene>
+        <Scene kind="sertao" side="l"><Repair content={content.repair} locale={lang} more={more("repair")} /></Scene>
+        <Scene kind="sertao" side="l"><Method content={content.method} locale={lang} more={more("method")} /></Scene>
+        <Scene kind="rio" side="r" tag={tag(1)}><Huipala content={content.huipala} locale={lang} more={more("huipala")} /></Scene>
+        <Scene kind="rio" side="r"><Territory content={content.territory} locale={lang} more={more("territory")} /></Scene>
+        <Scene kind="mangue" side="l" tag={tag(2)}><Voices content={content.voices} locale={lang} more={more("voices")} /></Scene>
+        <Scene kind="mangue" side="l"><BigQuote content={content.bigQuote} /></Scene>
+        <Scene kind="lama" side="r" tag={tag(3)}><FieldMission content={content.fieldMission} locale={lang} more={more("field-mission")} /></Scene>
+        <Scene kind="lama" side="r"><Fruits content={content.fruits} locale={lang} more={more("fruits")} /></Scene>
+        <Scene kind="encontro" side="l" tag={tag(4)}><ArchiveTeaser content={content.archive} locale={lang} /></Scene>
+        <Scene kind="encontro" side="l"><Credits content={content.credits} more={more("credits")} /></Scene>
+        <Scene kind="mar" side="r" tag={tag(5)}><References content={content.references} locale={lang} more={more("references")} /></Scene>
+        <SeaEnd copy={copy.sea} />
+      </div>
       <Footer content={content} locale={lang} />
     </>
   );

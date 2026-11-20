@@ -11,14 +11,14 @@ type MandalaPageProps = { params: Promise<{ lang: string }> };
 
 const copy: Record<Locale, { metaTitle: string; back: string; label: string; titleHtml: string; lede: string; note?: string }> = {
   pt: {
-    metaTitle: "Mandala das Lideranças · Reparação Integral Comunitária",
+    metaTitle: "Mandala das Lideranças · Clínica Ambiental Ceará",
     back: "← Voltar ao início",
     label: "escuta das lideranças · 2024–2025",
     titleHtml: "Mandala das <em>Lideranças</em>",
     lede: "As 15 entrevistas com quem faz a Clínica Ambiental, lidas pelos 12 sentidos da mandala de Aquarela, semiose e design (Vieira e Silva & Pfützenreuter). Cada ponto é um trecho de fala: a cor diz qual sentido ele toca, o anel diz a que pergunta ele responde.",
   },
   es: {
-    metaTitle: "Mandala de los Liderazgos · Reparación Integral Comunitaria",
+    metaTitle: "Mandala de los Liderazgos · Clínica Ambiental Ceará",
     back: "← Volver al inicio",
     label: "escucha de los liderazgos · 2024–2025",
     titleHtml: "Mandala de los <em>Liderazgos</em>",
@@ -26,7 +26,7 @@ const copy: Record<Locale, { metaTitle: string; back: string; label: string; tit
     note: "El panel está en portugués; las citas están en el español original.",
   },
   en: {
-    metaTitle: "Leaders' Mandala · Comprehensive Community Reparation",
+    metaTitle: "Leaders' Mandala · Clínica Ambiental Ceará",
     back: "← Back to home",
     label: "listening to the leaders · 2024–2025",
     titleHtml: "Leaders' <em>Mandala</em>",

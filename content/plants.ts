@@ -83,7 +83,7 @@ export type PlantCopy = {
 
 export const plantCopy: Record<Locale, PlantCopy> = {
   pt: {
-    metaTitle: "Acervo de plantas · Reparação Integral Comunitária",
+    metaTitle: "Acervo de plantas · Clínica Ambiental Ceará",
     metaDescription: "Plantas medicinais do inventário de Lagoa dos Cavalos (Ceará) e plantas citadas nas conversas da missão de campo no Equador, com nomes, usos relatados e territórios.",
     back: "← Voltar ao início",
     label: "acervo de plantas",
@@ -118,7 +118,7 @@ export const plantCopy: Record<Locale, PlantCopy> = {
     cearaFields: { for: "Para", part: "Parte usada", preparation: "Preparo", season: "Época de coleta", propagation: "Propagação", contraindication: "Contraindicação", place: "Onde se encontra", citations: (count) => (count === 1 ? "1 citação" : `${count} citações`), notRecorded: "Planta identificada pelo Coletivo, sem uso registrado na tabela." },
   },
   es: {
-    metaTitle: "Archivo de plantas · Reparación Integral Comunitaria",
+    metaTitle: "Archivo de plantas · Clínica Ambiental Ceará",
     metaDescription: "Plantas medicinales del inventario de Lagoa dos Cavalos (Ceará) y plantas mencionadas en las conversaciones de la misión de campo en Ecuador, con nombres, usos relatados y territorios.",
     back: "← Volver al inicio",
     label: "archivo de plantas",
@@ -154,7 +154,7 @@ export const plantCopy: Record<Locale, PlantCopy> = {
     cearaLanguageNote: "Los registros de Ceará están en portugués, como en el inventario original.",
   },
   en: {
-    metaTitle: "Plant archive · Comprehensive Community Reparation",
+    metaTitle: "Plant archive · Clínica Ambiental Ceará",
     metaDescription: "Medicinal plants from the Lagoa dos Cavalos inventory (Ceará) and plants mentioned in conversations during the field mission in Ecuador, with names, reported uses and territories.",
     back: "← Back to home",
     label: "plant archive",

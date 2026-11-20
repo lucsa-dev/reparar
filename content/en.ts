@@ -2,7 +2,7 @@ import type { Dictionary } from "./types";
 
 export const en: Dictionary = {
   meta: {
-    title: "Comprehensive Community Reparation",
+    title: "Clínica Ambiental Ceará | The Meeting of the Waters",
     description:
       "A community in the backlands of Ceará and an organization in the Ecuadorian Amazon learn from each other how to heal the land, health and the social fabric.",
   },

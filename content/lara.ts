@@ -47,7 +47,7 @@ const links = {
 };
 
 const pt: LaraPage = {
-  metaTitle: "Lara Braga · Reparação Integral Comunitária",
+  metaTitle: "Lara Braga · Clínica Ambiental Ceará",
   metaDescription:
     "Bióloga, sanitarista e educadora ambiental. O roteiro de quase duas décadas de pesquisa com Lagoa dos Cavalos, no sertão do Ceará, e com a Clínica Ambiental, na Amazônia equatoriana.",
   back: "← Voltar ao início",
@@ -162,7 +162,7 @@ const pt: LaraPage = {
         place: "Ceará ⇄ Equador",
         title: "Devolver o que se aprendeu",
         body: "O artigo na revista Mercator apresenta as bases do método, e este site reúne o percurso para que as comunidades, a Clínica e quem luta no Brasil possam usar o que foi aprendido.",
-        marks: ["artigo “Diálogos para reparação socioambiental integradora” (Mercator, 2026)", "site Reparação Integral Comunitária"],
+        marks: ["artigo “Diálogos para reparação socioambiental integradora” (Mercator, 2026)", "site Clínica Ambiental Ceará | O Encontro das Águas"],
       },
     ],
   },
@@ -207,7 +207,7 @@ const pt: LaraPage = {
 };
 
 const es: LaraPage = {
-  metaTitle: "Lara Braga · Reparación Integral Comunitaria",
+  metaTitle: "Lara Braga · Clínica Ambiental Ceará",
   metaDescription:
     "Bióloga, salubrista y educadora ambiental. El recorrido de casi dos décadas de investigación con Lagoa dos Cavalos, en el sertón de Ceará, y con la Clínica Ambiental, en la Amazonía ecuatoriana.",
   back: "← Volver al inicio",
@@ -322,7 +322,7 @@ const es: LaraPage = {
         place: "Ceará ⇄ Ecuador",
         title: "Devolver lo aprendido",
         body: "El artículo en la revista Mercator presenta las bases del método, y este sitio reúne el recorrido para que las comunidades, la Clínica y quienes luchan en Brasil puedan usar lo aprendido.",
-        marks: ["artículo “Diálogos para reparação socioambiental integradora” (Mercator, 2026)", "sitio Reparación Integral Comunitaria"],
+        marks: ["artículo “Diálogos para reparação socioambiental integradora” (Mercator, 2026)", "sitio Clínica Ambiental Ceará | El Encuentro de las Aguas"],
       },
     ],
   },
@@ -367,7 +367,7 @@ const es: LaraPage = {
 };
 
 const en: LaraPage = {
-  metaTitle: "Lara Braga · Comprehensive Community Reparation",
+  metaTitle: "Lara Braga · Clínica Ambiental Ceará",
   metaDescription:
     "Biologist, public health researcher and environmental educator. Nearly two decades of research with Lagoa dos Cavalos, in the backlands of Ceará, and with the Clínica Ambiental, in the Ecuadorian Amazon.",
   back: "← Back to home",
@@ -482,7 +482,7 @@ const en: LaraPage = {
         place: "Ceará ⇄ Ecuador",
         title: "Giving back what was learned",
         body: "The article in the journal Mercator sets out the foundations of the method, and this site gathers the journey so that the communities, the Clinic and those struggling in Brazil can use what was learned.",
-        marks: ["article on integrative socio-environmental reparation (Mercator, 2026)", "Comprehensive Community Reparation website"],
+        marks: ["article on integrative socio-environmental reparation (Mercator, 2026)", "Clínica Ambiental Ceará | The Meeting of the Waters website"],
       },
     ],
   },

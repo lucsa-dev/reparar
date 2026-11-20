@@ -2,7 +2,7 @@ import type { Dictionary } from "./types";
 
 export const pt: Dictionary = {
   meta: {
-    title: "Reparação Integral Comunitária",
+    title: "Clínica Ambiental Ceará | O Encontro das Águas",
     description:
       "Uma comunidade do sertão cearense e uma organização da Amazônia equatoriana aprendem uma com a outra a curar a terra, a saúde e o tecido social.",
   },

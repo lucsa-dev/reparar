@@ -1,33 +1,42 @@
 :root{
-  /* Paleta da marca Reparação Integral Comunitária */
-  --brand-green:#285D32;
-  --brand-terracotta:#B95832;
-  --brand-ochre:#D99A27;
-  --brand-brown:#54321F;
-  --brand-cream:#F8F3E7;
-  --brand-sage:#E5EDDF;
+  /* Paleta da marca Clínica Ambiental Ceará | O Encontro das Águas (do estuário: lama, mangue, maré, mar) */
+  --lama:#241812; --lama-2:#33231a; --lama-3:#4a3426;
+  --mangue:#1e4636; --mangue-claro:#4f8a5b;
+  --rio:#3e8f8c; --mare:#a7dcd6; --mare-viva:#cff3ee;
+  --mar:#0e3550; --mar-fundo:#0a2436;
+  --caranguejo:#d9542c; --camarao:#f4a48c;
+  --areia:#efe4ce; --sol-sertao:#e8b04a;
 
-  /* Papéis de cor */
-  --bg:var(--brand-cream);
-  --surface:var(--brand-sage);
-  --surface-raised:#FFFCF4;
-  --ink:var(--brand-brown);
-  --muted:#6B5243;
-  --line:#DCD0B9;
-  --accent:var(--brand-green);
-  --accent-ink:var(--brand-cream);
-  --highlight:#A04826;   /* terracota escurecido para texto pequeno sobre fundos claros */
-  --sol:var(--brand-ochre);
-  --overlay:rgba(44,26,15,.72);
+  /* Nomes antigos, mantidos para os componentes: agora apontam para a paleta nova */
+  --brand-green:var(--mangue);
+  --brand-terracotta:var(--caranguejo);
+  --brand-ochre:var(--sol-sertao);
+  --brand-brown:var(--lama);
+  --brand-cream:var(--areia);
+  --brand-sage:#dfe3cf;
+
+  /* Papéis de cor (tema claro: areia do sertão) */
+  --bg:#f3ead6;
+  --surface:#e7dcc2;
+  --surface-raised:#fbf5e8;
+  --ink:var(--lama);
+  --muted:#5e4a3c;
+  --line:#d6c7a8;
+  --accent:var(--mangue);
+  --accent-ink:var(--areia);
+  --highlight:#b0401c;   /* caranguejo escurecido para texto pequeno sobre fundos claros */
+  --sol:#c98d1e;
+  --overlay:rgba(20,13,9,.74);
 
   /* sete cores da wiphala, usadas só na régua Huipala */
   --w1:#c8332b; --w2:#e07a1f; --w3:#e8c22e; --w4:#f5f4ef; --w5:#3d8b3d; --w6:#2f5fa8; --w7:#6b3fa0; --w8:#5aa9d6;
 
-  /* Tipografia */
-  --f-display:var(--font-lora),Georgia,"Times New Roman",serif;
-  --f-body:var(--font-dm-sans),system-ui,-apple-system,"Segoe UI",sans-serif;
+  /* Tipografia: Fraunces nos títulos, Instrument Sans no texto, Space Mono em rótulos e dados */
+  --f-display:var(--font-fraunces),Georgia,"Times New Roman",serif;
+  --f-body:var(--font-instrument),system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:var(--font-space-mono),ui-monospace,"SFMono-Regular",monospace;
   --f-ui:var(--f-body);
-  --f-label:var(--f-body);
+  --f-label:var(--f-mono);
 
   /* Espaçamento */
   --gutter:max(16px,env(safe-area-inset-left,0px));
@@ -37,15 +46,19 @@
   /* Bordas e sombras */
   --radius-s:.5rem;
   --radius-m:.875rem;
-  --radius-l:1.25rem;
+  --radius-l:18px;
   --radius-xl:clamp(1.5rem,4vw,3.25rem);
   --radius-organic:4.5rem;
   --radius-pill:999px;
-  --shadow-soft:0 1px 2px rgba(84,50,31,.06),0 10px 28px rgba(84,50,31,.08);
+  --shadow-soft:0 1px 2px rgba(36,24,18,.06),0 10px 28px rgba(36,24,18,.09);
   --transition:.18s ease;
 }
-:root[data-theme="dark"]{
-  --bg:#1E1711;--surface:#2A231A;--surface-raised:#31281D;--ink:#F8F3E7;--muted:#CFC1AC;--line:#4B3C2C;
-  --accent:#A3D3A6;--accent-ink:#1E1711;--highlight:#EDA47E;--sol:#E8B24A;--w4:#d9d7cf;
-  --shadow-soft:0 1px 2px rgba(0,0,0,.3),0 10px 28px rgba(0,0,0,.25);
+
+/* Tema escuro (lama) — também usado nos trechos escuros do rio, com .ink-dark */
+:root[data-theme="dark"],.ink-dark{
+  --bg:var(--lama);--surface:var(--lama-2);--surface-raised:#3b2a1f;--ink:var(--areia);--muted:#cdbfa6;--line:#56402e;
+  --accent:var(--mare);--accent-ink:var(--lama);--highlight:var(--camarao);--sol:var(--sol-sertao);--w4:#d9d7cf;
+  --overlay:rgba(20,13,9,.8);
+  --shadow-soft:0 1px 2px rgba(0,0,0,.3),0 10px 28px rgba(0,0,0,.28);
   color-scheme:dark}
+.ink-dark{color:var(--ink)}
