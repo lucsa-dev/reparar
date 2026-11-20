@@ -1,11 +1,8 @@
 import Link from "next/link";
-import { Icon, type IconName } from "@/components/Icon";
 import { RichText } from "@/components/RichText";
 import { HeroMandala, HeroMandalaPanel } from "@/components/HeroMandala";
 import { localeHref, type Locale } from "@/content";
 import type { Dictionary } from "@/content/types";
-
-const factIcons: IconName[] = ["layers", "users", "calendar", "document"];
 
 const mandalaCopy: Record<Locale, { label: string; title: string; hint: string; cta: string; close: string; more: string }> = {
   pt: { label: "Mandala das Lideranças", title: "15 vozes da Clínica Ambiental lidas pelos 12 sentidos da mandala", hint: "Clique para ler as falas", cta: "Explorar a Mandala das Lideranças →", close: "× Fechar", more: "Abrir a Mandala completa →" },
@@ -46,15 +43,6 @@ export function Hero({ content, locale }: { content: Dictionary["hero"]; locale:
         <a className="btn solid" href="https://doi.org/10.36517/rm2026.e25009" target="_blank" rel="noopener">{content.cta.article}</a>
         <a className="btn" href="https://www.clinicambiental.org/" target="_blank" rel="noopener">{content.cta.clinic}</a>
         <Link className="btn" href={localeHref(locale, "plantas")}>{content.cta.plants}</Link>
-      </div>
-      <div className="facts">
-        {content.facts.map((fact, index) => (
-          <div key={fact.value}>
-            <Icon name={factIcons[index]} className="fact-icon" />
-            <strong>{fact.value}</strong>
-            <span>{fact.label}</span>
-          </div>
-        ))}
       </div>
     </header>
   );
